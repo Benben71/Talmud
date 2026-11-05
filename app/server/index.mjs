@@ -1,18 +1,18 @@
 // Serveur de la hevrouta : reçoit l'état de l'étude (sougya, segment courant, coup joué, historique)
-// et interroge Claude avec un prompt ancré sur le texte. Sans clé API, répond en « mode démo ».
+// et interroge OpenAI ou Claude avec un prompt ancré sur le texte. Sans clé API, répond en « mode démo ».
 import express from "express";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.resolve(here, "../src/content");
 // Pas `PORT` : certains lanceurs (preview) le fixent pour le serveur web, pas pour celui-ci.
 const PORT = process.env.HEVROUTA_PORT || 8787;
-const MODEL = process.env.HEVROUTA_MODEL || "claude-opus-5-5";
 
-// Charge .env à la main (pas de dépendance) : ANTHROPIC_API_KEY=...
+// Charge .env à la main (pas de dépendance) avant de choisir le fournisseur et le modèle.
 const envPath = path.resolve(here, "../.env");
 if (fs.existsSync(envPath)) {
   for (const line of fs.readFileSync(envPath, "utf8").split("\n")) {
@@ -20,8 +20,17 @@ if (fs.existsSync(envPath)) {
     if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
   }
 }
-const hasKey = Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
-const client = hasKey ? new Anthropic() : null;
+const provider = process.env.OPENAI_API_KEY
+  ? "openai"
+  : process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN
+    ? "claude"
+    : "demo";
+const model = provider === "openai"
+  ? process.env.OPENAI_MODEL || "gpt-6-luna"
+  : provider === "claude"
+    ? process.env.HEVROUTA_MODEL || "claude-opus-5-5"
+    : null;
+const client = provider === "openai" ? new OpenAI() : provider === "claude" ? new Anthropic() : null;
 
 const sougyot = new Map();
 for (const f of fs.readdirSync(CONTENT)) {
@@ -92,7 +101,7 @@ function demoReply(s, segIndex, move, text) {
 const app = express();
 app.use(express.json({ limit: "1mb" }));
 
-app.get("/api/status", (_req, res) => res.json({ mode: hasKey ? "claude" : "demo", model: MODEL, sougyot: [...sougyot.keys()] }));
+app.get("/api/status", (_req, res) => res.json({ mode: provider, model, sougyot: [...sougyot.keys()] }));
 
 app.post("/api/hevrouta", async (req, res) => {
   const { slug, segment, move = "libre", text = "", history = [] } = req.body ?? {};
@@ -107,8 +116,22 @@ app.post("/api/hevrouta", async (req, res) => {
     { role: "user", content: userTurn },
   ];
   try {
+    if (provider === "openai") {
+      const response = await client.responses.create({
+        model,
+        instructions: systemPrompt(s),
+        input: messages,
+        max_output_tokens: 2048,
+        reasoning: { effort: "low" },
+        store: false,
+      });
+      const reply = response.output_text?.trim();
+      if (!reply) return res.status(502).json({ error: "Aucune réponse reçue du modèle." });
+      return res.json({ mode: "openai", reply, usage: response.usage });
+    }
+
     const response = await client.beta.messages.create({
-      model: MODEL,
+      model,
       max_tokens: 1024,
       betas: ["server-side-fallback-2026-07-01"],
       fallbacks: "default",
@@ -122,12 +145,12 @@ app.post("/api/hevrouta", async (req, res) => {
     const reply = response.content.filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
     res.json({ mode: "claude", reply, usage: response.usage });
   } catch (err) {
-    if (err instanceof Anthropic.AuthenticationError) return res.status(401).json({ error: "Clé API invalide." });
-    if (err instanceof Anthropic.RateLimitError) return res.status(429).json({ error: "Trop de requêtes, réessaie dans un instant." });
-    if (err instanceof Anthropic.APIError) return res.status(502).json({ error: `Erreur API ${err.status} : ${err.message}` });
+    if (err instanceof Anthropic.AuthenticationError || err instanceof OpenAI.AuthenticationError) return res.status(401).json({ error: "Clé API invalide." });
+    if (err instanceof Anthropic.RateLimitError || err instanceof OpenAI.RateLimitError) return res.status(429).json({ error: "Trop de requêtes, réessaie dans un instant." });
+    if (err instanceof Anthropic.APIError || err instanceof OpenAI.APIError) return res.status(502).json({ error: `Erreur API ${err.status} : ${err.message}` });
     console.error(err);
     res.status(500).json({ error: "Erreur serveur." });
   }
 });
 
-app.listen(PORT, () => console.log(`hevrouta server on :${PORT} — mode ${hasKey ? "claude (" + MODEL + ")" : "démo (pas de clé API)"}`));
+app.listen(PORT, () => console.log(`hevrouta server on :${PORT} — mode ${provider === "demo" ? "démo (pas de clé API)" : `${provider} (${model})`}`));

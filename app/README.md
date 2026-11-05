@@ -13,7 +13,9 @@ npm run dev
 
 Ouvre http://localhost:5173. Deux processus : Vite (web, :5173) et le serveur hevrouta (Express, :8787, proxifié sous `/api`).
 
-**Hevrouta avec Claude** : copier `.env.example` en `.env` et renseigner `ANTHROPIC_API_KEY`. Sans clé, l'app tourne en **mode démo** (réponses scriptées à partir des amorces de l'éditeur) — tout le reste fonctionne. Modèle par défaut : `claude-opus-5-5` (`HEVROUTA_MODEL` pour changer). Le serveur active le repli serveur (`fallbacks: "default"`) en cas de refus de sécurité ; retirer `betas`/`fallbacks` dans `server/index.mjs` si on n'en veut pas.
+**Hevrouta avec OpenAI** : renseigner `OPENAI_API_KEY` dans `app/.env` (ou copier `.env.example` en `.env`). Le modèle par défaut est `gpt-6-luna`, modifiable avec `OPENAI_MODEL`. Le serveur lit la clé au démarrage ; relancer `npm run dev` après l'avoir ajoutée. Le fichier `.env` est ignoré par Git et la clé reste côté serveur. [Documentation officielle OpenAI](https://developers.openai.com/api/docs/quickstart).
+
+**Claude en option** : si `OPENAI_API_KEY` est vide, renseigner `ANTHROPIC_API_KEY` et, au besoin, `HEVROUTA_MODEL` (défaut : `claude-opus-5-5`). Si les deux clés sont présentes, OpenAI est choisi. Sans clé, l'app tourne en **mode démo** (réponses scriptées à partir des amorces de l'éditeur) — tout le reste fonctionne. Pour Claude, le serveur active le repli serveur (`fallbacks: "default"`) en cas de refus de sécurité ; retirer `betas`/`fallbacks` dans `server/index.mjs` si on n'en veut pas.
 
 ## Ce que fait le prototype
 Les six temps d'une sougya : **le cas** (transposé + d'époque) → **ta première idée** (écrite avant de lire) → **les voix & le débat** (lecture segment par segment) → **et alors ?** → **ma page**.
@@ -47,7 +49,7 @@ Sobre, inspiré de la page de Vilna : papier, encre, une seule couleur d'accent 
 ```
 app/
   scripts/build-content.mjs   assemble documentation/corpus → src/content/*.json (lancé avant dev/build)
-  server/index.mjs            POST /api/hevrouta (Claude ou démo), GET /api/status
+  server/index.mjs            POST /api/hevrouta (OpenAI, Claude ou démo), GET /api/status
   src/
     App.tsx                   les six temps, état global
     components/Page.tsx       l'écran page (profondeurs, couches, anticipation)

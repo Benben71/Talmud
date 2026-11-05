@@ -49,7 +49,7 @@ export function Hevrouta({
     <div className="flex h-full flex-col">
       <div className="flex items-baseline justify-between border-b hairline px-3 py-2">
         <div className="sc text-sm">Hevrouta <span className="text-ink-2">· segment {segment.i}</span></div>
-        <div className={`sc text-[12px] ${mode === "claude" ? "rubric" : "text-ink-2"}`}>{mode === "claude" ? "Claude" : "mode démo"}</div>
+        <div className={`sc text-[12px] ${mode === "demo" ? "text-ink-2" : "rubric"}`}>{mode === "openai" ? "OpenAI" : mode === "claude" ? "Claude" : "mode démo"}</div>
       </div>
 
       <div className="flex-1 space-y-3 overflow-y-auto px-3 py-3">

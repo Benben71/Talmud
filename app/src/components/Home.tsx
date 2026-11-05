@@ -1,17 +1,18 @@
 // La page d'accueil se lit de haut en bas comme une introduction, puis s'ouvre sur la mer :
-//   1. le mot, la promesse et un bouton pour commencer tout de suite ;
-//   2. « Le Talmud, c'est quoi ? » — trois paragraphes et un schéma de la page imprimée ;
-//   3. « Comment ça marche ici » — les cinq temps d'une séance et les outils de l'app ;
+//   1. le mot, la promesse, un bouton pour commencer, et un vrai débat résumé réplique par réplique ;
+//   2. « Le Talmud, c'est quoi ? » — trois paragraphes, un schéma de la page imprimée et une frise qui finit par « toi » ;
+//   3. « Comment ça marche ici » — les cinq temps d'une séance, les outils de l'app et cinq mots-clés ;
 //   4. « Choisis un passage » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges.
 import type { ReactNode } from "react";
-import type { Catalogue, Sougya } from "../types";
-import { OUTIL_LABEL, PARCOURS } from "../types";
+import type { Catalogue, Role, Sougya } from "../types";
+import { OUTIL_LABEL, PARCOURS, ROLE_LABEL, ROLE_SYMBOL } from "../types";
 import { readProgress } from "../store";
 import { Archipel, MobileArchipel } from "./Archipel";
 import { Fleuron } from "./Fleuron";
 import { NavIcon, type NavKey } from "./Nav";
 import type { Sujet } from "../router";
 
+const DEMO_SLUG = "bava-metzia-2a"; // la sougya résumée dans l'extrait de l'accueil
 const LINK = "underline decoration-rule underline-offset-2 hover:text-ink hover:decoration-ink";
 
 const TEMPS: { titre: string; texte: string }[] = [
@@ -28,6 +29,62 @@ const OUTILS: { k: NavKey; titre: string; texte: string }[] = [
   { k: "carte", titre: "La carte du débat", texte: "Reconstruis la discussion comme un arbre : la question, l'objection, la réponse." },
   { k: "reperes", titre: "Des repères", texte: "Une petite histoire du Talmud, qui est qui, un glossaire et les mots araméens." },
 ];
+
+// Le début de Bava Metsia 2a, résumé coup par coup (d'après les segments 0 à 7 de la sougya) :
+// chaque réplique répond à la précédente, d'où le décalage.
+const EXTRAIT: { role: Role; qui: string; texte: string }[] = [
+  { role: "MISHNA", qui: "la Mishna", texte: "Deux personnes tiennent un vêtement. Chacune dit : « Je l'ai trouvé, il est tout à moi. » Chacune jure, et on partage." },
+  { role: "QUESTION", qui: "la Guemara", texte: "Pourquoi leur faire dire deux choses ? « Je l'ai trouvé » suffirait !" },
+  { role: "REPONSE", qui: "la Guemara", texte: "Non : « trouvé » pourrait vouloir dire « vu ». Or voir un objet ne suffit pas pour qu'il soit à toi." },
+  { role: "OBJECTION", qui: "la Guemara, citant Rabbenaï", texte: "Mais dans la Torah, « trouver », c'est avoir en main !" },
+  { role: "REPONSE", qui: "la Guemara", texte: "La Mishna parle comme tout le monde : dans la rue, dès qu'on voit un objet, on dit « je l'ai trouvé »." },
+];
+
+const FRISE: { quand: string; quoi: string; toi?: boolean }[] = [
+  { quand: "vers 200", quoi: "la Mishna est écrite" },
+  { quand: "200-500", quoi: "les sages en débattent" },
+  { quand: "vers 500", quoi: "le Talmud de Babylone" },
+  { quand: "1040-1105", quoi: "Rachi l'explique" },
+  { quand: "1520", quoi: "premier Talmud imprimé" },
+  { quand: "1880", quoi: "la page de Vilna" },
+  { quand: "1965-2010", quoi: "Steinsaltz le traduit" },
+  { quand: "aujourd'hui", quoi: "toi", toi: true },
+];
+
+const MOTS: [string, string, string][] = [
+  ["מַחְלוֹקֶת", "Mahloket", "le désaccord, que le Talmud garde au lieu de l'effacer."],
+  ["סוּגְיָא", "Sougya", "un passage, une discussion complète : une île sur la carte."],
+  ["חַבְרוּתָא", "Hevrouta", "l'étude à deux, et le binôme qui lit avec toi."],
+  ["קוּשְׁיָא", "Kouchia", "l'objection : « oui, mais… »."],
+  ["תֵּיקוּ", "Teikou", "la question reste ouverte, sans réponse."],
+];
+
+function Extrait({ onLire }: { onLire: () => void }) {
+  return (
+    <figure className="bloc-strong px-4 py-4 md:px-5">
+      <figcaption className="flex flex-wrap items-baseline justify-between gap-x-3">
+        <span className="sc text-[calc(14px*var(--text-scale))] text-rubric">un débat, en vrai</span>
+        <span className="he text-[calc(15px*var(--text-scale))] text-ink-2">בבא מציעא ב.</span>
+      </figcaption>
+      <p className="text-[calc(12.5px*var(--text-scale))] italic text-ink-2">Le tout début de Bava Metsia, résumé réplique par réplique.</p>
+      <ol className="mt-3 space-y-2">
+        {EXTRAIT.map((e, k) => (
+          <li key={k} className="border-l-2 pl-3" style={{ marginLeft: `${Math.min(k, 4) * 12}px`, borderColor: k === 0 ? "var(--color-ink)" : "var(--color-rule)" }}>
+            <div className="flex flex-wrap items-baseline gap-x-2">
+              <span className="role-mark text-[calc(13px*var(--text-scale))]"><span className="sym">{ROLE_SYMBOL[e.role]}</span>{ROLE_LABEL[e.role]}</span>
+              <span className="text-[calc(12px*var(--text-scale))] italic text-ink-2">{e.qui}</span>
+            </div>
+            <p className="text-[calc(14px*var(--text-scale))] leading-snug">{e.texte}</p>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-3 border-t hairline pt-2 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">
+        … et ça continue : une nouvelle objection, puis la distinction de Rav Pappa.{" "}
+        <button className={LINK} onClick={onLire}>Lire la suite →</button>
+      </p>
+    </figure>
+  );
+}
 
 function Titre({ n, he, id, children }: { n: string; he: string; id?: string; children: ReactNode }) {
   return (
@@ -89,7 +146,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
 
   const commencer = resume
     ? <button onClick={() => onResume(resume.c.slug, resume.p.last_segment!)} className="btn btn-primary">Reprendre · {resume.c.court}, segment {resume.p.last_segment} →</button>
-    : <button onClick={() => onStart(first.slug)} className="btn btn-primary">Commencer · {first.titre} →</button>;
+    : <button onClick={() => onStart(first.slug)} className="btn btn-primary">Commencer le premier passage →</button>;
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-10 pt-3 md:px-6">
@@ -112,7 +169,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             {commencer}
             {resume
               ? <button onClick={() => onStart(first.slug)} className={`sc text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>ou commencer par {first.court.toLowerCase()}</button>
-              : <span className={`sc text-[calc(12px*var(--text-scale))] text-ink-2`}>{first.ref.replace("_", " ").replace(".", " ")} · {first.duree_min} min · aucun prérequis</span>}
+              : <span className={`sc text-[calc(12px*var(--text-scale))] text-ink-2`}>{first.court} · {first.ref.replace("_", " ").replace(".", " ")} · {first.duree_min} min · aucun prérequis</span>}
           </div>
           <nav className={`mt-4 flex flex-wrap gap-x-4 gap-y-1 text-[calc(14px*var(--text-scale))] text-ink-2`} aria-label="Sur cette page">
             <span className="sc text-rubric">sur cette page</span>
@@ -122,18 +179,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
           </nav>
         </div>
 
-        <dl className="bloc grid grid-cols-3 divide-x divide-rule md:grid-cols-1 md:divide-x-0 md:divide-y">
-          {[
-            ["2 711", "feuillets dans le Talmud de Babylone"],
-            ["300 ans", "de discussions entre sages, mises par écrit vers 500"],
-            [`${ouverts.length} / ${catalogue.length}`, "passages déjà ouverts ici, les autres arrivent"],
-          ].map(([chiffre, legende]) => (
-            <div key={legende} className="px-3 py-3 md:flex md:items-baseline md:gap-4 md:px-5">
-              <dt className="text-[1.5rem] font-semibold leading-none md:w-28 md:shrink-0 md:text-[1.8rem]">{chiffre}</dt>
-              <dd className={`mt-1 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2 md:mt-0`}>{legende}</dd>
-            </div>
-          ))}
-        </dl>
+        <Extrait onLire={() => onStart(DEMO_SLUG)} />
       </section>
 
       {/* 2. Le Talmud, c'est quoi ? */}
@@ -145,7 +191,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             <p className={`text-[calc(15px*var(--text-scale))] leading-snug`}>
               Vers l'an 200, Rabbi Yehouda ha-Nassi met par écrit des règles transmises jusque-là de bouche à oreille : c'est la <strong className="font-semibold">Mishna</strong>, en hébreu, courte et précise.
               Pendant trois siècles, des sages la discutent ligne par ligne, en Babylonie et en Terre d'Israël : c'est la <strong className="font-semibold">Guemara</strong>, surtout en araméen.
-              Mishna + Guemara = <strong className="font-semibold">Talmud</strong>.
+              Mishna + Guemara = <strong className="font-semibold">Talmud</strong> : 2 711 feuillets dans sa version de Babylone.
             </p>
           </div>
           <div>
@@ -171,6 +217,22 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
               <button className={LINK} onClick={() => onReperes("la-page")}>Comment lire une page →</button>
             </p>
           </div>
+        </div>
+
+        <div className="mt-8">
+          <div className="sc mb-3 text-[calc(14px*var(--text-scale))] text-rubric">quinze siècles, une seule conversation</div>
+          <ol className="relative grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4 lg:grid-cols-8">
+            <span className="absolute left-0 right-0 top-[5px] hidden border-t border-rule lg:block" aria-hidden="true" />
+            {FRISE.map((f) => (
+              <li key={f.quand} className="relative flex items-start gap-2 lg:block">
+                <span className={`relative mt-[1px] block h-[11px] w-[11px] shrink-0 rounded-full border ${f.toi ? "border-rubric bg-rubric" : "border-ink bg-paper"}`} />
+                <div className="lg:mt-2">
+                  <div className={`sc text-[calc(12.5px*var(--text-scale))] ${f.toi ? "text-rubric" : "text-ink-2"}`}>{f.quand}</div>
+                  <div className={`text-[calc(14.5px*var(--text-scale))] leading-tight ${f.toi ? "font-semibold text-rubric" : ""}`}>{f.quoi}</div>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -206,7 +268,21 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             </div>
           ))}
         </div>
-        <p className={`mt-3 text-[calc(13.5px*var(--text-scale))] text-ink-2`}>
+        <div className="mt-8">
+          <div className="sc mb-3 text-[calc(14px*var(--text-scale))] text-rubric">cinq mots pour s'y retrouver</div>
+          <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-5">
+            {MOTS.map(([he, mot, def]) => (
+              <div key={mot} className="border-t hairline pt-2">
+                <dt className="flex items-baseline justify-between gap-2">
+                  <span className="text-[calc(16px*var(--text-scale))] font-semibold">{mot}</span>
+                  <span className="he text-[calc(17px*var(--text-scale))] text-ink-2">{he}</span>
+                </dt>
+                <dd className="text-[calc(13.5px*var(--text-scale))] leading-snug text-ink-2">{def}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <p className={`mt-5 text-[calc(13.5px*var(--text-scale))] text-ink-2`}>
           Pas de compte : ce que tu écris reste dans ce navigateur. Ces outils sont aussi dans la barre de navigation{" "}
           <span className="hidden md:inline">à gauche</span><span className="md:hidden">en bas</span>.
         </p>
@@ -217,7 +293,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
         <Titre n="III" he="יַם הַתַּלְמוּד" id="passages">Choisis un passage</Titre>
         <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
           On appelle le Talmud « la mer » : on n'en voit jamais le bout. Ici, chaque île est un passage, regroupé par grande question.
-          Une île en trait plein est ouverte, en pointillé elle arrive. Pas d'ordre obligé : commence où tu veux.
+          Une île en trait plein est ouverte ({ouverts.length} sur {catalogue.length} pour l'instant), en pointillé elle arrive. Pas d'ordre obligé : commence où tu veux.
         </p>
 
         <div className="mt-5 grid gap-x-6 gap-y-6 lg:grid-cols-[190px_1fr_190px]">

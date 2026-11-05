@@ -1,7 +1,7 @@
 // La carte du débat : la sougya vue de haut, comme un fil de discussion.
 // Mode Lire : l'arbre réel, cliquable. Mode Reconstruire : les coups de la Guemara sont à replacer
 // (quel rôle ? à quoi répond-il ? — et, en mode mélangé, dans quel ordre ?).
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState, type CSSProperties } from "react";
 import type { Role, Segment, Sougya } from "../types";
 import { ROLE_LABEL, ROLE_SYMBOL, ROLE_VERB } from "../types";
 
@@ -25,9 +25,9 @@ function Tree({ nodes, segs, onPick, picked, highlight, compact, allowNone }: {
   const byId = new Map(nodes.map((n) => [n.i, n]));
   const depth = (n: Node) => { let d = 0; let p = n.parent; const seen = new Set<number>(); while (p !== null && byId.has(p) && !seen.has(p)) { seen.add(p); d++; p = byId.get(p)!.parent; } return d; };
   return (
-    <div className="space-y-[3px]">
+    <div className="space-y-1.5 md:space-y-[3px]">
       {onPick && allowNone && (
-        <button onClick={() => onPick(null)} className={`sc w-full border border-dashed px-2 py-1 text-left text-[13px] ${picked === null ? "border-ink" : "border-rule text-ink-2 hover:border-ink"}`}>
+        <button onClick={() => onPick(null)} className={`sc w-full border border-dashed px-2 py-2 text-left text-[14px] md:py-1 md:text-[13px] ${picked === null ? "border-ink" : "border-rule text-ink-2 hover:border-ink"}`}>
           ⟂ ne répond à rien : nouveau fil
         </button>
       )}
@@ -36,14 +36,14 @@ function Tree({ nodes, segs, onPick, picked, highlight, compact, allowNone }: {
         const h = highlight?.(n);
         const d = depth(n);
         return (
-          <div key={n.i} style={{ marginLeft: d * 18 }} className={d > 0 ? "border-l hairline pl-2" : ""}>
+          <div key={n.i} style={{ "--carte-depth": d } as CSSProperties} className={`carte-node ${d > 0 ? "border-l hairline pl-2" : ""}`}>
             <button onClick={() => onPick?.(n.i)} disabled={!onPick}
-              className={`w-full border px-2 py-1 text-left text-[13px] leading-snug ${picked === n.i ? "border-ink bg-white/40" : h === "ok" ? "border-ink-2 bg-white/30" : h === "ko" ? "border-rubric bg-rubric-soft/60" : "border-rule bg-white/20"} ${onPick ? "hover:border-ink" : ""}`}>
+              className={`w-full border px-2 py-2 text-left text-[15px] leading-snug md:py-1 md:text-[13px] ${picked === n.i ? "border-ink bg-white/40" : h === "ok" ? "border-ink-2 bg-white/30" : h === "ko" ? "border-rubric bg-rubric-soft/60" : "border-rule bg-white/20"} ${onPick ? "hover:border-ink" : ""}`}>
               <span className="role-mark"><span className="sym">{ROLE_SYMBOL[n.role]}</span>{ROLE_LABEL[n.role]}</span>
               <span className="text-ink-2"> [{n.i}] {s.voix}</span>
               {n.parent !== null && <span className="text-ink-2"> → {n.parent}</span>}
               {h === "ko" && <span className="rubric"> ✗</span>}
-              {!compact && <div className="mt-0.5 text-[12px] text-ink-2">{s.resume.length > 140 ? s.resume.slice(0, 140) + "…" : s.resume}</div>}
+              {!compact && <div className="mt-1 text-[14px] text-ink-2 md:mt-0.5 md:text-[12px]">{s.resume.length > 140 ? s.resume.slice(0, 140) + "…" : s.resume}</div>}
             </button>
           </div>
         );
@@ -67,6 +67,12 @@ export function Carte({ sougya, onGo, onScore, best }: { sougya: Sougya; onGo: (
   const [parent, setParent] = useState<number | null | undefined>(undefined);
   const [order, setOrder] = useState<number[]>([]);
   const [done, setDone] = useState<CarteScore | null>(null);
+  const controlsRef = useRef<HTMLDivElement>(null);
+
+  function pickParent(i: number | null) {
+    setParent(i);
+    if (window.innerWidth < 768) controlsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   function start(hard: boolean) {
     setDifficile(hard);
@@ -99,7 +105,7 @@ export function Carte({ sougya, onGo, onScore, best }: { sougya: Sougya; onGo: (
   const truthMap = new Map(truth.map((n) => [n.i, n]));
 
   return (
-    <div className="mx-auto h-full max-w-5xl overflow-y-auto px-4 py-5 md:px-8">
+    <div className="mx-auto h-full max-w-5xl overflow-y-auto px-3 py-5 md:px-8">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <div>
           <div className="sc text-sm text-rubric">la carte du débat</div>
@@ -114,7 +120,7 @@ export function Carte({ sougya, onGo, onScore, best }: { sougya: Sougya; onGo: (
       {best && <div className="mt-1 text-[13px] text-ink-2">Meilleur score : rôles {best.roles}/{best.total} · liens {best.liens}/{best.total}{best.difficile && ` · ordre ${best.ordre}/${best.total}`}</div>}
 
       {mode === "lire" && (
-        <div className="mt-4 grid gap-6 md:grid-cols-[1fr_260px]">
+        <div className="mt-4 grid gap-4 md:grid-cols-[1fr_260px] md:gap-6">
           <Tree nodes={truth} segs={segs} onPick={(i) => i !== null && onGo(i)} />
           <div className="text-[15px] leading-snug text-ink-2">
             <p>Chaque coup est indenté sous le coup auquel il répond. Clique sur un coup pour l'ouvrir dans la page.</p>
@@ -125,13 +131,13 @@ export function Carte({ sougya, onGo, onScore, best }: { sougya: Sougya; onGo: (
       )}
 
       {mode === "jouer" && !done && (
-        <div className="mt-4 grid gap-6 md:grid-cols-[1fr_300px]">
-          <div>
+        <div className="mt-4 grid gap-4 md:grid-cols-[1fr_300px] md:gap-6">
+          <div className="order-2 md:order-1">
             <div className="sc mb-1 text-sm text-ink-2">le fil, tel que tu le reconstruis</div>
             <Tree nodes={placed} segs={segs} compact allowNone
-              onPick={cur && role ? (i) => setParent(i) : undefined} picked={parent === undefined ? -1 : parent} />
+              onPick={cur && role ? pickParent : undefined} picked={parent === undefined ? -1 : parent} />
           </div>
-          <div>
+          <div ref={controlsRef} className="order-1 md:order-2">
             {difficile && current === null && (
               <>
                 <div className="sc mb-1 text-sm text-ink-2">quel coup vient maintenant ? ({remaining.length} restants)</div>
@@ -159,7 +165,7 @@ export function Carte({ sougya, onGo, onScore, best }: { sougya: Sougya; onGo: (
                 </div>
                 {role && (
                   <>
-                    <div className="sc mt-3 text-sm">2 · à quoi répond-il ? <span className="text-ink-2">(clique sur un coup du fil)</span></div>
+                    <div className="sc mt-3 text-sm">2 · à quoi répond-il ? <span className="text-ink-2 md:hidden">(touche un coup du fil ci-dessous)</span><span className="hidden text-ink-2 md:inline">(clique sur un coup du fil)</span></div>
                     {parent !== undefined && <div className="mt-1 text-[13px]">→ {parent === null ? "nouveau fil" : `répond à [${parent}]`}</div>}
                   </>
                 )}

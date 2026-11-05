@@ -13,9 +13,9 @@ const ICON: Record<NavKey, React.ReactNode> = {
 const LABEL: Record<NavKey, string> = { mer: "La mer", lire: "Lire", carte: "Carte", hevrouta: "Hevrouta", mapage: "Ma page", reperes: "Repères" };
 const ORDER: NavKey[] = ["mer", "lire", "carte", "hevrouta", "mapage", "reperes"];
 
-function Icon({ k, active }: { k: NavKey; active: boolean }) {
+function Icon({ k, active, size }: { k: NavKey; active: boolean; size: number }) {
   return (
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth={active ? 1.6 : 1.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth={active ? 1.6 : 1.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       {ICON[k]}
     </svg>
   );
@@ -30,11 +30,11 @@ export function Nav({ active, badge, disabled, onGo, variant }: {
     const off = disabled?.includes(k);
     return (
       <button key={k} onClick={() => !off && onGo(k)} disabled={off} aria-current={isActive ? "page" : undefined}
-        className={`relative flex flex-col items-center gap-0.5 ${variant === "rail" ? "w-full py-3" : "flex-1 py-1.5"} ${isActive ? "text-rubric" : off ? "text-rule" : "text-ink-2 hover:text-ink"}`}>
+        className={`relative flex min-w-0 flex-col items-center gap-1 ${variant === "rail" ? "w-full py-3" : "flex-1 py-2"} ${isActive ? "text-rubric" : off ? "text-rule" : "text-ink-2 hover:text-ink"}`}>
         {isActive && variant === "rail" && <span className="absolute left-0 top-2 bottom-2 w-[3px] bg-rubric" />}
         {isActive && variant === "tabs" && <span className="absolute left-3 right-3 top-0 h-[2px] bg-rubric" />}
-        <Icon k={k} active={isActive} />
-        <span className="sc text-[11px] leading-none">{LABEL[k]}</span>
+        <Icon k={k} active={isActive} size={variant === "tabs" ? 25 : 22} />
+        <span className={`sc leading-none ${variant === "tabs" ? "text-[12px]" : "text-[11px]"}`}>{LABEL[k]}</span>
         {badge?.[k] ? <span className="absolute right-1/2 top-1 translate-x-4 rounded-full bg-rubric px-1 text-[9px] leading-[14px] text-paper" style={{ fontVariant: "normal" }}>{badge[k]}</span> : null}
       </button>
     );
@@ -42,5 +42,5 @@ export function Nav({ active, badge, disabled, onGo, variant }: {
   if (variant === "rail") {
     return <nav className="hidden w-[76px] shrink-0 flex-col border-r hairline bg-paper-2/40 pt-2 md:flex print:hidden" aria-label="Navigation">{items}</nav>;
   }
-  return <nav className="flex shrink-0 border-t hairline bg-paper md:hidden print:hidden" aria-label="Navigation">{items}</nav>;
+  return <nav className="mobile-nav flex shrink-0 border-t hairline bg-paper md:hidden print:hidden" aria-label="Navigation">{items}</nav>;
 }

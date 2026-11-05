@@ -13,7 +13,7 @@ const ICON: Record<NavKey, React.ReactNode> = {
 const LABEL: Record<NavKey, string> = { mer: "La mer", lire: "Lire", carte: "Carte", hevrouta: "Hevrouta", mapage: "Ma page", reperes: "Repères" };
 const ORDER: NavKey[] = ["mer", "lire", "carte", "hevrouta", "mapage", "reperes"];
 
-function Icon({ k, active, size }: { k: NavKey; active: boolean; size: number }) {
+export function NavIcon({ k, active, size }: { k: NavKey; active: boolean; size: number }) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth={active ? 1.6 : 1.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       {ICON[k]}
@@ -33,7 +33,7 @@ export function Nav({ active, badge, disabled, onGo, variant }: {
         className={`relative flex min-w-0 flex-col items-center gap-1 ${variant === "rail" ? "w-full py-3" : "flex-1 py-2"} ${isActive ? "text-rubric" : off ? "text-rule" : "text-ink-2 hover:text-ink"}`}>
         {isActive && variant === "rail" && <span className="absolute left-0 top-2 bottom-2 w-[3px] bg-rubric" />}
         {isActive && variant === "tabs" && <span className="absolute left-3 right-3 top-0 h-[2px] bg-rubric" />}
-        <Icon k={k} active={isActive} size={variant === "tabs" ? 25 : 22} />
+        <NavIcon k={k} active={isActive} size={variant === "tabs" ? 25 : 22} />
         <span className={`sc leading-none ${variant === "tabs" ? "text-[12px]" : "text-[11px]"}`}>{LABEL[k]}</span>
         {badge?.[k] ? <span className="absolute right-1/2 top-1 translate-x-4 rounded-full bg-rubric px-1 text-[9px] leading-[14px] text-paper" style={{ fontVariant: "normal" }}>{badge[k]}</span> : null}
       </button>

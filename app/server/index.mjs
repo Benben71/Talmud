@@ -153,4 +153,9 @@ app.post("/api/hevrouta", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`hevrouta server on :${PORT} — mode ${provider === "demo" ? "démo (pas de clé API)" : `${provider} (${model})`}`));
+export default app;
+
+// Vercel importe cette application dans ses fonctions ; en local, ce fichier démarre le serveur.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  app.listen(PORT, () => console.log(`hevrouta server on :${PORT} — mode ${provider === "demo" ? "démo (pas de clé API)" : `${provider} (${model})`}`));
+}

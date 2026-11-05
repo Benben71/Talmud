@@ -1,0 +1,306 @@
+{
+ "slug": "taanit-7a",
+ "ref": "Taanit.7a",
+ "titre": "« De mes élèves plus que de tous »",
+ "parcours": [
+  "le-temps-long"
+ ],
+ "duree_min": 15,
+ "ce_texte": "Talmud de Babylone, traité Taanit (ordre Moëd, les jeûnes). Une suite d'enseignements de sages de Terre d'Israël et de Babylonie (IIIe-IVe siècle), en hébreu et en araméen, qui lisent des versets des Proverbes, de Jérémie et d'Isaïe sur la façon d'apprendre.",
+ "idee_cle": "On n'apprend pas seul : le feu ne prend pas sur une bûche seule. Et celui qui enseigne apprend le plus — de ses élèves.",
+ "sougya": {
+  "segments": [
+   7,
+   17
+  ],
+  "actes": [
+   {
+    "titre": "On n'apprend pas seul",
+    "segments": [
+     7,
+     11
+    ]
+   },
+   {
+    "titre": "Maître et élève : qui va vers qui ?",
+    "segments": [
+     12,
+     13
+    ]
+   },
+   {
+    "titre": "La Torah coule vers le bas",
+    "segments": [
+     14,
+     17
+    ]
+   }
+  ],
+  "note": "Segments 0-6 : éloge de la pluie et « l'homme est un arbre des champs », hors sougya mais le segment 5 (Rabbi Zeira demande de l'aggada parce qu'il est fatigué) est une jolie entrée. Le passage n'est pas un débat mais une chaîne d'enseignements liés par des versets : bon terrain pour l'outil DERACHA."
+ },
+ "cas": {
+  "transpose": "Tu révises mieux seul dans ta chambre ou avec quelqu'un ? Et dans ta vie, qui t'a appris le plus : un prof, un ami, ou quelqu'un à qui tu as dû expliquer ?",
+  "epoque": "Les sages s'interrogent : pourquoi la Torah est-elle comparée au fer, au feu, à l'arbre, à l'eau ? Chaque comparaison dit quelque chose sur la façon d'apprendre."
+ },
+ "premiere_idee": "Classe : maîtres, amis, élèves — de qui apprend-on le plus ? Écris ton ordre.",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": null,
+   "resume_fr": "(fin d'une discussion sur une formule de bénédiction)",
+   "encadres": []
+  },
+  {
+   "i": 1,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Abbahou / Rav Yossef",
+   "repond_a": null,
+   "resume_fr": "Le jour de pluie est plus grand que la résurrection des morts : la pluie profite aux justes et aux méchants. Rav Yossef : seulement équivalent.",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rav Yehouda / Rava",
+   "repond_a": 1,
+   "resume_fr": "La pluie est aussi grande que le don de la Torah (« ma doctrine tombera comme la pluie ») ; Rava : plus grande, car on compare le petit au grand.",
+   "encadres": []
+  },
+  {
+   "i": 3,
+   "dans_sougya": false,
+   "role": "DISTINCTION",
+   "voix": "Rava",
+   "repond_a": 2,
+   "resume_fr": "Le verset dit « tombera (durement) comme la pluie » puis « distillera (doucement) comme la rosée » : pour l'érudit digne, la Torah est rosée ; pour l'indigne, elle brise la nuque.",
+   "encadres": []
+  },
+  {
+   "i": 4,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Bena'a (baraïta)",
+   "repond_a": 3,
+   "resume_fr": "Étudier pour l'étude elle-même : élixir de vie ; pour se faire valoir : élixir de mort.",
+   "encadres": []
+  },
+  {
+   "i": 5,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "Rabbi Yirmeya et Rabbi Zeira",
+   "repond_a": null,
+   "resume_fr": "Rabbi Yirmeya demande un cours de halakha ; Rabbi Zeira : « mon cœur est faible ». — « Alors un peu d'aggada ? » Rabbi Zeira cite : « L'homme est-il un arbre des champs ? »",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Halakha / aggada",
+     "texte": "L'aggada demande moins d'effort que la halakha, dit Rabbi Yirmeya. Le Talmud alterne les deux — comme cette app."
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "dans_sougya": false,
+   "role": "REPONSE",
+   "voix": "Rabbi Yohanan",
+   "repond_a": 5,
+   "resume_fr": "Il y a des arbres qu'on peut couper et d'autres non : l'érudit digne, « tu en mangeras, tu ne le couperas pas » ; l'indigne, « tu le détruiras ».",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Hama fils de Rabbi Hanina",
+   "repond_a": null,
+   "resume_fr": "« Le fer aiguise le fer, et l'homme aiguise le visage de son ami » (Proverbes 27:17) : comme deux lames frottées l'une contre l'autre, deux érudits qui étudient ensemble s'aiguisent.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Deracha — lire un verset comme une image",
+     "texte": "Le sage prend une image du verset (le fer) et en tire une règle de vie (étudier à deux). Toute la sougya fonctionne ainsi : fer, feu, bois, eau."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabba bar bar Hana",
+   "repond_a": 7,
+   "resume_fr": "Pourquoi la Torah est-elle comparée au feu (Jérémie 23:29) ? Le feu ne prend pas sur une bûche seule, mais sur un tas de bois : la Torah ne tient pas chez celui qui étudie seul.",
+   "encadres": []
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Yossei bar Hanina",
+   "repond_a": 8,
+   "resume_fr": "« Une épée sur les solitaires, et ils deviendront sots » (Jérémie 50:36) : une épée sur « les ennemis des disciples des sages » qui étudient seuls — euphémisme pour ne pas maudire les sages eux-mêmes — et en plus ils deviennent sots.",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Bad bevad",
+     "texte": "« Seul à seul », jeu de mots sur habaddim (« les vantards » ou « les solitaires »). Le Talmud lit souvent un mot selon deux sens à la fois."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "la Guemara",
+   "repond_a": 9,
+   "resume_fr": "Et pas seulement sots : ils fautent — même mot « noalou » dans Nombres 12:11 « nous avons agi sottement et nous avons fauté » ; ou, si tu préfères, dans Isaïe 19:13 « les princes de Tsoan sont devenus sots… ils ont égaré l'Égypte ».",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Analogie de mots — le même mot ailleurs",
+     "texte": "Un mot rare apparaît dans deux versets : le Talmud relie les deux. Ici « noalou » lie « sot » et « fauter ». (C'est une analogie verbale aggadique, sur le modèle de la gezera chava ; la gezera chava au sens strict est un procédé halakhique reçu par tradition, Pessahim 66a.)"
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "Rav Nahman bar Yitshak / Rabbi Hanina",
+   "repond_a": 7,
+   "resume_fr": "Pourquoi la Torah est-elle un arbre (Proverbes 3:18) ? Un petit bois allume un grand : les petits érudits aiguisent les grands. Et Rabbi Hanina : « J'ai beaucoup appris de mes maîtres, plus de mes amis, et de mes élèves plus que de tous. »",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Hanina (bar Hama)",
+     "texte": "Amora de la 1re génération en terre d'Israël, élève de Rabbi Yehouda HaNassi (la tradition en fait aussi un médecin). La phrase sur les élèves est l'une des plus citées du Talmud — Makkot 10a l'attribue à Rabbi (Yehouda HaNassi) lui-même."
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "dans_sougya": true,
+   "role": "DISTINCTION",
+   "voix": "Rabbi Hanina bar Pappa",
+   "repond_a": null,
+   "resume_fr": "Contradiction : « À celui qui a soif, apportez de l'eau » (Isaïe 21:14) — le maître va vers l'élève ; « Vous tous qui avez soif, venez à l'eau » (Isaïe 55:1) — l'élève vient. Résolution : élève digne, le maître va vers lui ; sinon, à l'élève de chercher.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Résoudre une contradiction par une distinction",
+     "texte": "Deux versets se contredisent ? Le Talmud ne choisit pas : il trouve deux situations où chacun est vrai. Structure : « ici… là… »."
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "dans_sougya": true,
+   "role": "DISTINCTION",
+   "voix": "Rabbi Hanina bar Hama",
+   "repond_a": 12,
+   "resume_fr": "Même structure : « que tes sources se répandent au dehors » / « qu'elles soient à toi seul » (Proverbes 5:16-17) : élève digne, enseigne-lui ; sinon, garde pour toi.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Vigilance",
+     "texte": "« Élève digne / indigne » peut sonner élitiste. Digne (hagoun) = qui se conduit bien, pas qui est fort : le Rambam (Talmud Torah 4:1) dit qu'on enseigne à l'élève dont les actes sont convenables, et que celui qui suit une mauvaise voie, on commence par l'aider à changer. À discuter en hevrouta plutôt qu'à affirmer."
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Hanina bar Idi",
+   "repond_a": 12,
+   "resume_fr": "Pourquoi la Torah est-elle de l'eau ? L'eau quitte le haut pour aller en bas : la Torah ne tient que chez celui qui a l'esprit humble.",
+   "encadres": []
+  },
+  {
+   "i": 15,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Ochaya",
+   "repond_a": 14,
+   "resume_fr": "Pourquoi trois liquides — eau, vin, lait ? Ils ne se conservent que dans les récipients les plus simples (argile), pas dans l'or ou l'argent : la Torah ne se conserve que chez l'humble.",
+   "encadres": []
+  },
+  {
+   "i": 16,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 15,
+   "resume_fr": "La fille de l'empereur à Rabbi Yehochoua ben Hanania, qui était laid : « Tant de sagesse dans un récipient si laid ! » Lui : « Ton père garde-t-il son vin dans des pots d'argile ? Une personne comme toi devrait le mettre dans l'or et l'argent. »",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Yehochoua ben Hanania",
+     "texte": "Tanna de la 2e génération, lévite chanteur au Temple (Arakhin 11b), artisan pauvre — charbonnier ou forgeron (Berakhot 28a) —, interlocuteur régulier de l'empereur et des philosophes romains. C'est lui qui dit « la Torah n'est pas dans le ciel » (Bava Metzia 59b)."
+    }
+   ]
+  },
+  {
+   "i": 17,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "la Guemara",
+   "repond_a": 16,
+   "resume_fr": "Elle le fait ; le vin tourne. L'empereur convoque Rabbi Yehochoua : « Pourquoi lui as-tu dit ça ? » — « Comme elle m'a parlé, je lui ai répondu : ce qui est précieux se garde dans le récipient le plus simple. » L'empereur : « Mais il y a des beaux qui sont savants ! » (suite sur 7b : « s'ils étaient laids, ils seraient encore plus savants »).",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Répondre par une expérience",
+     "texte": "Rabbi Yehochoua ne dit pas « tu as tort » : il fait faire une expérience dont la conclusion s'impose. Même méthode qu'Hillel avec l'alphabet inversé (Chabbat 31a)."
+    }
+   ]
+  }
+ ],
+ "et_alors": {
+  "type": "OUVERTURE",
+  "principe": "On n'apprend pas seul : la Torah est un feu qui ne prend que sur un tas de bois. Et celui qui enseigne apprend le plus — de ses élèves. Condition : l'humilité, parce que l'eau coule vers le bas.",
+  "avis_ecarte": null,
+  "halakha": null
+ },
+ "outils": [
+  "DERACHA",
+  "CHANI"
+ ],
+ "personnages": [
+  "Rabbi Hanina",
+  "Rabbi Yehochoua ben Hanania"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Comment peut-on apprendre plus de ses élèves que de ses maîtres ?",
+   "piste": "Faire raconter une fois où expliquer quelque chose a forcé à le comprendre. Lien avec le coup « Je t'explique » de l'app."
+  },
+  {
+   "amorce": "« Une épée sur ceux qui étudient seuls » — c'est violent, non ?",
+   "piste": "Hyperbole talmudique. Faire chercher ce qui arrive réellement à une idée jamais confrontée : elle ne se corrige pas, elle se durcit."
+  },
+  {
+   "amorce": "Pourquoi tant de comparaisons (fer, feu, bois, eau, vin) au lieu de dire les choses directement ?",
+   "piste": "Chaque image dit une chose que la précédente ne disait pas. Faire trouver, pour chaque image, ce qu'elle ajoute."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Taanit.7b",
+   "pourquoi": "Suite de l'échange avec l'empereur."
+  },
+  {
+   "ref": "Shabbat.31a",
+   "pourquoi": "Hillel enseigne aussi par l'expérience (l'alphabet inversé)."
+  },
+  {
+   "ref": "Pirkei_Avot.1.6",
+   "pourquoi": "« Fais-toi un maître, acquiers-toi un ami »."
+  }
+ ]
+}

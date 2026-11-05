@@ -1,0 +1,103 @@
+{
+ "slug": "berakhot-10a",
+ "ref": "Berakhot.10a",
+ "titre": "Beruria : les péchés, pas les pécheurs",
+ "parcours": ["toi-et-lautre", "lire-comme-un-sage"],
+ "duree_min": 12,
+ "ce_texte": "Talmud de Babylone, traité Berakhot (ordre Zeraïm), au fil d'une discussion sur les Psaumes. En araméen. Rabbi Meïr et sa femme Beruria vivaient en Galilée au IIe siècle, après la révolte de Bar Kokhba ; le père de Beruria, Rabbi Hanania ben Teradion, était lui aussi un sage. Beruria est l'une des rares femmes que le Talmud montre en train de discuter un verset — et de gagner.",
+ "idee_cle": "Lis jusqu'au bout du verset. Beruria change la prière de son mari en lisant un mot de plus près : « que disparaissent les péchés », pas les pécheurs.",
+ "sougya": {
+  "segments": [1, 6],
+  "actes": [
+   {"titre": "Les voyous du quartier", "segments": [1, 3]},
+   {"titre": "Le moqueur et la femme stérile", "segments": [4, 6]}
+  ],
+  "note": "Segment 0 : fin d'une remarque sur les Psaumes 1 et 2, hors sougya. Segments 7-31 : autres échanges avec des hérétiques et lectures des Psaumes, hors sougya. Chapitre 10 du carnet « Ouvrir le Talmud » (Ayeka) : « Et les femmes dans le Talmud ? »."
+ },
+ "cas": {
+  "transpose": "Une bande te pourrit la vie au collège. Un soir, tu finis par souhaiter qu'il leur arrive quelque chose — et tu te trouves une bonne raison, une phrase qui le justifie. Quelqu'un relit ta phrase mot à mot et te dit : ce n'est pas ce qu'elle dit.",
+  "epoque": "Des voyous tourmentent Rabbi Meïr. Il prie pour qu'ils meurent, en s'appuyant sur un verset. Sa femme, Beruria, relit le verset."
+ },
+ "premiere_idee": "Qu'est-ce qu'on a le droit de souhaiter à quelqu'un qui nous fait du mal ? Écris ta réponse — et la phrase sur laquelle tu t'appuies.",
+ "segments": [
+  {"i": 0, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(Tout chapitre cher à David commence et finit par « heureux » : les Psaumes 1 et 2 n'en font qu'un.)", "encadres": []},
+  {"i": 1, "dans_sougya": true, "role": "RECIT", "voix": "la Guemara / Beruria", "repond_a": null,
+   "resume_fr": "Des voyous dans le quartier de Rabbi Meïr le tourmentent. Il prie pour qu'ils meurent. Beruria, sa femme : « À quoi penses-tu ? Parce qu'il est écrit “que disparaissent les péchés” (Psaume 104:35) ? Est-il écrit “les pécheurs” ? Il est écrit “les péchés” ! »",
+   "decoupage_suggere": ["RECIT : les voyous, la prière de Rabbi Meïr", "QUESTION de Beruria : sur quoi t'appuies-tu ?", "OBJECTION : il est écrit « péchés », pas « pécheurs »"],
+   "encadres": [
+    {"type": "PERSONNAGE", "titre": "Beruria", "texte": "Femme de Rabbi Meïr, fille de Rabbi Hanania ben Teradion. Le Talmud la montre discutant des versets avec des sages et des hérétiques, et dit qu'elle apprit trois cents lois de trois cents maîtres en un jour (Pessahim 62b)."},
+    {"type": "PERSONNAGE", "titre": "Rabbi Meïr", "texte": "On le retrouve en Érouvin 13b, si brillant que ses collègues ne pouvaient le suivre. Ici, c'est sa femme qui le corrige — et il l'accepte."},
+    {"type": "OUTIL", "titre": "Diyouk — un mot de plus près", "texte": "Toute la correction tient à un mot : hataïm. Beruria le lit « péchés » plutôt que « pécheurs ». Lire de près, c'est parfois changer ce qu'on va faire."},
+    {"type": "CONTEXTE", "titre": "Et les femmes dans le Talmud ?", "texte": "Le Talmud contient des femmes qui discutent avec autorité, comme Beruria, et des règles qui les écartent de nombreux rôles (l'étude, le tribunal). Les deux sont vrais en même temps ; aujourd'hui, des femmes étudient et enseignent le Talmud."}
+   ]},
+  {"i": 2, "dans_sougya": true, "role": "PREUVE", "voix": "Beruria", "repond_a": 1,
+   "resume_fr": "Et puis, va jusqu'au bout du verset : « et les méchants ne seront plus ». Si les péchés disparaissent parce que les méchants meurent, comment « ne seront-ils plus » méchants ? Prie plutôt pour qu'ils fassent techouva — et les méchants ne seront plus.",
+   "encadres": [{"type": "OUTIL", "titre": "Va jusqu'au bout du verset", "texte": "Deuxième arme de Beruria : la fin de la phrase. Celui qui cite la moitié d'un verset a souvent tort. Elle le refera avec l'hérétique (segment 5)."}]},
+  {"i": 3, "dans_sougya": true, "role": "CONCLUSION", "voix": "la Guemara", "repond_a": 1,
+   "resume_fr": "Rabbi Meïr vit qu'elle avait raison, pria pour eux, et ils firent techouva.",
+   "encadres": [{"type": "MOT", "titre": "Techouva", "texte": "« Retour » : changer de voie. La prière de Rabbi Meïr change d'objet — non plus que les voyous disparaissent, mais qu'ils changent — et le texte dit qu'ils ont changé."}]},
+  {"i": 4, "dans_sougya": true, "role": "QUESTION", "voix": "un hérétique", "repond_a": null,
+   "resume_fr": "Un hérétique à Beruria : il est écrit « Chante, stérile qui n'as pas enfanté… car les enfants de la délaissée sont plus nombreux que ceux de l'épouse » (Isaïe 54:1). Parce qu'elle n'a pas enfanté, elle devrait chanter ?",
+   "encadres": [{"type": "MOT", "titre": "Min — l'hérétique", "texte": "Un contradicteur qui lit les versets pour les tourner en ridicule. Le Talmud rapporte beaucoup de ces joutes ; les sages y répondent par une lecture plus précise."}]},
+  {"i": 5, "dans_sougya": true, "role": "REPONSE", "voix": "Beruria", "repond_a": 4,
+   "resume_fr": "Beruria : « Sot ! Va jusqu'au bout du verset : car les enfants de la délaissée seront plus nombreux que ceux de l'épouse. »",
+   "encadres": [{"type": "CONTEXTE", "titre": "Le ton", "texte": "« Sot ! » — Beruria ne ménage pas le moqueur. C'est une joute, et elle la gagne avec la même méthode qu'avec son mari : la fin du verset."}]},
+  {"i": 6, "dans_sougya": true, "role": "REPONSE", "voix": "Beruria", "repond_a": 5,
+   "resume_fr": "Que signifie alors « chante, stérile » ? Chante, assemblée d'Israël, qui es comme une stérile : tu n'as pas enfanté d'enfants destinés à la Géhenne — comme toi.",
+   "encadres": [{"type": "CONTEXTE", "titre": "Vigilance", "texte": "La chute (« comme toi ») est dure : c'est la réplique à une provocation, dans une joute entre adversaires. À lire comme telle, pas comme un jugement sur quiconque."}]},
+  {"i": 7, "dans_sougya": false, "role": "QUESTION", "voix": "un hérétique", "repond_a": null, "resume_fr": "(À Rabbi Abbahou : pourquoi le Psaume d'Absalom avant celui de Saül ?)", "encadres": []},
+  {"i": 8, "dans_sougya": false, "role": "REPONSE", "voix": "Rabbi Abbahou", "repond_a": 7, "resume_fr": "(Pour vous qui ne lisez pas les voisinages de versets, c'est difficile ; pour nous, non.)", "encadres": []},
+  {"i": 9, "dans_sougya": false, "role": "PREUVE", "voix": "Rabbi Yohanan", "repond_a": 8, "resume_fr": "(D'où sait-on qu'on interprète les voisinages ? Psaume 111:7-8.)", "encadres": []},
+  {"i": 10, "dans_sougya": false, "role": "REPONSE", "voix": "la Guemara", "repond_a": 9, "resume_fr": "(Absalom à côté de Gog et Magog : un fils peut se révolter contre son père, donc…)", "encadres": []},
+  {"i": 11, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite : lectures des Psaumes)", "encadres": []},
+  {"i": 12, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 13, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 14, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 15, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 16, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 17, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite : David et la chute des méchants, Psaume 104:35)", "encadres": []},
+  {"i": 18, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 19, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 20, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 21, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 22, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 23, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 24, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 25, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 26, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 27, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 28, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 29, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 30, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []},
+  {"i": 31, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara", "repond_a": null, "resume_fr": "(suite)", "encadres": []}
+ ],
+ "et_alors": {
+  "type": "RECIT",
+  "principe": "Beruria gagne deux fois avec la même méthode : lire un mot de près, et aller jusqu'au bout du verset. Et elle change quelque chose de réel — la prière de son mari, qui cesse de souhaiter la mort de ses ennemis et demande qu'ils changent ; le texte dit qu'ils ont changé. Le Talmud montre ici une femme qui discute avec autorité ; ailleurs, des règles qui écartent les femmes de nombreux rôles. Les deux sont vrais en même temps.",
+  "avis_ecarte": "Rabbi Meïr : prier pour que les voyous meurent — il y renonce lui-même après avoir entendu Beruria.",
+  "halakha": null
+ },
+ "plus_tard": [
+  {"qui": "Remarque de lecture", "quand": "carnet « Ouvrir le Talmud » (Ayeka), 2026", "texte": "dans le Psaume, la forme hataïm désigne plutôt des personnes, comme ganavim, « des voleurs ». Beruria la lit comme si elle signifiait « péchés » : c'est un drash, une lecture qui s'écarte du sens simple (pchat) — et c'est ce qui lui permet de changer la prière."},
+  {"qui": "Rachi", "quand": "Troyes, 1040-1105", "texte": "rapporte, sur une autre page (Avoda Zara 18b), une tradition sur la fin de Beruria, absente du Talmud lui-même et absente de cette app. À aborder avec un adulte."},
+  {"qui": "Mishna Sota 3:4 et Kiddouchin 1:7", "quand": "vers 200", "texte": "les sages sont en désaccord sur l'enseignement de la Torah aux filles, et dispensent les femmes de nombreuses mitsvot liées à un moment précis. C'est l'autre face du Talmud, à lire à côté de Beruria."}
+ ],
+ "a_toi": [
+  {"apres_segment": 3, "question": "Beruria a gagné en lisant un mot de plus près. Prends une phrase qu'on cite souvent pour avoir raison — un proverbe, une règle de ta famille, un slogan — et relis-la mot à mot : dit-elle vraiment ce qu'on lui fait dire ?"},
+  {"apres_segment": 6, "question": "Deux fois, Beruria répond « va jusqu'au bout du verset ». Pourquoi est-ce si efficace contre quelqu'un qui se moque ? Et contre quelqu'un qui est sincère, comme Rabbi Meïr ?"}
+ ],
+ "outils": ["DIYOUK", "FIN_DU_VERSET"],
+ "personnages": ["Beruria", "Rabbi Meïr"],
+ "questions_hevrouta": [
+  {"amorce": "Est-ce que Rabbi Meïr avait vraiment tort de vouloir que les voyous disparaissent ?", "piste": "Faire reformuler Rabbi Meïr avant de juger : il souffre, et il a un verset. Puis demander ce que Beruria change — pas le souhait d'être tranquille, mais sa cible. Lien avec la première idée de l'ado."},
+  {"amorce": "Pourquoi le Talmud fait-il gagner une femme, si ailleurs il écarte les femmes de l'étude ?", "piste": "Ne pas lisser : les deux sont dans le texte. Faire lire l'encadré « Et les femmes dans le Talmud ? ». Demander ce que ça dit d'un texte qui garde ce qui le contredit."},
+  {"amorce": "« Sot ! » — elle n'y va pas un peu fort ?", "piste": "Distinguer la joute avec un provocateur (segments 4-6) et la correction d'un proche (1-3) : même méthode, ton différent. Qu'est-ce qui justifie le ton ?"}
+ ],
+ "liens": [
+  {"ref": "Pesachim.62b", "pourquoi": "Beruria et les trois cents lois en un jour."},
+  {"ref": "Berakhot.51b", "pourquoi": "Yalta, l'autre femme qui conteste un sage — en brisant quatre cents jarres."},
+  {"ref": "Eruvin.13b", "pourquoi": "Rabbi Meïr, trop brillant pour être suivi."},
+  {"ref": "Chullin.90b", "pourquoi": "Lire de près, l'autre version : reconnaître une exagération."}
+ ],
+ "vigilance": "Segment 6 : la chute « comme toi » est dure, à présenter comme une joute. La tradition rapportée par Rachi (Avoda Zara 18b) sur la fin de Beruria n'est pas dans l'app : si un ado la découvre ailleurs, il faut un adulte pour en parler. L'encadré « Et les femmes dans le Talmud ? » ne lisse pas la contradiction ; prévoir la discussion."
+}

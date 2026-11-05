@@ -1,0 +1,332 @@
+{
+ "slug": "taanit-23a",
+ "ref": "Taanit.23a",
+ "titre": "Honi le traceur de cercle",
+ "parcours": [
+  "le-temps-long"
+ ],
+ "duree_min": 20,
+ "ce_texte": "Talmud de Babylone, traité Taanit (ordre Moëd, les jeûnes et la pluie). Une baraïta en hébreu, puis un récit en araméen rapporté par Rabbi Yohanan (Tibériade, IIIe siècle). Honi et Chimon ben Chetah vivaient à Jérusalem au Ier siècle avant notre ère.",
+ "idee_cle": "On plante pour ceux qu'on ne verra pas. Et personne ne peut vivre sans compagnons : ou la hevrouta, ou la mort.",
+ "sougya": {
+  "segments": [
+   3,
+   16
+  ],
+  "actes": [
+   {
+    "titre": "Honi, le cercle et la pluie",
+    "segments": [
+     3,
+     9
+    ]
+   },
+   {
+    "titre": "Ce que le Sanhédrin lui écrit",
+    "segments": [
+     10,
+     12
+    ]
+   },
+   {
+    "titre": "Honi, le caroubier et les 70 ans",
+    "segments": [
+     13,
+     16
+    ]
+   }
+  ],
+  "note": "Segments 0-2 : fin de la discussion sur les pluies « en leur temps », hors sougya. Segment 17 : début de l'histoire d'Abba Hilkiya, le petit-fils, hors sougya (mais à ajouter au corpus : 23a-b est une merveille). Deux actes très différents : le premier est une mahloket sur la prière (audace ou insolence ?), le second un conte sur la transmission."
+ },
+ "cas": {
+  "transpose": "Un vieux monsieur plante un arbre qui ne donnera des fruits que dans 70 ans. Tu lui demandes : à quoi bon ? Et toi, qu'est-ce que tu fais aujourd'hui dont tu ne verras jamais le résultat ?",
+  "epoque": "Honi voit un homme planter un caroubier. « Dans combien de temps donnera-t-il ? » — « Soixante-dix ans. » — « Tu es sûr de vivre 70 ans ? »"
+ },
+ "premiere_idee": "Pour qui plantes-tu tes caroubiers ? (Une chose que tu fais pour quelqu'un que tu ne connaîtras peut-être jamais.)",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": null,
+   "resume_fr": "(« en leur temps » = les nuits de mardi et de vendredi, quand personne n'est dehors)",
+   "encadres": []
+  },
+  {
+   "i": 1,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Du temps de Chimon ben Chetah, il pleuvait exactement ces nuits-là ; les grains de blé étaient gros comme des rognons.",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Du temps d'Hérode, pendant la construction du Temple, il pleuvait la nuit et le soleil revenait le matin.",
+   "encadres": []
+  },
+  {
+   "i": 3,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": null,
+   "resume_fr": "Fin du mois d'Adar, toujours pas de pluie. On envoie dire à Honi : « Prie, et il pleuvra. » Il prie — rien. Il trace un cercle dans la poussière et se met dedans, comme le prophète Habacuc.",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Honi HaMe'aguel",
+     "texte": "« Honi le traceur de cercle », sage de l'époque du Second Temple (Ier s. av. l'ère commune), contemporain de Chimon ben Chetah. Le Talmud le montre à la fois comme un homme dont la prière est exaucée et comme un maître dont les explications éclairaient la maison d'étude (segment 16) ; ses élèves l'appellent « Rabbi ». Son nom vient de cette histoire, selon l'explication la plus courante."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Adar",
+     "texte": "Fin de la saison des pluies en Israël. Pas de pluie en Adar = récolte perdue, famine."
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "Honi",
+   "repond_a": 3,
+   "resume_fr": "« Maître du monde, tes enfants se sont tournés vers moi comme vers un membre de ta maison. Je jure par ton grand nom que je ne bouge pas d'ici tant que tu n'auras pas pitié d'eux. » Il tombe quelques gouttes. Ses élèves : « Rabbi, ça, c'est juste pour te libérer de ton serment, pas pour nous sauver. »",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Comment parle Honi ?",
+     "texte": "Il ne supplie pas : il exige, et il engage sa parole par un serment. Noter le ton pour la suite (Chimon ben Chetah en jugera)."
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "Honi",
+   "repond_a": 4,
+   "resume_fr": "« Ce n'est pas ça que j'ai demandé, mais de quoi remplir les citernes. » Déluge : des gouttes grosses comme l'ouverture d'un tonneau. Les élèves : « Maintenant on dirait que la pluie vient détruire le monde. »",
+   "encadres": []
+  },
+  {
+   "i": 6,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "Honi",
+   "repond_a": 5,
+   "resume_fr": "« Pas ça non plus : une pluie de bienveillance, de bénédiction, de générosité. » La pluie devient normale… mais ne s'arrête plus ; tout le monde monte au Mont du Temple. « Prie pour qu'elle cesse ! » — « J'ai reçu par tradition qu'on ne prie pas contre un excès de bien. »",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "Honi",
+   "repond_a": 6,
+   "resume_fr": "« Apportez-moi quand même un taureau. » Il pose ses mains dessus : « Maître du monde, ton peuple ne supporte ni trop de bien ni trop de punition. Que la pluie cesse et que le monde respire. » Le vent souffle, le soleil revient, les gens ramassent des champignons.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Ni trop, ni trop peu",
+     "texte": "Trois pluies ratées (trop peu, trop fort, trop long) avant la bonne. L'histoire est aussi une leçon sur ce qu'on demande, et comment."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "OBJECTION",
+   "voix": "Chimon ben Chetah",
+   "repond_a": 4,
+   "resume_fr": "Chimon ben Chetah lui fait dire : « Si tu n'étais pas Honi, je t'aurais excommunié. Si ces années avaient été comme celles d'Élie, qui avait juré qu'il ne pleuvrait pas, ton serment aurait obligé Dieu à en rendre un faux. »",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Chimon ben Chetah",
+     "texte": "L'une des « paires » (zougot) de maîtres, avec Yehouda ben Tabbaï (Avot 1:8) ; selon le Talmud (Berakhot 48a), frère de la reine Chlomtsion (Salomé Alexandra). Le Talmud de Jérusalem lui attribue la création d'écoles pour les enfants (le Bavli, Bava Batra 21a, l'attribue à Yehochoua ben Gamla). L'autorité face à l'audace de Honi."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Une voix de la Mishna",
+     "texte": "Cette critique n'est pas une glose tardive : elle figure déjà dans la Mishna (Taanit 3:8). Elle a donc le même statut canonique que le récit lui-même."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "Chimon ben Chetah (suite)",
+   "repond_a": 8,
+   "resume_fr": "« Mais que puis-je contre toi ? Tu harcèles Dieu et il cède, comme un enfant qui harcèle son père — « lave-moi à l'eau chaude, donne-moi des noix, des pêches » — et le père donne. Sur toi le verset dit : « ton père et ta mère se réjouiront ». »",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Une objection qui reste",
+     "texte": "Chimon ben Chetah ne retire pas sa critique ; il constate qu'elle ne s'applique pas à Honi. Les deux restent vrais : on ne parle pas ainsi à Dieu — et Honi le peut. Mahloket conservée."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": 8,
+   "resume_fr": "Le grand Sanhédrin (la Chambre de pierre taillée) lui envoie un verset de Job 22:28-30 : « Tu décréteras et cela sera… la lumière brillera sur tes chemins… »",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Deux voix institutionnelles",
+     "texte": "Chimon ben Chetah, à titre personnel, menace d'excommunier Honi ; le Sanhédrin, l'institution suprême, lui envoie un éloge. Le texte met les deux côte à côte sans les réconcilier."
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 10,
+   "resume_fr": "« Tu décréteras » : toi en bas, et Dieu accomplit en haut. « La lumière brillera » : une génération dans l'obscurité, tu l'as éclairée par ta prière.",
+   "encadres": []
+  },
+  {
+   "i": 12,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 10,
+   "resume_fr": "« Quand ils sont abaissés, tu diras : relèvement » : une génération abaissée, tu l'as relevée… « il délivrera même le non-innocent » : une génération qui ne le méritait pas, tu l'as sauvée par la pureté de tes mains.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Deracha mot à mot",
+     "texte": "Le Sanhédrin lit le verset expression par expression et fait correspondre chacune à un acte de Honi. Méthode de lecture typique : le verset devient un portrait."
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "dans_sougya": true,
+   "role": "QUESTION",
+   "voix": "Rabbi Yohanan",
+   "repond_a": null,
+   "resume_fr": "Toute sa vie, Honi fut tourmenté par un verset : « Quand l'Éternel ramena les captifs de Sion, nous étions comme des rêveurs » (Psaume 126:1). Peut-on vraiment dormir et rêver 70 ans, la durée de l'exil ?",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Une question qui dure une vie",
+     "texte": "Le conte commence par une kouchia que Honi porte toute sa vie. Le reste de l'histoire est la réponse — vécue, pas argumentée."
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 13,
+   "resume_fr": "En chemin, il voit un homme planter un caroubier. « Dans combien d'années donnera-t-il ? » — « Soixante-dix. » — « Tu es sûr de vivre 70 ans ? » — « J'ai trouvé un monde plein de caroubiers : comme mes ancêtres ont planté pour moi, je plante pour mes descendants. »",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Caroubier",
+     "texte": "Arbre méditerranéen à croissance lente, fruits sucrés (la caroube). Le « 70 ans » est symbolique : une vie humaine, la durée de l'exil de Babylone."
+    }
+   ]
+  },
+  {
+   "i": 15,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 14,
+   "resume_fr": "Honi mange, s'endort ; un rocher l'enveloppe, il dort 70 ans. À son réveil, un homme cueille les caroubes. « C'est toi qui l'as planté ? » — « Je suis le fils de son fils. » Honi comprend ; son ânesse a eu des troupeaux de petits.",
+   "encadres": []
+  },
+  {
+   "i": 16,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "la Guemara / Rava",
+   "repond_a": 13,
+   "resume_fr": "Chez lui : « Le fils de Honi est-il vivant ? » — « Non, mais son petit-fils, oui. » — « Je suis Honi. » On ne le croit pas. À la maison d'étude, on dit « c'est clair comme au temps de Honi » — « Je suis Honi. » On ne le croit pas, on ne l'honore pas. Il en est très affecté, prie, et meurt. Rava : d'où le proverbe « ou la compagnie, ou la mort ».",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "O hevrouta o mitouta",
+     "texte": "« Ou la hevrouta, ou la mort. » Le mot hevrouta désigne ici la compagnie, les amis — et c'est le même mot que le binôme d'étude. Le texte insiste : on ne le croit pas et on ne l'honore pas, chez lui comme à la maison d'étude. Ce n'est pas seulement l'absence d'un partenaire d'étude, c'est d'être devenu un inconnu pour tous. Rava en tire un proverbe sur le besoin de compagnie, pas une conduite."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Vigilance",
+     "texte": "Le texte dit « il pria et mourut » (c'est Rachi qui précise : pour mourir). Pour un ado, présenter la fin comme un conte sur la solitude et la transmission, pas comme un éloge de la mort. Prévoir dans l'app un renvoi vers un adulte ou une ressource d'aide sur ce segment, et une hevrouta qui sait en parler. (Le Talmud de Jérusalem, Taanit 3:9, raconte une version où le dormeur est le grand-père de Honi, et l'issue est différente.)"
+    }
+   ]
+  },
+  {
+   "i": 17,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": null,
+   "resume_fr": "(début de l'histoire d'Abba Hilkiya, petit-fils de Honi, faiseur de pluie discret — suite sur 23b)",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "RECIT",
+  "principe": "Deux histoires, deux leçons qui se répondent. La pluie : on peut parler à Dieu comme un enfant à son père — Chimon ben Chetah s'en inquiète, le Sanhédrin en fait l'éloge, et les deux voix restent. Le caroubier : on plante pour ceux qu'on ne verra pas ; et personne ne peut vivre sans compagnons — « o hevrouta o mitouta ».",
+  "avis_ecarte": "Chimon ben Chetah (« je t'aurais excommunié ») : sa critique n'est pas annulée, seulement suspendue pour Honi.",
+  "halakha": null
+ },
+ "outils": [
+  "DERACHA",
+  "MAHLOKET"
+ ],
+ "personnages": [
+  "Honi HaMe'aguel",
+  "Chimon ben Chetah"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Honi, c'est du courage ou de l'insolence ?",
+   "piste": "Arène : camp Honi / camp Chimon ben Chetah. Faire reformuler l'autre avant d'argumenter. Noter que le texte garde les deux."
+  },
+  {
+   "amorce": "Pourquoi Honi n'est-il pas heureux de se réveiller et de voir que le monde a continué ?",
+   "piste": "Il a eu la réponse à sa question (oui, on peut dormir 70 ans) — mais la réponse l'a coupé de tout le monde. Une réponse peut coûter cher."
+  },
+  {
+   "amorce": "Qu'est-ce que tu plantes, toi, pour dans 70 ans ?",
+   "piste": "Pas de réponse attendue ; aider à nommer une chose concrète. Lien avec « Ma page »."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Taanit.23b",
+   "pourquoi": "Abba Hilkiya, le petit-fils qui fait pleuvoir sans le dire."
+  },
+  {
+   "ref": "Taanit.7a",
+   "pourquoi": "On n'apprend pas seul : le feu ne prend pas sur une bûche seule."
+  },
+  {
+   "ref": "Jerusalem_Talmud_Taanit.3.9",
+   "pourquoi": "L'autre version du dormeur de 70 ans (à vérifier)."
+  },
+  {
+   "ref": "Mishnah_Taanit.3.8",
+   "pourquoi": "La Mishna d'origine sur Honi."
+  }
+ ],
+ "vigilance": "Fin du segment 16 (Honi prie et meurt) : à accompagner, ne pas laisser sans dialogue ; prévoir un renvoi vers un adulte ou une ressource d'aide. À valider par l'équipe pédagogique."
+}

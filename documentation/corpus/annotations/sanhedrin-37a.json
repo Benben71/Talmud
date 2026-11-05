@@ -1,0 +1,300 @@
+{
+ "slug": "sanhedrin-37a",
+ "ref": "Sanhedrin.37a",
+ "titre": "Qui sauve une vie sauve un monde entier",
+ "parcours": [
+  "toi-et-lautre"
+ ],
+ "duree_min": 15,
+ "ce_texte": "Mishna, traité Sanhédrin (ordre Nezikin, les tribunaux), chapitre 4, en hébreu, vers 200 : ce que le tribunal dit aux témoins avant un procès où l'accusé risque la mort. Le Talmud de Babylone la cite au feuillet 37a et la commente.",
+ "idee_cle": "Adam fut créé seul pour t'apprendre que chaque vie est un monde entier — et que personne ne peut dire « mon ancêtre vaut plus que le tien ».",
+ "sougya": {
+  "segments": [
+   9,
+   14
+  ],
+  "actes": [
+   {
+    "titre": "Ce qu'on dit aux témoins avant qu'ils parlent",
+    "segments": [
+     9,
+     11
+    ]
+   },
+   {
+    "titre": "Pourquoi un seul humain au départ",
+    "segments": [
+     12,
+     14
+    ]
+   }
+  ],
+  "note": "Segments 0-8 : la disposition du Sanhédrin en demi-cercle, et deux histoires sur le respect des gens « vides » (Rav Kahana — segment 5, sujet intime, à ne pas afficher sans encadrement ; Rabbi Zeira et les voyous — segment 7, très bon pour le parcours « Toi et l'autre », à garder comme bonus). Segment 15 : début de la fin de la Mishna, qui continue sur 37b (téléchargé : corpus/sanhedrin-37b.json, segment 0) avec le CONTREPOIDS indispensable : « et peut-être direz-vous : pourquoi nous mêler de ce malheur ? — mais il est écrit : s'il ne témoigne pas, il portera sa faute (Lévitique 5:1) ». Sans cette fin, l'ado mis dans la peau du témoin peut retenir qu'il vaut mieux se taire. À fusionner comme acte 3 lors du découpage définitif. Toute la sougya est une Mishna : pas de débat ici, mais un discours structuré avec ses preuves."
+ },
+ "cas": {
+  "transpose": "Tu es témoin dans une affaire grave. Avant que tu parles, le juge te dit : « Si tu te trompes, ce n'est pas une personne que tu condamnes, c'est un monde entier. » Qu'est-ce que ça veut dire, et pourquoi te le dire à toi ?",
+  "epoque": "Dans un procès capital, le tribunal fait entrer les témoins et leur fait peur : peut-être parlez-vous par ouï-dire ? Savez-vous ce que pèse une vie ?"
+ },
+ "premiere_idee": "Pourquoi, d'après toi, l'humanité commence-t-elle par une seule personne dans le récit de la Genèse ? Propose une raison.",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": null,
+   "resume_fr": "Trois rangées d'élèves devant les juges, chacun à sa place ; quand on nomme un juge, tout le monde avance d'un rang.",
+   "encadres": []
+  },
+  {
+   "i": 1,
+   "dans_sougya": false,
+   "role": "QUESTION",
+   "voix": "la Guemara / Rabbi Aha bar Hanina",
+   "repond_a": 0,
+   "resume_fr": "D'où vient le demi-cercle du Sanhédrin ? Du Cantique des cantiques 7:3 : « ton nombril est une coupe ronde… »",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 1,
+   "resume_fr": "« Nombril » : le Sanhédrin siège au nombril du monde, le Temple. « Coupe » : il protège le monde. « Ronde » : comme la lune — en demi-cercle.",
+   "encadres": []
+  },
+  {
+   "i": 3,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 1,
+   "resume_fr": "« Que le vin mélangé ne manque pas » : un juge peut sortir s'il reste 23 membres (un tiers, comme le vin dans l'eau).",
+   "encadres": []
+  },
+  {
+   "i": 4,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 1,
+   "resume_fr": "« Tas de blé » : tous en profitent. « Entouré de lis » : Israël ne franchit même pas une barrière de lis.",
+   "encadres": []
+  },
+  {
+   "i": 5,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "Rav Kahana",
+   "repond_a": 4,
+   "resume_fr": "Un hérétique à Rav Kahana : comment faire confiance à un couple seul ? — « La Torah témoigne que nous sommes entourés de lis. »",
+   "encadres": []
+  },
+  {
+   "i": 6,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rech Lakich / Rabbi Zeira",
+   "repond_a": 5,
+   "resume_fr": "Même les « vides » d'Israël sont pleins de mitsvot comme une grenade de grains ; même les « traîtres » ont le parfum d'un champ béni.",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": false,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 6,
+   "resume_fr": "Des voyous vivaient près de Rabbi Zeira ; il les fréquentait pour les ramener, et les sages désapprouvaient. À sa mort, les voyous dirent : « Qui priera pour nous maintenant ? » — et se repentirent.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Bonus",
+     "texte": "Hors sougya, mais une histoire à garder pour le parcours « Toi et l'autre » : les sages désapprouvaient, et le texte montre — sans le dire — qu'ils avaient tort : les voyous se repentent."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Abayé",
+   "repond_a": 0,
+   "resume_fr": "Celui qui passe de la tête du 2e rang à la queue du 1er pourrait protester. Réponse : « Sois une queue de lions, pas une tête de renards » (Avot 4:15).",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Queue de lions",
+     "texte": "Mieux vaut être le dernier parmi les grands que le premier parmi les petits. Proverbe à débloquer."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": null,
+   "resume_fr": "Comment intimide-t-on les témoins dans un procès capital ? On leur dit : peut-être parlez-vous par supposition, par rumeur, par ouï-dire, sur la foi de quelqu'un de confiance ? Savez-vous qu'on va vous interroger à fond et que le mensonge se verra ?",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Dinei nefachot — procès capitaux",
+     "texte": "Les affaires où l'accusé risque la mort. Le Talmud y multiplie les garde-fous (23 juges, deux témoins directs, avertissement préalable…). La Mishna Makkot 1:10 (7a) en débat : un Sanhédrin qui exécute une fois en sept ans est « destructeur » ; Rabbi Élazar ben Azaria dit : une fois en soixante-dix ans ; Rabbi Tarfon et Rabbi Akiva : avec nous, personne n'aurait jamais été exécuté ; Rabban Chimon ben Gamliel : vous multiplieriez les meurtriers. Quatre voix, conservées."
+    },
+    {
+     "type": "OUTIL",
+     "titre": "Pourquoi faire peur aux témoins ?",
+     "texte": "La Mishna ne demande pas « dites la vérité ». Elle énumère les façons de croire sincèrement qu'on sait, alors qu'on ne sait pas. Bonne liste pour un ado : supposition, rumeur, « on m'a dit », « quelqu'un de fiable m'a dit »."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": 9,
+   "resume_fr": "Sachez qu'un procès capital n'est pas un procès d'argent. Pour l'argent, un faux témoin peut rembourser et c'est pardonné. Pour une vie, le sang de l'accusé et de tous les descendants qu'il n'aura pas pèsent sur le témoin pour toujours.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Comparer deux cas par un seul critère",
+     "texte": "« Ce n'est pas comme… » : la Mishna oppose argent et vie par un critère unique : peut-on réparer ? (Ce n'est pas le chani dialectique de la Guemara, juste une comparaison — mais la méthode est la même : trouver le critère qui fait la différence.)"
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "la Mishna",
+   "repond_a": 10,
+   "resume_fr": "Preuve par Caïn : « la voix des sangs de ton frère crie » (Genèse 4:10) — « sangs » au pluriel, pas « sang » : son sang et celui de ses descendants. Autre lecture : son sang éclaboussé sur les arbres et les pierres.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Diyouk sur un pluriel",
+     "texte": "Toute la preuve tient à une lettre : demei (sangs) au lieu de dam (sang). Et la Mishna donne aussitôt une deuxième lecture : elle ne cache pas que le pluriel peut dire autre chose."
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Mishna",
+   "repond_a": 10,
+   "resume_fr": "C'est pourquoi Adam fut créé seul : pour t'apprendre que qui détruit une seule vie, c'est comme s'il détruisait un monde entier ; et qui fait vivre une seule vie, comme s'il faisait vivre un monde entier.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "« Une vie » ou « une vie d'Israël » ?",
+     "texte": "Le Talmud de Babylone imprimé (dont le texte Steinsaltz ici) lit « une vie d'Israël » ; le Talmud de Jérusalem (Sanhédrin 4:9) et plusieurs manuscrits anciens de la Mishna lisent « une vie ». C'est cette seconde version qui est inscrite sur la médaille des Justes parmi les Nations de Yad Vashem. Un ado mérite de savoir qu'un texte a une histoire — à vérifier avec un enseignant. Dans les deux cas, l'argument (« Adam fut créé seul ») vaut pour toute l'humanité."
+    },
+    {
+     "type": "OUTIL",
+     "titre": "Un argument par la création",
+     "texte": "La Mishna ne cite pas un verset : elle raisonne sur la façon dont le monde a été créé. Si tout le monde descend d'un seul, chacun est un monde en puissance."
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Mishna",
+   "repond_a": 12,
+   "resume_fr": "Deuxième raison : pour la paix entre les gens, que personne ne dise « mon ancêtre est plus grand que le tien ». Troisième : pour que les hérétiques ne disent pas « il y a plusieurs puissances au ciel, chacune a créé un humain ».",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "« Mon père est plus grand que le tien »",
+     "texte": "La Mishna anticipe le racisme et la noblesse de sang en une phrase. Tout le monde a le même ancêtre : personne n'est né supérieur."
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "la Mishna",
+   "repond_a": 12,
+   "resume_fr": "Et pour dire la grandeur de Dieu : un humain qui frappe des pièces avec un seul moule les fait toutes pareilles ; Dieu a frappé tous les humains avec le moule d'Adam, et aucun ne ressemble à un autre. Donc chacun doit se dire : « le monde a été créé pour moi ».",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Le moule (hotam)",
+     "texte": "Le sceau qui frappe les pièces. Image d'atelier monétaire, concrète pour l'époque : même moule, pièces identiques — sauf chez Dieu."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "« Le monde a été créé pour moi »",
+     "texte": "Ce n'est pas de l'orgueil : c'est de la responsabilité. Si le monde a été créé pour toi, ce que tu fais compte pour le monde. Le témoin qui va parler doit se le dire — et l'ado aussi."
+    }
+   ]
+  },
+  {
+   "i": 15,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": 9,
+   "resume_fr": "« Et peut-être direz-vous… » — la Mishna continue sur 37b : « pourquoi nous mêler de ce malheur ? Mais il est écrit : s'il ne témoigne pas, il portera sa faute (Lévitique 5:1). Et peut-être direz-vous : pourquoi porter la responsabilité du sang de cet homme ? Mais il est écrit : quand les méchants périssent, c'est un chant (Proverbes 11:10). »",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Le contrepoids : et pourtant, il faut parler",
+     "texte": "Après avoir fait peur aux témoins, la Mishna (37b) referme la porte de la fuite : ne pas témoigner quand on sait est aussi une faute. Le poids d'une parole ne dispense pas de parler — il oblige à parler juste. Texte dans corpus/sanhedrin-37b.json, segment 0."
+    }
+   ]
+  }
+ ],
+ "et_alors": {
+  "type": "OUVERTURE",
+  "principe": "Chaque personne est un monde entier — parce que tout le monde descend d'un seul, parce que personne n'est né supérieur, et parce que chacun est unique malgré le même moule. On le dit aux témoins avant qu'ils parlent : la parole peut détruire ou sauver un monde. Et pourtant (37b), se taire quand on sait est aussi une faute : il faut parler, et parler juste.",
+  "avis_ecarte": null,
+  "halakha": "Dans un procès capital, les témoins sont solennellement avertis avant de témoigner — et celui qui sait doit témoigner (Lévitique 5:1)."
+ },
+ "outils": [
+  "LECTURE_PLURIEL"
+ ],
+ "personnages": [],
+ "questions_hevrouta": [
+  {
+   "amorce": "Pourquoi dire tout ça aux témoins plutôt qu'aux juges ?",
+   "piste": "Les juges ne décident que sur ce que disent les témoins. Celui qui parle en premier porte le plus. Lien avec la parole en général : rumeur, réseaux sociaux."
+  },
+  {
+   "amorce": "« Le monde a été créé pour moi » — c'est pas un peu égocentrique ?",
+   "piste": "Faire relire : la phrase vient après « aucun ne ressemble à un autre ». Elle vaut pour chacun, donc elle oblige. Comparer avec « je suis unique » comme droit / comme devoir."
+  },
+  {
+   "amorce": "Une vie d'Israël ou une vie tout court ?",
+   "piste": "Présenter l'existence des deux versions sans trancher ; demander ce que change chaque version au raisonnement (« Adam fut créé seul » vaut pour toute l'humanité). Renvoyer à un enseignant pour l'histoire du texte."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Sanhedrin.37b",
+   "pourquoi": "La fin de la Mishna : il faut témoigner quand même (corpus/sanhedrin-37b.json)."
+  },
+  {
+   "ref": "Bava_Metzia.62a",
+   "pourquoi": "Deux voyageurs, une gourde : l'autre face de « une vie = un monde »."
+  },
+  {
+   "ref": "Makkot.7a",
+   "pourquoi": "Quatre voix sur la peine de mort (une fois en 7 ans / 70 ans / jamais / « vous multiplieriez les meurtriers ») et un teikou de la Guemara — candidat pour la sougya « teikou » (corpus/makkot-7a.json, segments 2 et 8)."
+  },
+  {
+   "ref": "Mishnah_Sanhedrin.4.5",
+   "pourquoi": "La Mishna d'origine (le texte Sefaria lit « une vie d'Israël »)."
+  },
+  {
+   "ref": "Jerusalem_Talmud_Sanhedrin.4.9",
+   "pourquoi": "Le Talmud de Jérusalem lit « une vie », sans « d'Israël »."
+  }
+ ]
+}

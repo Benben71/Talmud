@@ -1,0 +1,287 @@
+{
+ "slug": "berakhot-2a",
+ "ref": "Berakhot.2a",
+ "titre": "À partir de quand c'est « le soir » ?",
+ "parcours": [
+  "avoir-raison"
+ ],
+ "duree_min": 15,
+ "ce_texte": "Talmud de Babylone, traité Berakhot (« bénédictions », ordre Zeraïm), tout début du chapitre 1, « À partir de quand ». C'est la première page de tout le Talmud. Mishna en hébreu (vers 200) : Rabbi Eliézer, les Sages et Rabban Gamliel vivaient à Yavné vers l'an 100. Guemara en araméen, anonyme : les rédacteurs des écoles de Babylonie, Ve-VIe siècle.",
+ "idee_cle": "Le Talmud commence par une question sur une question : avant de répondre, il demande d'où vient ce qu'on croit savoir — et il garde trois avis sur une même heure.",
+ "sougya": {
+  "segments": [
+   0,
+   12
+  ],
+  "actes": [
+   {
+    "titre": "La Mishna : trois avis sur une heure limite",
+    "segments": [
+     0,
+     4
+    ]
+   },
+   {
+    "titre": "La Guemara : pourquoi commencer par là ?",
+    "segments": [
+     5,
+     10
+    ]
+   },
+   {
+    "titre": "La Guemara : pourquoi parler des prêtres ?",
+    "segments": [
+     11,
+     12
+    ]
+   }
+  ],
+  "note": "Segment 0 contient une introduction éditoriale de Steinsaltz avant « MISHNA » ; l'afficher comme encadré CONTEXTE, pas comme texte. Segment 13 entame une discussion technique du verset qui continue sur 2b : hors sougya."
+ },
+ "cas": {
+  "transpose": "Une règle dit : « À faire le soir, quand tu te couches. » Ton frère : « donc avant 22 h. » Ta mère : « avant minuit. » Ton grand-père : « tant qu'il fait nuit, c'est bon. » Qui a raison ? Et pourquoi la règle n'a-t-elle pas donné d'heure ?",
+  "epoque": "La Torah dit de réciter le Chema « quand tu te couches ». Mais ça commence quand, et ça finit quand ?"
+ },
+ "premiere_idee": "Avant de lire : d'après toi, « quand tu te couches », ça veut dire quelle heure ? Et comment tu le justifies ?",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": true,
+   "role": "MISHNA",
+   "voix": "la Mishna — Rabbi Eliézer",
+   "repond_a": null,
+   "resume_fr": "À partir de quand récite-t-on le Chema le soir ? Dès que les prêtres rentrent manger leur terouma. Jusqu'à quand ? Jusqu'à la fin de la première veille — avis de Rabbi Eliézer.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Le tout premier mot du Talmud",
+     "texte": "Le Talmud entier commence par « À partir de quand ? » — une question, pas une affirmation. Et il commence par le Chema parce que c'est l'acceptation du « joug du Ciel », la base de tout le reste (intro de Steinsaltz)."
+    },
+    {
+     "type": "MOT",
+     "titre": "Terouma",
+     "texte": "Part des récoltes réservée aux prêtres (cohanim). Un prêtre devenu impur ne peut en manger qu'après s'être purifié et après le coucher du soleil — d'où le repère horaire."
+    },
+    {
+     "type": "MOT",
+     "titre": "Veille (achmoura)",
+     "texte": "La nuit était divisée en veilles — trois selon Rabbi, quatre selon Rabbi Natan (la Guemara en discute en 3a et conclut que Rabbi Eliézer en compte trois). La fin de la première = environ un tiers de la nuit."
+    },
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Eliézer (ben Hyrcanus)",
+     "texte": "Tanna de la 2e génération, élève de Rabban Yohanan ben Zakkaï, mémoire prodigieuse (« une citerne qui ne perd pas une goutte », Avot 2:8). Souvent en minorité. On le retrouve dans le four d'Akhnaï (Bava Metzia 59b)."
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "dans_sougya": true,
+   "role": "MISHNA",
+   "voix": "la Mishna — les Sages",
+   "repond_a": 0,
+   "resume_fr": "Les Sages disent : jusqu'à minuit.",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": true,
+   "role": "MISHNA",
+   "voix": "la Mishna — Rabban Gamliel",
+   "repond_a": 0,
+   "resume_fr": "Rabban Gamliel dit : jusqu'à l'aube — « quand tu te couches » désigne tout le temps où les gens dorment.",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabban Gamliel (de Yavné)",
+     "texte": "Nassi (chef) du Sanhédrin après la destruction du Temple. Autorité forte — il sera même destitué un temps par ses collègues (Berakhot 27b-28a) — et c'est lui qui fera excommunier Rabbi Eliézer, son propre beau-frère (Bava Metzia 59b)."
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Mishna — Rabban Gamliel",
+   "repond_a": 2,
+   "resume_fr": "Ses fils rentrent tard d'un mariage : « on n'a pas récité le Chema ». Il répond : si l'aube n'est pas levée, vous devez le réciter. La Mishna ajoute : partout où les Sages disent « jusqu'à minuit », le commandement vaut jusqu'à l'aube. (Que les Sages « sont en fait d'accord avec lui » est la lecture de la Guemara en 4b, que Steinsaltz interpole ici — elle transforme trois avis en deux.)",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Un récit comme preuve",
+     "texte": "La Mishna raconte une anecdote pour montrer qu'un sage appliquait son avis. Un cas vécu vaut argument."
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "la Mishna — Rabban Gamliel",
+   "repond_a": 3,
+   "resume_fr": "Exemples : les graisses des sacrifices brûlent sur l'autel toute la nuit ; les sacrifices à consommer « le jour même » peuvent l'être jusqu'à l'aube selon la Torah. Pourquoi les Sages ont-ils dit minuit ? Pour éloigner de la faute : si on croit avoir jusqu'à l'aube, on traîne et on rate.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Seyag — une haie autour de la loi",
+     "texte": "Les Sages fixent parfois une limite plus stricte que la Torah, pour qu'on ne frôle pas la vraie limite. C'est une « haie ». Le Talmud le dit explicitement ici."
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "dans_sougya": true,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Sur quoi s'appuie la Mishna pour demander « à partir de quand » ? Elle parle comme si l'obligation était déjà connue — or c'est la toute première mishna du Talmud !",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Le Talmud commence au milieu",
+     "texte": "La Guemara remarque que le Talmud suppose quelque chose avant même de commencer. Chaque traité commence d'ailleurs à la page 2, jamais 1."
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "dans_sougya": true,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Et puis, pourquoi commencer par le Chema du soir ? Que la Mishna enseigne d'abord celui du matin ! (Steinsaltz explique, d'après les Tossefot HaRoch : la plupart des commandements se font le jour.)",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": [
+    5,
+    6
+   ],
+   "resume_fr": "Une seule réponse aux deux questions : « le tanna s'appuie sur le verset » « …quand tu te couches et quand tu te lèves » (Deutéronome 6:7). L'obligation vient de là, et le verset met le coucher avant le lever. La Torah orale suit l'ordre de la Torah écrite.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "D'où vient la règle ? — ici, du verset",
+     "texte": "Quand la Guemara demande d'où vient une règle, la réponse peut être un verset (comme ici : « le tanna s'appuie sur le verset »), mais aussi une mishna, une baraïta ou un raisonnement. L'expression ta chma (« viens, écoute ») introduit d'ordinaire une preuve tirée d'une source tannaïtique."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 6,
+   "resume_fr": "Autre réponse possible : l'ordre de la création — « il fut soir, il fut matin, un jour » (Genèse 1:5). Le jour commence par le soir.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Pourquoi le chabbat commence le vendredi soir",
+     "texte": "Même logique : dans le calendrier juif, la journée commence à la tombée de la nuit."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": [
+    7,
+    8
+   ],
+   "resume_fr": "Si c'est ça, pourquoi une mishna plus loin dans le chapitre parle-t-elle d'abord des bénédictions du matin, puis de celles du soir ? Elle aurait dû commencer par le soir.",
+   "encadres": []
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 9,
+   "resume_fr": "La Mishna a commencé par le soir, puis est passée au matin ; une fois sur le matin, elle a tout dit sur le matin avant de revenir au soir. L'ordre est respecté, puis on suit le fil.",
+   "encadres": []
+  },
+  {
+   "i": 11,
+   "dans_sougya": true,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "« Quand les prêtres rentrent manger la terouma » — c'est quand, exactement ? À la sortie des étoiles. Alors que la Mishna dise « à la sortie des étoiles » !",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Diyouk — pourquoi ce détour ?",
+     "texte": "La Mishna aurait pu être simple. Si elle ne l'est pas, c'est qu'elle veut dire quelque chose de plus."
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 11,
+   "resume_fr": "Elle nous apprend une chose en passant : un prêtre purifié peut manger la terouma dès la sortie des étoiles, même s'il n'a pas encore apporté son sacrifice d'expiation. Une baraïta le déduit du verset « le soleil se couche et il est pur » (Lévitique 22:7).",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Baraïta",
+     "texte": "Enseignement de l'époque de la Mishna mais non inclus dans la Mishna. Souvent cité par « nos maîtres ont enseigné » (tanou rabbanan)."
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "dans_sougya": false,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 12,
+   "resume_fr": "D'où sait-on que « le soleil se couche » désigne le coucher complet et « il est pur » la fin du jour ? (suite sur 2b)",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "HALAKHA",
+  "principe": "Trois avis sur une même règle, tous argumentés, conservés côte à côte. La loi retient une limite de précaution (minuit) tout en reconnaissant que la vraie limite est plus large (l'aube). Et le Talmud commence par une question, au milieu d'une conversation déjà commencée.",
+  "avis_ecarte": "Rabbi Eliézer (fin de la première veille) — sa lecture du mot « quand tu te couches » = le moment où l'on va se coucher.",
+  "halakha": "Le Chema du soir se dit après la sortie des étoiles. Il faut le dire avant minuit (haie des Sages) ; si on a laissé passer minuit, on peut encore le dire jusqu'à l'aube. (Guemara 4b ; Rambam, Keriat Chema 1:9 ; Choulhan Aroukh OH 235:1 et 235:3 — numéros à confirmer.) Nuance utile : beaucoup de communautés prient Arvit avant la nuit et répètent alors le Chema après la sortie des étoiles — d'où « à la synagogue on le dit à 18 h »."
+ },
+ "outils": [
+  "SEYAG",
+  "DIYOUK"
+ ],
+ "personnages": [
+  "Rabbi Eliézer",
+  "Rabban Gamliel"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Pourquoi la Torah n'a-t-elle pas donné une heure, tout simplement ?",
+   "piste": "Faire remarquer que « quand tu te couches » décrit une pratique humaine, variable, pas une horloge. Trois lectures possibles d'un même mot = trois avis légitimes."
+  },
+  {
+   "amorce": "Si les Sages savent que la vraie limite est l'aube, pourquoi dire minuit ? C'est mentir ?",
+   "piste": "Non : la haie est annoncée comme telle (segment 4). Faire comparer avec « rentre à 22 h » quand le vrai danger est à minuit."
+  },
+  {
+   "amorce": "Le Talmud commence par une question. C'est bizarre pour un livre de loi, non ?",
+   "piste": "Relier au segment 5 : le Talmud suppose que la conversation a déjà commencé. Que suppose-t-on avant de poser une question ?"
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Berakhot.4b",
+   "pourquoi": "La suite : pourquoi « jusqu'à minuit » et le Chema avant de dormir."
+  },
+  {
+   "ref": "Bava_Metzia.59b",
+   "pourquoi": "Rabbi Eliézer et Rabban Gamliel se retrouvent dans le four d'Akhnaï."
+  }
+ ]
+}

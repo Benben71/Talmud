@@ -1,0 +1,99 @@
+{
+ "slug": "pesachim-10b",
+ "ref": "Pesachim.10b",
+ "titre": "La souris, la belette et le serpent",
+ "parcours": ["lire-comme-un-sage"],
+ "duree_min": 15,
+ "ce_texte": "Talmud de Babylone, traité Pessahim (ordre Moëd, les fêtes), chapitre 1 : la recherche du hamets avant Pessah. En araméen. Rava (mort vers 352) dirigeait l'école de Mehoza, en Babylonie ; il aimait poser des questions en série, en ne changeant qu'un détail à la fois.",
+ "idee_cle": "Un cas bizarre est un laboratoire : il isole une seule question. Et quand on ne peut pas trancher, le Talmud écrit teikou — la question reste debout.",
+ "sougya": {
+  "segments": [3, 11],
+  "actes": [
+   {"titre": "Les miettes : ce qu'une souris sait faire", "segments": [3, 3]},
+   {"titre": "Une souris entre, une souris sort", "segments": [4, 7]},
+   {"titre": "La poutre, le puits, le serpent", "segments": [8, 11]}
+  ],
+  "note": "Segments 0-2 : fin d'une discussion sur une hache perdue dans une maison (pureté), hors sougya. Segments 12-19 : la Mishna suivante (quand chercher le hamets) et sa Guemara, hors sougya. Deux séries de questions de Rava, chacune close par un teikou : c'est la sougya « teikou » qui manquait au corpus. Chapitre 6 du carnet « Ouvrir le Talmud » (Ayeka)."
+ },
+ "cas": {
+  "transpose": "La veille de Pessah, la maison est vérifiée de fond en comble : plus une miette de pain. Et là, tu vois une souris entrer avec un bout de pain dans la gueule… puis une souris ressortir avec un bout de pain dans la gueule. La même ? Une autre ? Est-ce que tu refais toute la vérification ?",
+  "epoque": "Une souris entre avec un pain dans la gueule, et une souris sort avec un pain dans la gueule. Qu'en est-il ?"
+ },
+ "premiere_idee": "Faut-il refaire la vérification ? Et surtout : comment décides-tu, puisque tu ne peux pas savoir ?",
+ "segments": [
+  {"i": 0, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara / baraïta", "repond_a": null, "resume_fr": "(Hamets déplacé d'un coin à l'autre : comme la dispute sur la hache perdue — la maison est-elle impure ?)", "encadres": []},
+  {"i": 1, "dans_sougya": false, "role": "QUESTION", "voix": "la Guemara", "repond_a": 0, "resume_fr": "(Qui a parlé d'un coin ?)", "encadres": []},
+  {"i": 2, "dans_sougya": false, "role": "REPONSE", "voix": "la Guemara", "repond_a": 1, "resume_fr": "(La baraïta est incomplète ; une fois complétée, la dispute s'applique au hamets.)", "encadres": []},
+  {"i": 3, "dans_sougya": true, "role": "ENSEIGNEMENT", "voix": "Rava", "repond_a": null,
+   "resume_fr": "Rava : une souris entre avec un pain, on trouve des miettes derrière elle — il faut revérifier, car une souris n'émiette pas. Un enfant entre avec un pain, on trouve des miettes — pas besoin, car un enfant émiette.",
+   "encadres": [
+    {"type": "PERSONNAGE", "titre": "Rava", "texte": "Rava bar Yossef bar Hama (mort vers 352), l'un des plus grands amoraïm de Babylonie, chef de l'école de Mehoza. Ses débats avec son ami Abayé remplissent des centaines de pages ; dans presque tous, la loi suit Rava."},
+    {"type": "MOT", "titre": "Hamets, bedikat hamets", "texte": "Le hamets est tout ce qui est levé (pain, pâtes, bière…), interdit pendant Pessah. La bedikat hamets est la recherche du hamets dans la maison, à la bougie, la veille de la fête — règle des Sages, pas de la Torah."},
+    {"type": "OUTIL", "titre": "Ce qu'un être « a l'habitude » de faire", "texte": "Rava tranche les deux premiers cas avec un seul critère : l'habitude (une souris n'émiette pas, un enfant si). Tout raisonnement sur un doute commence par « que fait d'habitude… ? »."}
+   ]},
+  {"i": 4, "dans_sougya": true, "role": "QUESTION", "voix": "Rava", "repond_a": null,
+   "resume_fr": "Rava demande : une souris entre avec un pain, une souris sort avec un pain — est-ce la même ? Alors la maison est propre. Ou une autre ? Alors le premier pain est encore dedans.",
+   "encadres": [{"type": "MOT", "titre": "Ba'ei Rava — « Rava a demandé »", "texte": "Le mot ba'ei (« il a demandé ») annonce une question que celui qui la pose ne sait pas trancher. Ce n'est pas une kouchia (objection) : c'est un vrai doute."}]},
+  {"i": 5, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 4,
+   "resume_fr": "Et si tu admets que c'est la même : une souris blanche entre, une souris noire sort. Sûrement une autre ? Ou la noire a pris le pain à la blanche ?",
+   "encadres": [{"type": "OUTIL", "titre": "« Et si tu dis que… » — un seul détail change", "texte": "Chaque question part de la réponse supposée à la précédente et ne change qu'une chose : la couleur, puis l'espèce, puis ce qu'on trouve dans la gueule. Comme une expérience où l'on ne modifie qu'une variable."}]},
+  {"i": 6, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 5,
+   "resume_fr": "Et si les souris ne se volent pas entre elles : une souris entre, une belette sort avec un pain. La belette l'a sûrement pris à la souris ? Ou c'est un autre pain — car si elle l'avait pris, on trouverait aussi la souris dans sa gueule.",
+   "encadres": [{"type": "MOT", "titre": "Houlda — la belette", "texte": "Petit carnivore qui chasse les souris. L'argument tient à ce qu'une belette ne se contenterait pas du pain."}]},
+  {"i": 7, "dans_sougya": true, "role": "TEIKOU", "voix": "la Guemara", "repond_a": 6,
+   "resume_fr": "Et si tu admets cet argument : une souris entre, une belette sort avec le pain ET la souris dans la gueule. Sûrement la même ? Ou bien : le pain serait dans la gueule de la souris, pas de la belette — donc un autre pain ; ou la souris l'a lâché de peur. Pas de réponse : teikou.",
+   "decoupage_suggere": ["QUESTION : belette avec pain et souris", "OBJECTION : le pain serait dans la gueule de la souris", "REPONSE possible : lâché de peur", "TEIKOU"],
+   "encadres": [
+    {"type": "MOT", "titre": "Teikou", "texte": "« Qu'elle reste debout » : la question reste sans réponse. Le Talmud ne cache pas ce qu'il ne sait pas ; il l'écrit. Une tradition tardive lit le mot comme un acronyme (« le Tichbite — Élie — résoudra les questions et les énigmes ») ; le sens littéral suffit."},
+    {"type": "OUTIL", "titre": "Jusqu'où aller ?", "texte": "Quatre cas, de plus en plus étranges, pour cerner une seule question : à partir de quand deux observations désignent-elles la même chose ? Le Talmud s'arrête quand l'argument peut se retourner dans les deux sens."}
+   ]},
+  {"i": 8, "dans_sougya": true, "role": "QUESTION", "voix": "Rava", "repond_a": null,
+   "resume_fr": "Nouvelle série. Rava : un pain sur une poutre du plafond — faut-il une échelle ? Les Sages n'ont pas exigé tant de peine, le pain ne tombera pas ; ou bien : parfois il tombe, et on viendra le manger.",
+   "encadres": [{"type": "CONTEXTE", "titre": "Pourquoi la peine compte", "texte": "La recherche du hamets est une règle des Sages : la question n'est pas « y a-t-il du hamets ? » mais « jusqu'où les Sages ont-ils demandé qu'on se donne de la peine ? »."}]},
+  {"i": 9, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 8,
+   "resume_fr": "Et si parfois il tombe : un pain dans un puits — faut-il une échelle pour le remonter ? Il ne remontera pas tout seul ; ou bien : parfois on descend dans le puits pour autre chose, et on viendra le manger.", "encadres": []},
+  {"i": 10, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 9,
+   "resume_fr": "Et si parfois on descend : un pain dans la gueule d'un serpent — faut-il payer un charmeur de serpents pour le récupérer ?",
+   "encadres": [{"type": "MOT", "titre": "Le charmeur de serpents", "texte": "Un métier de l'époque (havar). Le cas sert à poser une question d'argent : doit-on payer pour détruire du hamets ?"}]},
+  {"i": 11, "dans_sougya": true, "role": "TEIKOU", "voix": "la Guemara", "repond_a": 10,
+   "resume_fr": "Les deux côtés : pour son corps, les Sages ont demandé de la peine, mais pas pour son argent ? Ou l'argent ne se distingue pas du corps ? Cette série aussi reste ouverte : teikou.",
+   "decoupage_suggere": ["DISTINCTION proposée : corps / argent", "OBJECTION : l'argent ne se distingue pas", "TEIKOU"],
+   "encadres": [{"type": "OUTIL", "titre": "Deux teikou sur une page", "texte": "Deux séries, deux questions laissées ouvertes. Un lecteur qui attend une réponse à tout est déçu ; un lecteur du Talmud comprend que la question était le but."}]},
+  {"i": 12, "dans_sougya": false, "role": "MISHNA", "voix": "la Mishna — Rabbi Yehouda / les Sages", "repond_a": null, "resume_fr": "(Nouvelle Mishna : quand cherche-t-on le hamets ? Trois moments selon Rabbi Yehouda ; les Sages : si on n'a pas cherché le soir, le matin…)", "encadres": []},
+  {"i": 13, "dans_sougya": false, "role": "MISHNA", "voix": "la Mishna", "repond_a": 12, "resume_fr": "(…pendant la fête, après la fête ; ce qu'on garde, on le cache.)", "encadres": []},
+  {"i": 14, "dans_sougya": false, "role": "QUESTION", "voix": "la Guemara", "repond_a": 12, "resume_fr": "(Pourquoi trois fois selon Rabbi Yehouda ? Trois versets.)", "encadres": []},
+  {"i": 15, "dans_sougya": false, "role": "OBJECTION", "voix": "Rav Yossef", "repond_a": 14, "resume_fr": "(Rabbi Yehouda ne demande pas trois recherches : il fixe les trois moments possibles.)", "encadres": []},
+  {"i": 16, "dans_sougya": false, "role": "PREUVE", "voix": "Mar Zoutra", "repond_a": 15, "resume_fr": "(Autre version de la baraïta : « à l'un de ces trois moments ».)", "encadres": []},
+  {"i": 17, "dans_sougya": false, "role": "CONCLUSION", "voix": "la Guemara", "repond_a": 15, "resume_fr": "(Rabbi Yehouda : on peut chercher au 2e ou 3e moment, pas après.)", "encadres": []},
+  {"i": 18, "dans_sougya": false, "role": "DISTINCTION", "voix": "la Guemara", "repond_a": 17, "resume_fr": "(Le désaccord : avant l'interdiction de manger, oui ; après, Rabbi Yehouda craint qu'on mange en cherchant.)", "encadres": []},
+  {"i": 19, "dans_sougya": false, "role": "OBJECTION", "voix": "la Guemara", "repond_a": 18, "resume_fr": "(Rabbi Yehouda craint-il vraiment cela ? Une mishna sur le omer… suite sur 11a.)", "encadres": []}
+ ],
+ "et_alors": {
+  "type": "TEIKOU",
+  "principe": "Rava fabrique des cas de plus en plus étranges — souris blanche, souris noire, belette, serpent — non pour s'amuser, mais pour isoler une seule question à la fois : quand deux observations désignent-elles la même chose ? jusqu'où doit-on se donner de la peine ? Et quand l'argument peut se retourner dans les deux sens, le Talmud l'écrit : teikou. Deux fois sur la même page. Ne pas savoir, et le dire, fait partie de la méthode.",
+  "avis_ecarte": null,
+  "halakha": "Les cas tranchés par Rava (miettes de souris : revérifier ; miettes d'enfant : non) sont codifiés dans le Choulhan Aroukh, Orah Hayim 438. Pour les cas restés en teikou, les décisionnaires ont dû trancher eux-mêmes, en général avec indulgence puisque la recherche est une règle des Sages — à confirmer."
+ },
+ "plus_tard": [
+  {"qui": "Rachi", "quand": "Troyes, 1040-1105", "texte": "explique le cas de la belette : si elle avait pris le pain à la souris, elle aurait pris la souris avec — c'est ce qui rend l'argument réversible."},
+  {"qui": "Choulhan Aroukh, Orah Hayim 438", "quand": "Safed, 1565", "texte": "fixe la pratique pour les cas de la souris : ce que le Talmud a laissé ouvert, les décisionnaires ont dû le fermer, chacun avec sa raison — à confirmer."},
+  {"qui": "Le carnet « Ouvrir le Talmud » (Ayeka)", "quand": "2026", "texte": "compare Rava à un scientifique qui ne modifie qu'une variable dans une expérience : sans ces cas extrêmes, la règle resterait floue."}
+ ],
+ "a_toi": [
+  {"apres_segment": 7, "question": "Rava et la Guemara ont changé un seul détail à chaque étape. Lesquels, dans l'ordre ? Et quelle question chaque détail isole-t-il ?"},
+  {"apres_segment": 11, "question": "Choisis une règle que tu connais (le téléphone en classe, le Chabbat, la kasherout…). Invente un cas étrange qui la met à l'épreuve. Puis change un seul détail pour obtenir un deuxième cas. Est-ce que la réponse change ?"}
+ ],
+ "outils": ["CAS_LIMITE", "TEIKOU"],
+ "personnages": ["Rava"],
+ "questions_hevrouta": [
+  {"amorce": "Pourquoi le Talmud perd-il son temps avec des souris ?", "piste": "Ne pas défendre tout de suite : demander à l'ado ce que chaque cas ajoute. Faire trouver que la question réelle est « quand deux observations sont-elles la même chose ? » — une question qu'un juge, un médecin ou un détective se posent aussi."},
+  {"amorce": "Teikou, c'est un échec ?", "piste": "Comparer avec « je ne sais pas » dans une classe. Le Talmud écrit sa propre ignorance et la garde pendant quinze siècles. Qu'est-ce que ça dit de lui ? Puis : quelqu'un a bien dû trancher pour la pratique — qui, et comment ?"},
+  {"amorce": "Et si c'était une caméra qui avait filmé la souris ?", "piste": "L'ado transpose : avec une preuve, plus de doute, plus de sougya. Faire remarquer que la méthode de Rava sert précisément quand on n'a pas de preuve — c'est-à-dire presque toujours."}
+ ],
+ "liens": [
+  {"ref": "Pesachim.9b", "pourquoi": "Le début : la souris et le hamets, et le principe « on ne s'inquiète pas sans fin »."},
+  {"ref": "Pesachim.2a", "pourquoi": "L'ouverture du traité : « la veille du quatorze, on cherche le hamets à la lumière de la bougie »."},
+  {"ref": "Shulchan Arukh, Orach Chayim 438", "pourquoi": "Ce que la pratique a retenu des cas de la souris."}
+ ],
+ "vigilance": null
+}

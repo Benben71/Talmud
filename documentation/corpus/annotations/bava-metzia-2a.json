@@ -1,0 +1,99 @@
+{
+ "slug": "bava-metzia-2a",
+ "ref": "Bava_Metzia.2a",
+ "titre": "Deux personnes tiennent un talit",
+ "parcours": ["a-qui-cest"],
+ "duree_min": 15,
+ "sougya": {
+  "segments": [0, 11],
+  "actes": [
+   {"titre": "La Mishna : le cas et sa solution", "segments": [0, 3]},
+   {"titre": "La Guemara : pourquoi deux fois « celui-ci dit » ?", "segments": [4, 11]}
+  ],
+  "note": "Le passage Sefaria commence par une note des commentateurs sur l'ordre des chapitres (début du segment 0), à ne pas afficher en profondeur Histoire. Segment 11 (« et il fallait les deux ») ouvre la suite sur 2b : on s'arrête là."
+ },
+ "cas": {
+  "transpose": "Dans la cour, un téléphone par terre. Deux élèves le ramassent exactement en même temps. « Je l'ai trouvé. » « Non, moi. » Aucun témoin. Tu es le juge.",
+  "epoque": "Deux personnes arrivent au tribunal en tenant chacune un bout du même vêtement. Chacune dit : je l'ai trouvé, il est entièrement à moi."
+ },
+ "premiere_idee": "Qu'est-ce que tu décides, et surtout : qu'est-ce que tu demandes avant de décider ?",
+ "segments": [
+  {"i": 0, "dans_sougya": true, "role": "MISHNA", "voix": "la Mishna", "repond_a": null,
+   "resume_fr": "Deux personnes tiennent un vêtement, chacune dit « je l'ai trouvé » et « il est tout à moi » : chacune jure qu'elle n'en possède pas moins de la moitié, et on partage.",
+   "encadres": [
+    {"type": "MOT", "titre": "Talit", "texte": "Ici, n'importe quel vêtement ou pièce de tissu — pas seulement le châle de prière."},
+    {"type": "HALAKHA", "titre": "Pourquoi un serment ?", "texte": "Le serment n'est pas une punition : c'est ce qu'on demande quand personne ne peut rien prouver. Il engage celui qui jure devant Dieu et devant le tribunal."}
+   ]},
+  {"i": 1, "dans_sougya": true, "role": "MISHNA", "voix": "la Mishna", "repond_a": null,
+   "resume_fr": "Variante : l'un dit « tout à moi », l'autre « la moitié ». Celui qui dit « tout » jure sur trois quarts, l'autre sur un quart ; trois quarts / un quart.",
+   "encadres": [{"type": "OUTIL", "titre": "On ne partage que ce qui est disputé", "texte": "La Mishna se contente de donner la règle. Steinsaltz explique le raisonnement : les deux sont d'accord que la moitié appartient au premier ; le conflit ne porte que sur l'autre moitié, qu'on partage."}]},
+  {"i": 2, "dans_sougya": true, "role": "MISHNA", "voix": "la Mishna", "repond_a": null,
+   "resume_fr": "Même règle pour deux personnes sur un animal, ou l'une dessus et l'autre qui le mène : serment et partage.", "encadres": []},
+  {"i": 3, "dans_sougya": true, "role": "MISHNA", "voix": "la Mishna", "repond_a": null,
+   "resume_fr": "S'ils reconnaissent la version de l'autre, ou s'ils ont des témoins, on partage sans serment.",
+   "encadres": [{"type": "HALAKHA", "titre": "Les témoins d'abord", "texte": "Si tu avais écrit « je demande des témoins » dans ta première idée : la Mishna y a pensé. Le serment n'intervient que faute de mieux."}]},
+  {"i": 4, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 0,
+   "resume_fr": "Pourquoi la Mishna fait-elle dire deux choses à chacun — « je l'ai trouvé » ET « il est tout à moi » ? Une seule suffirait. Réponse immédiate : c'est en fait une seule déclaration : « je l'ai trouvé et il est tout à moi ».",
+   "decoupage_suggere": ["QUESTION : pourquoi deux déclarations ?", "REPONSE : c'est une seule déclaration en deux parties."],
+   "encadres": [{"type": "OUTIL", "titre": "Diyouk — chaque mot compte", "texte": "La Guemara part du principe que la Mishna ne gaspille aucun mot. Une répétition apparente est donc une question à poser."}]},
+  {"i": 5, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 4,
+   "resume_fr": "Alors pourquoi ne pas dire seulement « je l'ai trouvé » ? On comprendrait bien « donc il est à moi ». Réponse : parce que « trouvé » pourrait vouloir dire « vu ». Quelqu'un pourrait croire qu'avoir vu l'objet le premier suffit pour le posséder. « Tout à moi » précise qu'il faut l'avoir en main.",
+   "decoupage_suggere": ["QUESTION : pourquoi pas juste « trouvé » ?", "REPONSE : « trouvé » pourrait signifier « vu » ; voir ne suffit pas."],
+   "encadres": [{"type": "HALAKHA", "titre": "Voir n'est pas posséder", "texte": "On acquiert un objet perdu en le prenant (ou par un autre mode d'acquisition reconnu), pas en le voyant. La règle est vraie — la Mishna de Bava Metzia 10a le dit : « il a vu l'objet et s'est jeté dessus, un autre l'a saisi : c'est celui qui l'a saisi qui l'acquiert ». Mais attention à la suite : la Guemara va renoncer à la tirer d'ici."}]},
+  {"i": 6, "dans_sougya": true, "role": "OBJECTION", "voix": "la Guemara (citant Rabbenaï)", "repond_a": 5,
+   "resume_fr": "Mais comment « trouvé » pourrait-il signifier « vu » ? Rabbenaï a enseigné que dans la Torah (Deutéronome 22:3, « et tu l'as trouvé »), trouver veut dire avoir en main.",
+   "encadres": [
+    {"type": "PERSONNAGE", "titre": "Rabbenaï", "texte": "Un sage dont on sait peu de choses, cité pour sa lecture précise du verset sur l'objet perdu."},
+    {"type": "CONTEXTE", "titre": "Deutéronome 22:1-3", "texte": "La Torah ordonne de rapporter l'objet perdu de son prochain. Tout le chapitre du Talmud sur les objets trouvés s'appuie sur ces versets."}
+   ]},
+  {"i": 7, "dans_sougya": true, "role": "REPONSE", "voix": "la Guemara", "repond_a": 6,
+   "resume_fr": "D'accord, dans la Torah « trouver » = avoir en main. Mais la Mishna parle le langage de tout le monde, et dans la rue, dès qu'on voit un objet on dit « je l'ai trouvé ». D'où la précision « tout à moi ».",
+   "encadres": [{"type": "OUTIL", "titre": "Langue de la Torah / langue des gens", "texte": "Le Talmud distingue le sens strict d'un mot dans l'Écriture et son usage courant. Les deux comptent, mais pas au même endroit."}]},
+  {"i": 8, "dans_sougya": true, "role": "QUESTION", "voix": "la Guemara", "repond_a": 7,
+   "resume_fr": "Dans ce cas, qu'elle dise seulement « tout à moi » et pas « je l'ai trouvé » ! Réponse : si elle ne disait que « tout à moi », on aurait pu croire que, partout où la Mishna dit « j'ai trouvé », elle veut dire qu'on acquiert par la simple vue. En disant les deux, l'expression en trop enseigne que voir ne suffit pas.",
+   "decoupage_suggere": ["QUESTION : alors pourquoi garder « trouvé » ?", "REPONSE : les deux ensemble ferment la porte à l'idée que voir suffit."],
+   "encadres": []},
+  {"i": 9, "dans_sougya": true, "role": "OBJECTION", "voix": "la Guemara", "repond_a": 4,
+   "resume_fr": "Retour à la case départ : comment peux-tu dire que c'est une seule déclaration ? Le texte dit bien « celui-ci dit… celui-ci dit » deux fois — ce sont deux déclarations distinctes !",
+   "encadres": [{"type": "OUTIL", "titre": "Une réponse peut être réfutée après coup", "texte": "La Guemara avait accepté une explication (segment 4), l'avait affinée (5-8), et la rejette maintenant sur un détail du texte. Avancer, puis revenir : c'est normal."}]},
+  {"i": 10, "dans_sougya": true, "role": "DISTINCTION", "voix": "Rav Pappa (ou Rav Chimi bar Achi, ou anonyme)", "repond_a": 9,
+   "resume_fr": "Rav Pappa répond à l'objection par une distinction : ce sont deux cas différents. « Je l'ai trouvé » = un objet trouvé par deux personnes. « Tout à moi » = un achat, où chacun prétend l'avoir acheté au vendeur. (La sougya continue sur 2b : ce n'est pas une conclusion.)",
+   "encadres": [
+    {"type": "PERSONNAGE", "titre": "Rav Pappa", "texte": "Amora babylonien (IVe s.), élève d'Abayé et de Rava, fondateur de l'académie de Naresh. Connu pour ses conclusions qui concilient des positions."},
+    {"type": "CONTEXTE", "titre": "« Ou bien c'est Rav Chimi… ou bien anonyme »", "texte": "Le Talmud note quand il n'est pas sûr de qui a dit quoi. Il préfère avouer un doute qu'inventer une attribution."}
+   ]},
+  {"i": 11, "dans_sougya": true, "role": "DISTINCTION", "voix": "la Guemara", "repond_a": 10,
+   "resume_fr": "« Et il fallait enseigner les deux cas » — la Guemara va expliquer (sur 2b) pourquoi on ne pouvait pas déduire l'un de l'autre.",
+   "encadres": [{"type": "OUTIL", "titre": "Tsrikha — pourquoi les deux ?", "texte": "Quand le texte donne deux cas, le Talmud demande toujours : l'un n'aurait-il pas suffi ? Si oui, l'autre est superflu — et le Talmud ne croit pas au superflu."}]}
+ ],
+ "et_alors": {
+  "type": "HALAKHA",
+  "principe": "Ce que la sougya enseigne, c'est d'abord une méthode : la Guemara a cru trouver dans la double formule de la Mishna que voir ne suffit pas pour acquérir (segments 4-8), puis elle a abandonné cette lecture sur un détail du texte (segment 9) et lu la Mishna autrement (segment 10). La règle « voir n'est pas posséder » reste vraie (Mishna Bava Metzia 10a), mais ce n'est pas d'ici qu'on la tire. Quant au serment, la Guemara en donne la raison en 3a : il est d'institution rabbinique, « pour que chacun n'aille pas saisir le vêtement d'autrui en disant : il est à moi ».",
+  "avis_ecarte": null,
+  "halakha": "Deux personnes qui tiennent un objet et le revendiquent entièrement : chacune jure et on partage. Sans contestation ou avec témoins : partage sans serment. (Codifié dans le Choulhan Aroukh, Hochen Michpat 138 — numéro à confirmer.)"
+ },
+ "ce_texte": "Talmud de Babylone, traité Bava Metsia (« la porte du milieu », ordre Nezikin, le droit civil), tout début du chapitre 1, « Deux personnes tiennent ». La Mishna est en hébreu (mise par écrit vers 200) ; la Guemara en araméen (Babylonie, IIIe-VIe siècle). Rav Pappa (mort vers 375) enseignait à Naresh.",
+ "idee_cle": "Chaque mot compte — et une explication peut être abandonnée en chemin. Le Talmud ne gaspille pas un mot, et il a le droit de se tromper avant de trouver.",
+ "plus_tard": [
+  {"qui": "Rachi", "quand": "Troyes, 1040-1105", "texte": "explique « par la vue on n'acquiert pas » : repérer un objet perdu ne donne aucun droit dessus tant qu'on ne l'a pas saisi."},
+  {"qui": "Les Tossafot", "quand": "France et Allemagne, XIIe-XIIIe siècle", "texte": "demandent pourquoi ce chapitre, qui traite de détails, précède le chapitre 2, qui pose les règles de base des objets trouvés. Réponse : il continue la fin de Bava Kamma, où l'on partageait déjà un objet par serment.", "source": "Tossafot sur Bava Metsia 2a, rapporté par Steinsaltz"},
+  {"qui": "Choulhan Aroukh, Hochen Michpat 138", "quand": "Safed, 1565", "texte": "codifie la règle : deux qui tiennent un objet et le revendiquent, chacun jure, on partage — numéro à confirmer."}
+ ],
+ "a_toi": [
+  {"apres_segment": 3, "question": "La Mishna a prévu les témoins. Toi aussi ? Relis ta première idée, et note ce que la Mishna a prévu que tu n'avais pas vu — ou l'inverse."},
+  {"apres_segment": 9, "question": "La Guemara vient d'abandonner l'explication qu'elle construisait depuis cinq segments. Est-ce un échec ? Écris ce qu'elle a gagné en chemin."}
+ ],
+ "outils": ["DIYOUK", "TSRIKHA"],
+ "personnages": ["Rav Pappa", "Rabbenaï"],
+ "questions_hevrouta": [
+  {"amorce": "Pourquoi ne pas tirer au sort ?", "piste": "Faire chercher ce que le serment fait que le sort ne fait pas : la Guemara (3a) dit qu'il décourage celui qui saisirait le vêtement d'un autre en disant « il est à moi ». Le Talmud utilise le tirage au sort ailleurs, par exemple pour partager entre frères (Bava Batra 106b) — porte vers une autre sougya."},
+  {"amorce": "Et si l'un des deux ment, le serment sert à quoi ?", "piste": "Le serment n'empêche pas le mensonge, il en augmente le prix. Lien : traité Chevouot."},
+  {"amorce": "Pourquoi la Guemara consacre-t-elle 7 segments à une répétition de mots ?", "piste": "Parce qu'une règle ne tient que si l'on sait exactement ce qu'elle dit. Faire comparer avec la lecture d'un règlement ou d'un contrat. Et faire remarquer qu'à la fin, la première explication est abandonnée : on a le droit de se tromper en chemin."}
+ ],
+ "liens": [
+  {"ref": "Bava_Metzia.3a", "pourquoi": "Pourquoi un serment ? La raison donnée par la Guemara."},
+  {"ref": "Bava_Metzia.10a", "pourquoi": "La Mishna qui dit vraiment que voir ne suffit pas : « il a vu l'objet et s'est jeté dessus, un autre l'a saisi »."},
+  {"ref": "Bava_Metzia.21a", "pourquoi": "Chapitre 2 : quels objets trouvés doit-on rapporter ?"},
+  {"ref": "Shevuot.38b", "pourquoi": "Le serment au tribunal : comment, quand, pourquoi."}
+ ]
+}

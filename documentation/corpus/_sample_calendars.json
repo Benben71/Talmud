@@ -1,0 +1,218 @@
+{
+ "date": "2026-11-05",
+ "timezone": "America/Halifax",
+ "calendar_items": [
+  {
+   "title": {
+    "en": "Parashat Hashavua",
+    "he": "פרשת השבוע"
+   },
+   "displayValue": {
+    "en": "Chayei Sara",
+    "he": "חיי שרה"
+   },
+   "url": "Genesis.23.1-25.18",
+   "ref": "Genesis 23:1-25:18",
+   "heRef": "בראשית כ״ג:א׳-כ״ה:י״ח",
+   "order": 1,
+   "category": "Tanakh",
+   "extraDetails": {
+    "aliyot": [
+     "Genesis 23:1-23:16",
+     "Genesis 23:17-24:9",
+     "Genesis 24:10-24:26",
+     "Genesis 24:27-24:52",
+     "Genesis 24:53-24:67",
+     "Genesis 25:1-25:11",
+     "Genesis 25:12-25:18",
+     "Genesis 25:16-25:18"
+    ]
+   },
+   "description": {
+    "en": "Chayyei Sarah (“The Life of Sarah”) opens as Sarah dies and Abraham buys the Cave of Machpelah to bury her. Abraham sends his servant to find a wife for Isaac. The servant meets Rebecca at a well, and Rebecca returns with the servant to marry Isaac. Abraham remarries, has more children, and dies at age 175.",
+    "he": "פרשת חיי שרה נפתחת במות שרה. אברהם קונה את מערת המכפלה וקובר בה את אשתו. אברהם שולח את עבדו למולדתו חרן למצוא אישה לבנו יצחק. העבד פוגש את רבקה על יד הבאר, והיא מציעה לדלות מים לו ולגמליו. לאחר משא ומתן עם משפחת רבקה העבד מביא את רבקה לארץ כנען, ויצחק לוקח אותה לאישה. אברהם לוקח אישה נוספת, מוליד ילדים ומת בן 175."
+   }
+  },
+  {
+   "title": {
+    "en": "Haftarah",
+    "he": "הפטרה"
+   },
+   "displayValue": {
+    "en": "I Kings 1:1-31",
+    "he": "מלכים א א׳:א׳-ל״א"
+   },
+   "url": "I_Kings.1.1-31",
+   "ref": "I Kings 1:1-31",
+   "order": 2,
+   "category": "Tanakh"
+  },
+  {
+   "title": {
+    "en": "Daf Yomi",
+    "he": "דף יומי"
+   },
+   "displayValue": {
+    "en": "Bekhorot 48",
+    "he": "בכורות מ״ח"
+   },
+   "url": "Bekhorot.48",
+   "ref": "Bekhorot 48",
+   "order": 3,
+   "category": "Talmud"
+  },
+  {
+   "title": {
+    "en": "929",
+    "he": "929"
+   },
+   "displayValue": {
+    "en": "II Kings 1 (310)",
+    "he": "מלכים ב א׳ (310)"
+   },
+   "url": "II_Kings.1",
+   "ref": "II Kings 1",
+   "order": 4,
+   "category": "Tanakh"
+  },
+  {
+   "title": {
+    "en": "Daily Mishnah",
+    "he": "משנה יומית"
+   },
+   "displayValue": {
+    "en": "Mishnah Oholot 15:6-7",
+    "he": "משנה אהלות ט״ו:ו׳-ז׳"
+   },
+   "url": "Mishnah_Oholot.15.6-7",
+   "ref": "Mishnah Oholot 15:6-7",
+   "order": 5,
+   "category": "Mishnah"
+  },
+  {
+   "title": {
+    "en": "Daily Rambam",
+    "he": "הרמב\"ם היומי"
+   },
+   "displayValue": {
+    "en": "Forbidden Intercourse 17",
+    "he": "הלכות איסורי ביאה י״ז"
+   },
+   "url": "Mishneh_Torah,_Forbidden_Intercourse.17",
+   "ref": "Mishneh Torah, Forbidden Intercourse 17",
+   "order": 6,
+   "category": "Halakhah"
+  },
+  {
+   "title": {
+    "en": "Daily Rambam (3 Chapters)",
+    "he": "הרמב\"ם היומי (3 פרקים)"
+   },
+   "displayValue": {
+    "en": "Ownerless Property and Gifts 10-12",
+    "he": "הלכות זכייה ומתנה י׳-י״ב"
+   },
+   "url": "Mishneh_Torah,_Ownerless_Property_and_Gifts.10-12",
+   "ref": "Mishneh Torah, Ownerless Property and Gifts 10-12",
+   "order": 7,
+   "category": "Halakhah"
+  },
+  {
+   "title": {
+    "en": "Daf a Week",
+    "he": "דף השבוע"
+   },
+   "displayValue": {
+    "en": "Nazir 16",
+    "he": "נזיר ט״ז"
+   },
+   "url": "Nazir.16",
+   "ref": "Nazir 16",
+   "order": 8,
+   "category": "Talmud"
+  },
+  {
+   "title": {
+    "en": "Halakhah Yomit",
+    "he": "הלכה יומית"
+   },
+   "displayValue": {
+    "en": "Shulchan Arukh, Orach Chayim 290:2-291:2",
+    "he": "שולחן ערוך, אורח חיים ר״צ:ב׳-רצ״א:ב׳"
+   },
+   "url": "Shulchan_Arukh,_Orach_Chayim.290.2-291.2",
+   "ref": "Shulchan Arukh, Orach Chayim 290:2-291:2",
+   "order": 9,
+   "category": "Halakhah"
+  },
+  {
+   "title": {
+    "en": "Arukh HaShulchan Yomi",
+    "he": "ערוך השולחן היומי"
+   },
+   "displayValue": {
+    "en": "Orach Chaim 368:5-370:1",
+    "he": "אורח חיים שס״ח:ה׳-ש״ע:א׳"
+   },
+   "url": "Arukh_HaShulchan,_Orach_Chaim.368.5-370.1",
+   "ref": "Arukh HaShulchan, Orach Chaim 368:5-370:1",
+   "order": 10,
+   "category": "Halakhah"
+  },
+  {
+   "title": {
+    "en": "Tanakh Yomi",
+    "he": "תנ\"ך יומי"
+   },
+   "displayValue": {
+    "en": "Judges Seder 14",
+    "he": "שופטים סדר יד"
+   },
+   "url": "Judges.20.27-21.25",
+   "ref": "Judges 20:27-21:25",
+   "order": 11,
+   "category": "Tanakh"
+  },
+  {
+   "title": {
+    "en": "Chok LeYisrael",
+    "he": "חק לישראל"
+   },
+   "displayValue": {
+    "en": "Chayei Sara",
+    "he": "חיי שרה"
+   },
+   "url": "collections/חק-לישראל?tag=Chayei%20Sara",
+   "order": 12,
+   "category": "Tanakh"
+  },
+  {
+   "title": {
+    "en": "Tanya Yomi",
+    "he": "תניא יומי"
+   },
+   "displayValue": {
+    "en": "25 Cheshvan",
+    "he": "כה חשון"
+   },
+   "url": "Tanya,_Part_IV;_Iggeret_HaKodesh.31.1",
+   "ref": "Tanya, Part IV; Iggeret HaKodesh 31:1",
+   "order": 15,
+   "category": "Chasidut"
+  },
+  {
+   "title": {
+    "en": "Yerushalmi Yomi",
+    "he": "ירושלמי יומי"
+   },
+   "displayValue": {
+    "en": "Jerusalem Talmud Sanhedrin 17",
+    "he": "תלמוד ירושלמי סנהדרין יז"
+   },
+   "url": "Jerusalem_Talmud_Sanhedrin.3.6.3-9.1",
+   "ref": "Jerusalem Talmud Sanhedrin 3:6:3-9:1",
+   "order": 16,
+   "category": "Talmud"
+  }
+ ]
+}

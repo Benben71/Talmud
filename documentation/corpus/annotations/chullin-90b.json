@@ -1,0 +1,96 @@
+{
+ "slug": "chullin-90b",
+ "ref": "Chullin.90b",
+ "titre": "Trois cents prêtres pour un rideau",
+ "parcours": ["lire-comme-un-sage"],
+ "duree_min": 12,
+ "ce_texte": "Talmud de Babylone, traité Houlin (ordre Kodachim : l'abattage et la nourriture), au détour d'une discussion sur le nerf sciatique. Des Mishnayot sur le Temple (Tamid, Middot, Chekalim) en hébreu, commentées en araméen par Rava (Mehoza, IVe siècle), Rabbi Ami (Tibériade, fin du IIIe siècle) et Chmouel (Nehardea, IIIe siècle).",
+ "idee_cle": "La Torah, les prophètes et les sages exagèrent parfois — et c'est le Talmud lui-même qui le dit. Lire, c'est aussi reconnaître une image.",
+ "sougya": {
+  "segments": [8, 14],
+  "actes": [
+   {"titre": "Rava : « c'est une exagération »", "segments": [8, 9]},
+   {"titre": "Rabbi Ami : la Torah aussi, les prophètes aussi", "segments": [10, 11]},
+   {"titre": "Chmouel : trois cents prêtres, trois fois", "segments": [12, 14]}
+  ],
+  "note": "Segments 0-7 et 15-20 : le nerf sciatique (où le mettre sur l'autel, quelle cuisse), hors sougya. La sougya est une digression : on cite la Mishna du tas de cendres parce qu'on vient d'y poser le nerf, et Rava en profite. Chapitre 9 du carnet « Ouvrir le Talmud » (Ayeka)."
+ },
+ "cas": {
+  "transpose": "« J'ai attendu mille ans. » « Il y avait dix mille personnes. » « Tout le lycée en parle. » Tu exagères ? Tout le monde exagère, et tout le monde comprend. La question : comment sait-on quand un texte exagère — surtout un texte qu'on prend au sérieux ?",
+  "epoque": "La Mishna dit qu'il y avait parfois trois cents kor de cendres sur l'autel. Rava dit : c'est une exagération."
+ },
+ "premiere_idee": "Un texte sacré a-t-il le droit d'exagérer ? Et si oui, à quoi le reconnais-tu ?",
+ "segments": [
+  {"i": 0, "dans_sougya": false, "role": "PREUVE", "voix": "la Guemara", "repond_a": null, "resume_fr": "(Le nerf sciatique attaché à la chair monte sur l'autel : « tout » le dit.)", "encadres": []},
+  {"i": 1, "dans_sougya": false, "role": "PREUVE", "voix": "les Sages", "repond_a": 0, "resume_fr": "(Les Sages : on n'offre que ce qui est permis à Israël — Ézéchiel 45:15.)", "encadres": []},
+  {"i": 2, "dans_sougya": false, "role": "DISTINCTION", "voix": "Rabbi / les Sages", "repond_a": 1, "resume_fr": "(Comme la graisse et le sang ? Non : pour eux la Torah le dit explicitement.)", "encadres": []},
+  {"i": 3, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "Rav Houna / Rav Hisda", "repond_a": null, "resume_fr": "(Rav Houna : on pose le nerf sur le tas de cendres. Rav Hisda : la Torah dit « les enfants d'Israël ne mangent pas », pas « l'autel ne consume pas ».)", "encadres": []},
+  {"i": 4, "dans_sougya": false, "role": "REPONSE", "voix": "la Guemara", "repond_a": 3, "resume_fr": "(Rav Houna s'appuie sur « des pâturages d'Israël ».)", "encadres": []},
+  {"i": 5, "dans_sougya": false, "role": "OBJECTION", "voix": "la Guemara (baraïta)", "repond_a": 3, "resume_fr": "(Une baraïta : le nerf de l'holocauste, on le monte sur l'autel — et on le brûle ?)", "encadres": []},
+  {"i": 6, "dans_sougya": false, "role": "REPONSE", "voix": "la Guemara", "repond_a": 5, "resume_fr": "(On le monte, puis on le retire — car on n'offre pas une cuisse abîmée, Malachie 1:8.)", "encadres": []},
+  {"i": 7, "dans_sougya": false, "role": "PREUVE", "voix": "baraïta", "repond_a": 3, "resume_fr": "(Une baraïta dans le sens de Rav Houna : on le retire et on le pose sur le tas de cendres.)", "encadres": []},
+  {"i": 8, "dans_sougya": true, "role": "ENSEIGNEMENT", "voix": "la Mishna (Tamid) / Rava", "repond_a": null,
+   "resume_fr": "La Mishna dit qu'au milieu de l'autel il y avait un tas de cendres, et parfois jusqu'à trois cents kor dessus. Rava : c'est une exagération (gouzma) ; le tanna veut dire « beaucoup ».",
+   "encadres": [
+    {"type": "MOT", "titre": "Gouzma", "texte": "« Exagération ». Le mot technique du Talmud pour dire qu'un chiffre ou une image ne se lit pas à la lettre. Un kor fait environ 250 litres : trois cents kor, ce serait un camion de cendres."},
+    {"type": "PERSONNAGE", "titre": "Rava", "texte": "On le retrouve dans la sougya de la souris (Pessahim 10b). Ici, il fait autre chose : il dit à quel moment ne pas prendre la Mishna à la lettre."},
+    {"type": "CONTEXTE", "titre": "Pourquoi on en parle ici", "texte": "On vient de dire que le nerf sciatique se pose sur le tas de cendres ; la Guemara cite la Mishna qui décrit ce tas — et digresse. Le Talmud avance par association."}
+   ]},
+  {"i": 9, "dans_sougya": true, "role": "ENSEIGNEMENT", "voix": "la Mishna (Tamid) / Rava", "repond_a": 8,
+   "resume_fr": "Autre Mishna : avant l'abattage, on faisait boire l'agneau de l'offrande quotidienne dans une coupe d'or. Rava : exagération — pas vraiment de l'or.",
+   "encadres": [{"type": "OUTIL", "titre": "Gouzma — reconnaître une exagération", "texte": "Deux signes : un chiffre rond et énorme (trois cents), ou un détail trop beau (une coupe d'or pour un agneau). Rava ne dit pas que la Mishna ment : elle parle comme on parle."}]},
+  {"i": 10, "dans_sougya": true, "role": "ENSEIGNEMENT", "voix": "Rabbi Ami", "repond_a": 9,
+   "resume_fr": "Rabbi Ami généralise : la Torah a parlé par exagération, les prophètes ont parlé par exagération, les sages ont parlé par exagération. Pour les sages, on vient de le voir.",
+   "encadres": [
+    {"type": "MOT", "titre": "Lachon havaï", "texte": "« Langage d'exagération » — l'hyperbole. Rabbi Ami ose l'appliquer à la Torah elle-même."},
+    {"type": "PERSONNAGE", "titre": "Rabbi Ami", "texte": "Amora de Tibériade, fin du IIIe siècle, élève de Rabbi Yohanan. Souvent cité avec son ami Rabbi Assi."}
+   ]},
+  {"i": 11, "dans_sougya": true, "role": "PREUVE", "voix": "Rabbi Ami", "repond_a": 10,
+   "resume_fr": "Preuves : la Torah — « des villes grandes et fortifiées jusqu'au ciel » (Deutéronome 9:1), et les murailles n'atteignaient pas le ciel ; les prophètes — au couronnement de Salomon, « la terre se fendit à leur voix » (I Rois 1:40), c'est-à-dire : le bruit était très fort.",
+   "encadres": [{"type": "CONTEXTE", "titre": "Personne n'y croyait", "texte": "Les espions qui décrivent les villes « jusqu'au ciel » veulent dire : immenses, effrayantes. Rabbi Ami en tire une règle de lecture : le texte sacré emploie les images de la langue courante."}]},
+  {"i": 12, "dans_sougya": true, "role": "ENSEIGNEMENT", "voix": "Rabbi Yitshak bar Nahmani au nom de Chmouel", "repond_a": 10,
+   "resume_fr": "Chmouel : en trois endroits les sages ont parlé par exagération — le tas de cendres, la vigne, et le rideau du Sanctuaire. Le tas de cendres, on l'a dit.",
+   "encadres": [{"type": "PERSONNAGE", "titre": "Chmouel", "texte": "Médecin, astronome et sage de Nehardea (Babylonie, IIIe siècle), compagnon et contradicteur de Rav. On lui doit aussi « la loi du royaume est la loi »."}]},
+  {"i": 13, "dans_sougya": true, "role": "PREUVE", "voix": "la Mishna (Middot)", "repond_a": 12,
+   "resume_fr": "La vigne : une vigne d'or à l'entrée du Sanctuaire, où chacun suspendait la feuille ou la grappe d'or qu'il offrait. Rabbi Elazar fils de Rabbi Tsadok : il fallut trois cents prêtres pour la déplacer. Pour Chmouel : exagération.",
+   "encadres": [{"type": "MOT", "titre": "Trois cents", "texte": "Le chiffre favori du Talmud pour dire « énormément » : trois cents prêtres, trois cents lois, trois cents arguments. Quand tu le vois, pose la question."}]},
+  {"i": 14, "dans_sougya": true, "role": "PREUVE", "voix": "la Mishna (Chekalim)", "repond_a": 12,
+   "resume_fr": "Le rideau : épais d'une paume, tissé de 72 fils de 24 brins chacun (bleu, pourpre, écarlate, lin), 40 coudées sur 20, 820 000 dinars, deux par an — et trois cents prêtres pour l'immerger.",
+   "encadres": [{"type": "CONTEXTE", "titre": "Le vrai et l'exagéré sur la même ligne", "texte": "La Mishna donne des mesures précises (72 fils, 24 brins, 40 coudées) puis « trois cents prêtres ». Chmouel ne rejette pas la Mishna : il distingue, dans la même phrase, la description et l'image."}]},
+  {"i": 15, "dans_sougya": false, "role": "ENSEIGNEMENT", "voix": "la Guemara / Rabbi Yehouda", "repond_a": null, "resume_fr": "(Retour au nerf sciatique : Rabbi Yehouda, une seule cuisse — la droite, « par raison ».)", "encadres": []},
+  {"i": 16, "dans_sougya": false, "role": "QUESTION", "voix": "la Guemara", "repond_a": 15, "resume_fr": "(Est-ce certain pour lui, ou un doute ?)", "encadres": []},
+  {"i": 17, "dans_sougya": false, "role": "PREUVE", "voix": "la Guemara (Mishna Pessahim)", "repond_a": 16, "resume_fr": "(Viens écouter : les os et les tendons de l'agneau pascal, qu'on brûle le seize…)", "encadres": []},
+  {"i": 18, "dans_sougya": false, "role": "REPONSE", "voix": "Rav Hisda", "repond_a": 17, "resume_fr": "(…les « tendons » sont le nerf sciatique selon Rabbi Yehouda.)", "encadres": []},
+  {"i": 19, "dans_sougya": false, "role": "DISTINCTION", "voix": "la Guemara", "repond_a": 18, "resume_fr": "(Si c'est un doute, on comprend qu'on brûle les deux ; si c'est certain, qu'on mange le gauche !)", "encadres": []},
+  {"i": 20, "dans_sougya": false, "role": "REPONSE", "voix": "Rav Ika bar Hanina", "repond_a": 19, "resume_fr": "(C'est certain ; mais ici les deux nerfs retirés se sont mélangés.)", "encadres": []}
+ ],
+ "et_alors": {
+  "type": "OUVERTURE",
+  "principe": "Le Talmud enseigne lui-même comment le lire : la Torah, les prophètes et les sages emploient parfois des images exagérées — « jusqu'au ciel », « la terre se fendit », « trois cents prêtres ». Rava et Chmouel ne rejettent pas ces textes ; ils distinguent, dans la même phrase, ce qui décrit et ce qui peint. Lire le Talmud, c'est aussi reconnaître quand il exagère — et savoir que ce n'est pas un mensonge.",
+  "avis_ecarte": null,
+  "halakha": null
+ },
+ "plus_tard": [
+  {"qui": "Maïmonide (Rambam)", "quand": "Égypte, 1138-1204", "texte": "distingue, dans son introduction au chapitre Helek, trois façons de lire les récits des sages : à la lettre en y croyant, à la lettre en s'en moquant, ou en cherchant le sens que l'image porte — la seule qu'il approuve.", "source": "Introduction au Perek Helek"},
+  {"qui": "Rabbi Tsvi Hirsch Chajes", "quand": "Galicie, 1805-1855", "texte": "classe les manières de lire l'aggada : exagérations, chiffres symboliques, images, miracles, croyances de l'époque. Pour lui l'aggada n'oblige pas comme la loi ; elle enseigne par des moyens qui ne sont pas toujours littéraux.", "source": "Mevo ha-Talmud, ch. 30"},
+  {"qui": "Le carnet « Ouvrir le Talmud » (Ayeka)", "quand": "2026", "texte": "fait classer à l'élève des phrases du Talmud — à la lettre, exagération, ou impossible à savoir — et refuse de trancher pour lui : le but est la question."}
+ ],
+ "a_toi": [
+  {"apres_segment": 11, "question": "Pour chaque phrase, décide : à la lettre, exagération, ou impossible à savoir — et justifie. (a) Beruria apprit trois cents lois de trois cents maîtres en un jour (Pessahim 62b). (b) Rabbi Akiva eut vingt-quatre mille élèves (Yevamot 62b). (c) Une phrase que tu as dite cette semaine."},
+  {"apres_segment": 14, "question": "Dans la description du rideau, souligne ce qui est une mesure et ce qui est une image. Puis écris une règle : à quoi reconnaît-on une exagération dans un texte sérieux ? Donne deux signes."}
+ ],
+ "outils": ["GUZMA"],
+ "personnages": ["Rava", "Rabbi Ami", "Chmouel"],
+ "questions_hevrouta": [
+  {"amorce": "Si la Torah exagère, comment savoir ce qui est vrai dedans ?", "piste": "Ne pas rassurer trop vite. Faire remarquer que Rabbi Ami donne des exemples précis et laisse le reste intact : l'exagération est une figure, pas un doute général. Comparer avec le langage courant : « je meurs de faim » n'empêche pas de savoir si on a mangé."},
+  {"amorce": "Pourquoi « trois cents » revient-il tout le temps ?", "piste": "Chiffre rond, mémorisable, conventionnel — comme « mille » ou « des millions » chez nous. Faire chercher d'autres chiffres conventionnels dans d'autres cultures."},
+  {"amorce": "Est-ce que Rava a le droit de dire que la Mishna exagère ?", "piste": "Rava respecte la Mishna et la lit comme on lit toute parole humaine. Relier à Chmouel au segment 14 : la description précise et l'image sont dans la même phrase. Qu'est-ce qui changerait si on prenait tout à la lettre ?"}
+ ],
+ "liens": [
+  {"ref": "Mishnah_Tamid.2.2", "pourquoi": "La Mishna du tas de cendres."},
+  {"ref": "Pesachim.62b", "pourquoi": "Beruria et les trois cents lois en un jour — à la lettre ou non ?"},
+  {"ref": "Yevamot.62b", "pourquoi": "Les vingt-quatre mille élèves de Rabbi Akiva."},
+  {"ref": "Berakhot.10a", "pourquoi": "Beruria lit un verset de près — l'autre façon de bien lire."}
+ ],
+ "vigilance": null
+}

@@ -1,0 +1,332 @@
+{
+ "slug": "eruvin-13b",
+ "ref": "Eruvin.13b",
+ "titre": "« Celles-ci et celles-là » — pourquoi la loi suit Beit Hillel",
+ "parcours": [
+  "avoir-raison"
+ ],
+ "duree_min": 20,
+ "ce_texte": "Talmud de Babylone, traité Érouvin (ordre Moëd). Chmouel, sage de Babylonie au IIIe siècle, rapporte une dispute bien plus ancienne entre les écoles de Hillel et de Chammaï, à Jérusalem. Juste avant, la page parle de Rabbi Meïr (Galilée, IIe siècle). Hébreu et araméen.",
+ "idee_cle": "Deux avis peuvent être tous deux « paroles du Dieu vivant ». On suit celui qui cite l'autre en premier — et le perdant reste sur la page.",
+ "sougya": {
+  "segments": [
+   2,
+   13
+  ],
+  "actes": [
+   {
+    "titre": "Rabbi Meïr : trop brillant pour être suivi",
+    "segments": [
+     2,
+     8
+    ]
+   },
+   {
+    "titre": "Beit Chammaï et Beit Hillel : trois ans de dispute",
+    "segments": [
+     9,
+     13
+    ]
+   }
+  ],
+  "note": "Segments 0-1 : fin d'une discussion technique sur le rouleau de la sota, hors sougya. Segments 14-16 : nouvelle Mishna sur la poutre de l'érouv, hors sougya. Le premier acte (Rabbi Meïr) est une entrée en matière précieuse : quelqu'un capable de prouver n'importe quoi n'est pas suivi."
+ },
+ "cas": {
+  "transpose": "Deux groupes de la classe se disputent depuis des mois sur une règle du jeu. Un arbitre tranche : « Vous avez tous les deux raison… mais on jouera avec la règle du groupe B. » Pourquoi B ? Et ça veut dire quoi, « tous les deux raison » ?",
+  "epoque": "Pendant trois ans, Beit Chammaï et Beit Hillel se disputent : « la loi suit notre avis » — « non, le nôtre ». Une voix céleste tranche."
+ },
+ "premiere_idee": "Qu'est-ce qui devrait décider entre deux avis argumentés : le meilleur argument ? le vote ? l'ancienneté ? autre chose ?",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": null,
+   "resume_fr": "(fin d'une discussion sur l'acte de divorce écrit pour une autre femme : invalide — donc le rouleau de la sota devrait l'être aussi ?)",
+   "encadres": []
+  },
+  {
+   "i": 1,
+   "dans_sougya": false,
+   "role": "DISTINCTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Non : pour le divorce, la Torah dit « il écrira pour elle » ; pour la sota, « il fera pour elle » — l'acte doit être pour elle, pas l'écriture.",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Aha bar Hanina",
+   "repond_a": null,
+   "resume_fr": "Dans la génération de Rabbi Meïr, personne ne l'égalait. Pourquoi la loi ne suit-elle pas ses avis ? Parce que ses collègues ne pouvaient pas suivre sa pensée : il pouvait prouver qu'une chose impure est pure, et l'inverse, avec des arguments convaincants. On ne savait plus distinguer ce qui était la loi.",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Meïr",
+     "texte": "Tanna du IIe s., élève de Rabbi Akiva, mari de Beruria. Les enseignements anonymes de la Mishna lui sont attribués (Sanhédrin 86a) et font loi. Génie du raisonnement."
+    },
+    {
+     "type": "OUTIL",
+     "titre": "Trop profond pour être suivi",
+     "texte": "Le texte commence par un éloge (« personne ne l'égalait ») et fait porter la limite sur les collègues : ils « ne pouvaient pas aller au bout de sa pensée ». Dans ses désaccords avec eux, on n'a donc pas fixé la loi selon lui — non parce qu'il avait tort, mais parce qu'on ne pouvait pas vérifier. Pour qu'une décision tienne, il faut que les autres puissent la suivre."
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "baraïta",
+   "repond_a": 2,
+   "resume_fr": "Rabbi Meïr ne s'appelait pas Meïr mais Nehoraï ; on l'a appelé Meïr parce qu'il « éclairait » (meïr) les yeux des sages. (Et Rabbi Nehoraï non plus ne s'appelait pas ainsi…)",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Meïr / Nehoraï",
+     "texte": "Les deux noms veulent dire « celui qui éclaire », l'un en hébreu, l'autre en araméen."
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "Rabbi Yehouda HaNassi",
+   "repond_a": 2,
+   "resume_fr": "Rabbi : « Si je suis plus aigu que mes collègues, c'est parce que j'ai vu Rabbi Meïr de dos (j'étais assis derrière lui). Si je l'avais vu de face, je serais encore plus aigu. »",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Apprendre en voyant le visage",
+     "texte": "Isaïe 30:20 : « tes yeux verront ton maître ». L'étude n'est pas que des mots : c'est une présence. Pertinent pour une app : que perd-on en apprenant sans visage ?"
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Abbahou au nom de Rabbi Yohanan",
+   "repond_a": 2,
+   "resume_fr": "Rabbi Meïr avait un élève, Soumkhous, capable de donner 48 raisons de déclarer pur et 48 raisons de déclarer impur, pour chaque cas.",
+   "encadres": []
+  },
+  {
+   "i": 6,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "baraïta",
+   "repond_a": 2,
+   "resume_fr": "Un élève brillant de Yavné savait « purifier » le reptile, que la Torah déclare explicitement impur, avec 150 raisons.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Une prouesse admirée",
+     "texte": "Le Talmud admire cette capacité : « on ne fait siéger au Sanhédrin que celui qui sait purifier le reptile à partir de la Torah » (Sanhédrin 17a). Pour juger, il faut savoir construire le meilleur argument du camp adverse. Mais un argument brillant ne suffit pas à faire la loi — c'est la leçon des segments précédents."
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Ravina",
+   "repond_a": 6,
+   "resume_fr": "Ravina : « Moi aussi je peux le purifier » — un serpent tue et augmente l'impureté dans le monde, et pourtant il est pur ; le reptile, qui ne tue pas, à plus forte raison devrait être pur.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Kal va-homer (a fortiori)",
+     "texte": "Si le cas « lourd » (le serpent) est pur, le cas « léger » (le reptile) devrait l'être aussi. Formellement correct — et pourtant…"
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": 7,
+   "resume_fr": "Non : ce kal va-homer se réfute. Le serpent ne fait que ce que fait une épine (blesser, tuer) — et une épine n'est pas impure. L'argument tombe.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Réfuter un kal va-homer",
+     "texte": "On casse un a fortiori en montrant que le cas « lourd » ne l'est pas vraiment sous l'angle qui compte. Compétence-clé : trouver la faille d'un bel argument."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Abba au nom de Chmouel",
+   "repond_a": null,
+   "resume_fr": "Trois ans de dispute entre Beit Chammaï et Beit Hillel : « la loi suit notre avis » — « non, le nôtre ». Une voix céleste sort : « Celles-ci et celles-là sont paroles du Dieu vivant. Mais la loi suit Beit Hillel. »",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Bat kol — voix céleste",
+     "texte": "Littéralement « fille d'une voix », un écho venu du ciel. Attention : dans le four d'Akhnaï (Bava Metzia 59b), on refusera d'écouter une bat kol. Ici on l'écoute. Pourquoi la différence ? Grande question de hevrouta."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Beit Chammaï / Beit Hillel",
+     "texte": "Les deux écoles issues d'Hillel et Chammaï (Ier s.). Environ 300 désaccords recensés dans la littérature rabbinique ; dans presque tous, la loi suit Beit Hillel. Yevamot 14a donne une autre raison que celle de notre page : Beit Hillel étaient plus nombreux, Beit Chammaï plus aiguisés."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 9,
+   "resume_fr": "Question : si les deux sont « paroles du Dieu vivant », pourquoi Beit Hillel a-t-il mérité que la loi le suive ? Réponse : parce qu'ils étaient conciliants et humbles, qu'ils enseignaient leur avis ET celui de Beit Chammaï — et qu'ils citaient Beit Chammaï avant eux-mêmes.",
+   "decoupage_suggere": [
+    "QUESTION : pourquoi Hillel, si les deux ont raison ?",
+    "REPONSE : humilité, et citer l'autre en premier."
+   ],
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Citer l'avis adverse avant le sien",
+     "texte": "Le texte dit exactement : ils enseignaient les deux avis, et citaient Beit Chammaï avant eux-mêmes. C'est le critère retenu ici pour départager deux écoles également vraies — la manière de porter le désaccord, pas la force de l'argument. (L'exercice de l'app « reformule l'avis que tu ne partages pas » s'en inspire ; il va un peu plus loin que le texte.)"
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "la Guemara",
+   "repond_a": 10,
+   "resume_fr": "Preuve : une mishna sur la soucca (Soucca 2:7, Bavli 28a) où Beit Hillel, en racontant une visite commune, nomme « les Anciens de Beit Chammaï » avant « les Anciens de Beit Hillel ».",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Diyouk sur un ordre de mots",
+     "texte": "La preuve tient à l'ordre dans lequel une phrase nomme deux groupes. Chaque mot compte — même sa place."
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "la Guemara",
+   "repond_a": 10,
+   "resume_fr": "Leçon : qui s'abaisse, Dieu l'élève ; qui s'élève, Dieu l'abaisse. Qui court après la grandeur, elle le fuit ; qui la fuit, elle le cherche. Qui force le moment, le moment le force ; qui cède au moment, le moment se tient à ses côtés.",
+   "encadres": []
+  },
+  {
+   "i": 13,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": 9,
+   "resume_fr": "Autre dispute de deux ans et demi entre les deux écoles : aurait-il mieux valu que l'homme ne soit pas créé ? Les uns disent : oui. Les autres : non. (Le texte ne précise pas qui dit quoi.) Ils ont voté et conclu : mieux aurait valu qu'il ne soit pas créé — mais maintenant qu'il l'est, qu'il examine ses actes passés ; certains disent : ses actes à venir.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Un vote, pas une voix céleste",
+     "texte": "Ici, le désaccord est tranché par comptage. Deux disputes, deux modes de décision. Le Talmud ne donne pas une recette unique. Et il ne dit pas quelle école défendait quoi : à toi de deviner, et de dire pourquoi."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Vigilance",
+     "texte": "« Mieux aurait valu ne pas être créé » peut heurter un ado. Le sens traditionnel : la responsabilité d'exister est lourde — d'où la suite immédiate : « examine tes actes ». À présenter avec la conclusion, jamais seule."
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": null,
+   "resume_fr": "(Nouvelle Mishna : largeur de la poutre d'un érouv — hors sougya.)",
+   "encadres": []
+  },
+  {
+   "i": 15,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna — Rabbi Yehouda",
+   "repond_a": 14,
+   "resume_fr": "(suite : solidité de la poutre)",
+   "encadres": []
+  },
+  {
+   "i": 16,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": 14,
+   "resume_fr": "(suite : poutre courbe ou ronde ; circonférence 3 = diamètre 1)",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "HALAKHA",
+  "principe": "Deux avis peuvent être tous deux « paroles du Dieu vivant » : avoir raison n'est pas le seul critère. Ce qui fait suivre Beit Hillel, c'est ici leur façon de porter le désaccord — humilité, et citer l'adversaire en premier (ailleurs, Yevamot 14a, le Talmud donne une autre raison : ils étaient la majorité). Et à l'inverse, Rabbi Meïr, trop profond pour que ses collègues le suivent jusqu'au bout, n'a pas vu la loi fixée selon lui dans ses désaccords avec eux.",
+  "avis_ecarte": "Beit Chammaï — dont les avis restent dans la Mishna, cités à chaque fois, souvent en premier.",
+  "halakha": "Dans les désaccords entre les deux écoles, la loi suit Beit Hillel, sauf quelques cas signalés au fil du Talmud ; un avis de Beit Chammaï contraire à Beit Hillel « n'est pas une mishna » (Berakhot 36b — à confirmer)."
+ },
+ "outils": [
+  "MAHLOKET",
+  "KAL_VAHOMER",
+  "DIYOUK",
+  "ROV"
+ ],
+ "personnages": [
+  "Rabbi Meïr",
+  "Beit Hillel",
+  "Beit Chammaï",
+  "Ravina"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Comment deux avis contraires peuvent-ils être tous les deux vrais ?",
+   "piste": "Ne pas résoudre trop vite. Pistes : vrais dans leur logique, vrais à des époques différentes, vrais comme deux faces d'une réalité. Faire choisir et argumenter."
+  },
+  {
+   "amorce": "Si Beit Hillel gagne par humilité, est-ce que ça veut dire qu'être humble, c'est avoir raison ?",
+   "piste": "Non : le texte dit que les deux ont raison ; l'humilité décide de qui on suit, pas de qui a raison. Distinguer vérité et autorité."
+  },
+  {
+   "amorce": "Ici on écoute la voix céleste, dans le four d'Akhnaï on la refuse. C'est contradictoire ?",
+   "piste": "Laisser l'ado formuler une distinction (chani) : ici la voix ne contredit pas la majorité ? ici elle tranche une impasse ? La Guemara elle-même soulève le problème (Yevamot 14a) et les Tossafot (Berakhot 52a, s.v. ve-Rabbi Yehochoua hi) répondent : dans le four d'Akhnaï, la voix allait contre la majorité ; Beit Hillel étaient la majorité → moment « ta question est celle des Tossafot »."
+  },
+  {
+   "amorce": "Dans la dispute « aurait-il mieux valu ne pas être créé ? », qui a dit quoi, d'après toi ?",
+   "piste": "Le texte ne le dit pas. Faire argumenter dans les deux sens à partir de ce qu'on sait des deux écoles (rigueur / indulgence). Pas de bonne réponse."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Bava_Metzia.59b",
+   "pourquoi": "Le four d'Akhnaï : la voix céleste refusée."
+  },
+  {
+   "ref": "Shabbat.31a",
+   "pourquoi": "Hillel et Chammaï face aux trois candidats."
+  },
+  {
+   "ref": "Yevamot.14b",
+   "pourquoi": "Malgré leurs désaccords, Beit Hillel et Beit Chammaï se mariaient entre eux (Mishna Yevamot 1:4, Bavli 13b) ; la baraïta en 14b conclut : « pour t'apprendre qu'ils se témoignaient affection et amitié, pour accomplir “aimez la vérité et la paix” (Zacharie 8:19) »."
+  },
+  {
+   "ref": "Yevamot.14a",
+   "pourquoi": "Pourquoi la loi suit Beit Hillel : parce qu'ils étaient la majorité — et le problème de la voix céleste."
+  },
+  {
+   "ref": "Sanhedrin.17a",
+   "pourquoi": "« On ne fait siéger au Sanhédrin que celui qui sait purifier le reptile »."
+  }
+ ],
+ "vigilance": "Segment 13 (« mieux aurait valu ne pas être créé ») : toujours l'afficher avec sa conclusion (« examine tes actes »)."
+}

@@ -1,0 +1,247 @@
+{
+ "slug": "bava-metzia-62a",
+ "ref": "Bava_Metzia.62a",
+ "titre": "Deux voyageurs, une seule gourde",
+ "parcours": [
+  "toi-et-lautre"
+ ],
+ "duree_min": 12,
+ "ce_texte": "Talmud de Babylone, traité Bava Metsia (ordre Nezikin). Une baraïta en hébreu, citée au milieu d'une discussion sur le prêt à intérêt. Ben Petoura et Rabbi Akiva vivaient en Terre d'Israël au début du IIe siècle, sous la domination romaine.",
+ "idee_cle": "Un même verset, deux conclusions opposées. Le Talmud garde les deux et tranche : ta vie passe avant — mais Ben Petoura reste sur la page.",
+ "sougya": {
+  "segments": [
+   0,
+   1
+  ],
+  "actes": [],
+  "note": "Le dilemme tient en un seul segment Sefaria (1), cité au passage dans une discussion sur l'intérêt (ribbit) qui occupe tout le reste de la page (2-14). Le segment 1 doit être découpé en 4 coups pour l'app (voir decoupage_suggere). Les segments 2-14 forment une chaîne dialectique pure (objection / réponse / question / preuve) : bon matériau pour l'exercice « reconstruis le fil » avec des ados avancés, mais trop technique pour une première lecture."
+ },
+ "cas": {
+  "transpose": "Deux randonneurs perdus dans le désert, une seule gourde. S'ils partagent, les deux meurent avant d'arriver. Si un seul boit, il arrive. La gourde est à l'un des deux. Qu'est-ce qu'il fait ?",
+  "epoque": "Deux personnes marchent sur un chemin désert ; l'une a une cruche d'eau. S'ils boivent tous les deux, ils meurent ; si un seul boit, il atteint un lieu habité."
+ },
+ "premiere_idee": "Tu es celui qui a la gourde. Qu'est-ce que tu fais ? Écris-le avant de lire — et note si tu es sûr ou pas.",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "la Guemara (fin de la dérivation de l'avis opposé à Rabbi Yohanan, cf. 61b)",
+   "repond_a": null,
+   "resume_fr": "« Et ton frère vivra avec toi » (Lévitique 25:36) : de là on apprend qu'il faut rendre l'intérêt pris à quelqu'un, pour qu'il puisse vivre.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "D'où sort ce dilemme ?",
+     "texte": "La page parle d'argent prêté avec intérêt. Un verset est cité (« ton frère vivra avec toi ») ; la Guemara demande ce qu'un autre sage fait de ce verset — et c'est là que surgit l'histoire de la gourde. Le Talmud digresse, et c'est dans la digression que se trouve le trésor."
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "dans_sougya": true,
+   "role": "ENSEIGNEMENT",
+   "voix": "baraïta — Ben Petoura / Rabbi Akiva",
+   "repond_a": 0,
+   "resume_fr": "Que fait Rabbi Yohanan de ce verset ? Il s'en sert pour cette baraïta : deux voyageurs, une cruche. Ben Petoura enseignait : mieux vaut que les deux boivent et meurent, plutôt que l'un voie la mort de l'autre. Jusqu'à ce que vienne Rabbi Akiva : « ton frère vivra AVEC toi » — ta vie passe avant celle de l'autre.",
+   "decoupage_suggere": [
+    "QUESTION : que fait Rabbi Yohanan du verset ?",
+    "MISHNA (baraïta) : le cas des deux voyageurs",
+    "ENSEIGNEMENT : Ben Petoura — partager et mourir ensemble",
+    "CONCLUSION : Rabbi Akiva — « avec toi » : ta vie d'abord"
+   ],
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Ben Petoura",
+     "texte": "On ne sait presque rien de lui — pas même son prénom. Il n'existe dans le Talmud de Babylone que par cette position (le Sifra l'appelle Ben Petouri). Sa voix est conservée alors que la loi ne le suit pas."
+    },
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Akiva",
+     "texte": "On le retrouve dans le four d'Akhnaï (c'est lui qui annonce l'excommunication avec douceur). C'est aussi lui qui a dit : « aime ton prochain comme toi-même » est le grand principe de la Torah (Sifra Kedochim 4:12)."
+    },
+    {
+     "type": "OUTIL",
+     "titre": "Diyouk sur « avec toi »",
+     "texte": "Toute la décision de Rabbi Akiva tient à un mot : imakh, « avec toi ». L'autre doit vivre avec toi — donc toi d'abord. Un ado peut contester cette lecture : c'est le but."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Le même verset, deux avis (Sifra Behar 5:3)",
+     "texte": "Dans le Sifra, la source parallèle, Ben Petouri tire son avis du même verset : « ton frère vivra avec toi » — donc les deux vivent ou meurent ensemble. Rabbi Akiva lit « avec toi » autrement. Deux lectures d'un même mot : excellent exercice de diyouk comparé."
+    },
+    {
+     "type": "HALAKHA",
+     "titre": "Ta vie d'abord — mais",
+     "texte": "Les décisionnaires suivent en général Rabbi Akiva. Mais le texte ne dit pas « laisse l'autre mourir » ; il dit « ta vie passe avant ». Questions ouvertes (certaines discutées par les décisionnaires tardifs) : et si la gourde n'appartient à personne ? Et si l'autre est ton enfant ?"
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "« Jusqu'à ce que vienne Rabbi Akiva »",
+     "texte": "La formule du Talmud de Babylone suggère que l'enseignement de Ben Petoura avait cours jusqu'à ce que Rabbi Akiva enseigne autrement (c'est la lecture de Steinsaltz). Dans le Sifra, c'est un simple échange entre les deux : « Rabbi Akiva lui dit ». Deux versions, deux façons de présenter un désaccord."
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Objection d'une baraïta : les fils qui héritent d'argent pris en intérêt ne doivent pas le rendre — donc le père, lui, devait ?",
+   "encadres": []
+  },
+  {
+   "i": 3,
+   "dans_sougya": false,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 2,
+   "resume_fr": "Non : le texte parle des fils seulement parce que la suite parle d'un objet volé hérité, qu'ils doivent rendre pour l'honneur du père.",
+   "encadres": []
+  },
+  {
+   "i": 4,
+   "dans_sougya": false,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 3,
+   "resume_fr": "L'honneur d'un père qui prêtait à intérêt ? Il n'agissait pas « selon ton peuple ».",
+   "encadres": []
+  },
+  {
+   "i": 5,
+   "dans_sougya": false,
+   "role": "REPONSE",
+   "voix": "la Guemara (Rabbi Pinhas au nom de Rava)",
+   "repond_a": 4,
+   "resume_fr": "Il s'agit d'un père qui s'est repenti mais n'a pas eu le temps de rendre.",
+   "encadres": []
+  },
+  {
+   "i": 6,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Autre baraïta : les voleurs et prêteurs à intérêt, même après avoir encaissé, doivent rendre. Donc l'intérêt se rend.",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": false,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 6,
+   "resume_fr": "C'est une dispute de tannaïm : Rabbi Nehemia et Rabbi Eliézer ben Yaakov exemptent le prêteur des coups parce qu'il peut réparer — en rendant.",
+   "encadres": []
+  },
+  {
+   "i": 8,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": 7,
+   "resume_fr": "Donc le premier tanna pense qu'il n'y a rien à réparer ? Non : la réparation, c'est déchirer le document.",
+   "encadres": []
+  },
+  {
+   "i": 9,
+   "dans_sougya": false,
+   "role": "QUESTION",
+   "voix": "la Guemara",
+   "repond_a": 8,
+   "resume_fr": "À quoi sert de déchirer le document ? Dans les deux hypothèses sur le statut d'un document, ça ne change rien.",
+   "encadres": []
+  },
+  {
+   "i": 10,
+   "dans_sougya": false,
+   "role": "REPONSE",
+   "voix": "la Guemara",
+   "repond_a": 9,
+   "resume_fr": "Ce tanna enseigne qu'une évaluation de biens est déjà un acte significatif.",
+   "encadres": []
+  },
+  {
+   "i": 11,
+   "dans_sougya": false,
+   "role": "PREUVE",
+   "voix": "la Guemara",
+   "repond_a": 10,
+   "resume_fr": "Confirmation par une mishna (75b) : même les témoins transgressent — donc l'évaluation compte. Conclus-en ainsi.",
+   "encadres": []
+  },
+  {
+   "i": 12,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rav Safra",
+   "repond_a": null,
+   "resume_fr": "Règle : ce que les tribunaux non juifs feraient payer comme intérêt, nos tribunaux le font rendre ; sinon, non.",
+   "encadres": []
+  },
+  {
+   "i": 13,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "Abayé à Rav Yossef",
+   "repond_a": 12,
+   "resume_fr": "Contre-exemple : le prêt d'une mesure de grain contre la même mesure, si le prix monte. Réponse : pour eux ce n'est pas un prêt mais un dépôt.",
+   "encadres": []
+  },
+  {
+   "i": 14,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "Ravina à Rav Achi",
+   "repond_a": 12,
+   "resume_fr": "Autre contre-exemple : l'hypothèque sans déduction (suite sur 62b).",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "HALAKHA",
+  "principe": "Rabbi Akiva : ta vie passe avant. Mais le Talmud garde la voix de Ben Petoura, et la formule « jusqu'à ce que vienne Rabbi Akiva » indique que son enseignement avait cours jusqu'à ce que Rabbi Akiva enseigne autrement. Un dilemme tranché n'est pas un dilemme effacé.",
+  "avis_ecarte": "Ben Petoura : qu'aucun ne voie la mort de l'autre — partager, même pour mourir ensemble.",
+  "halakha": "La Guemara ne tranche pas explicitement ici : elle cite la baraïta pour expliquer l'usage du verset. Les décisionnaires suivent en général Rabbi Akiva (règle « la halakha suit Rabbi Akiva contre un collègue isolé », Erouvin 46b) : la vie de celui qui a l'eau passe d'abord. Le cas n'est pas codifié mot pour mot dans le Rambam ni le Choulhan Aroukh (à confirmer)."
+ },
+ "outils": [
+  "DIYOUK",
+  "MAHLOKET"
+ ],
+ "personnages": [
+  "Rabbi Akiva",
+  "Ben Petoura"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Rabbi Akiva a-t-il raison ?",
+   "piste": "Arène. Exiger de reformuler Ben Petoura avant d'argumenter (« il ne dit pas : sois gentil ; il dit : ne sois pas celui qui regarde l'autre mourir »). Puis tester Rabbi Akiva : et si l'autre est ton frère ? ton enfant ?"
+  },
+  {
+   "amorce": "Tout repose sur le mot « avec toi ». Est-ce que ce n'est pas tiré par les cheveux ?",
+   "piste": "Montrer que le Talmud assume ce type de lecture (diyouk) ; faire chercher une autre lecture possible du même mot. L'ado a le droit de ne pas être convaincu — c'est une kouchia légitime."
+  },
+  {
+   "amorce": "Et si la gourde n'est à personne ?",
+   "piste": "Question discutée par des décisionnaires tardifs. Ne pas trancher : la noter comme teikou dans « Ma page »."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Sanhedrin.37a",
+   "pourquoi": "Qui sauve une vie sauve un monde — l'autre face du même principe."
+  },
+  {
+   "ref": "Pesachim.25b",
+   "pourquoi": "« Qui te dit que ton sang est plus rouge ? » — on ne tue pas pour se sauver (aussi Sanhédrin 74a, Yoma 82b)."
+  },
+  {
+   "ref": "Sifra, Behar, Section 5:3",
+   "pourquoi": "La source parallèle : Ben Petouri y tire son avis du même verset, et la formule « jusqu'à ce que vienne Rabbi Akiva » y est absente."
+  }
+ ],
+ "vigilance": "Dilemme de vie ou de mort : l'app doit laisser la place au désaccord de l'ado et ne jamais présenter la halakha comme un conseil pratique de survie."
+}

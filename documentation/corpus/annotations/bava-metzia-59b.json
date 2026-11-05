@@ -1,0 +1,347 @@
+{
+ "slug": "bava-metzia-59b",
+ "ref": "Bava_Metzia.59b",
+ "titre": "Le four d'Akhnaï : « la Torah n'est pas dans le ciel »",
+ "parcours": [
+  "avoir-raison"
+ ],
+ "duree_min": 25,
+ "ce_texte": "Talmud de Babylone, traité Bava Metsia (ordre Nezikin, le droit civil), au milieu d'une discussion sur la blessure par les mots. Une baraïta en hébreu, puis des récits en araméen. L'histoire se passe à Yavné vers l'an 100 : Rabbi Eliézer, Rabbi Yehochoua, Rabban Gamliel, Rabbi Akiva.",
+ "idee_cle": "La Torah n'est pas dans le ciel : la décision appartient aux humains, à la majorité. Mais gagner ne donne pas le droit d'humilier — les portes de la blessure par les mots ne se ferment jamais.",
+ "sougya": {
+  "segments": [
+   0,
+   10
+  ],
+  "actes": [
+   {
+    "titre": "Le débat : caroubier, ruisseau, murs, voix céleste",
+    "segments": [
+     0,
+     4
+    ]
+   },
+   {
+    "titre": "Le prix : l'excommunication et ses suites",
+    "segments": [
+     5,
+     10
+    ]
+   }
+  ],
+  "note": "L'histoire est citée dans le Talmud au milieu d'une discussion sur l'ona'at devarim, la blessure par les mots (segments 11-14 et avant 59a). Ce contexte change tout : le four d'Akhnaï n'est pas seulement « la majorité l'emporte », c'est aussi « regardez ce que coûte d'humilier celui qui a perdu ». Le début (le four lui-même, 59a) manque : ajouter 59a au corpus."
+ },
+ "cas": {
+  "transpose": "Vote de classe. Tout le monde est contre toi, mais tu es sûr d'avoir raison. Tu dis : « Si j'ai raison, que le tableau tombe » — et il tombe. Est-ce que ça compte comme un argument ? Et après : qu'est-ce que la classe fait de toi ?",
+  "epoque": "Rabbi Eliézer dit qu'un four d'un certain type est pur ; tous les autres sages disent impur. Il donne tous les arguments du monde ; ils refusent. Alors il appelle un caroubier à témoin."
+ },
+ "premiere_idee": "Si un miracle confirme ton avis, est-ce que tu as raison ? Et si la majorité se trompe, est-ce qu'il faut quand même la suivre ?",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara / Chmouel / baraïta",
+   "repond_a": null,
+   "resume_fr": "Pourquoi « four d'Akhnaï » (le serpent) ? Parce que les sages l'ont entouré d'arguments comme un serpent enroulé, et l'ont déclaré impur. Ce jour-là, Rabbi Eliézer donna toutes les réponses du monde, et ils ne les acceptèrent pas.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Le four (59a)",
+     "texte": "Un four en terre cuite coupé en anneaux, avec du sable entre les anneaux. Est-ce encore un « ustensile » (qui peut devenir impur) ou des morceaux ? Rabbi Eliézer : des morceaux, donc pur. Les sages : un ustensile, donc impur. Le détail technique compte peu pour la suite."
+    },
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Eliézer ben Hyrcanus",
+     "texte": "On le retrouve en Berakhot 2a (le premier avis du Talmud). Élève de Rabban Yohanan ben Zakkaï, qui disait de lui qu'il « pèserait plus que tous les sages réunis » (Avot 2:8 — Abba Chaoul attribue ce mot à Rabbi Élazar ben Arakh). Maître de Rabbi Akiva. Fidèle aux traditions reçues (« il ne disait rien qu'il n'eût entendu de son maître », Soucca 28a), il refuse de céder à un raisonnement majoritaire."
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "Rabbi Eliézer / les Sages",
+   "repond_a": 0,
+   "resume_fr": "« Si la loi est comme moi, ce caroubier le prouvera. » Le caroubier se déracine et se déplace de cent coudées. « On n'apporte pas de preuve d'un caroubier. » — « Alors le ruisseau le prouvera. » Le ruisseau remonte son cours. « On n'apporte pas de preuve d'un ruisseau. »",
+   "decoupage_suggere": [
+    "PREUVE : le caroubier",
+    "OBJECTION : pas de preuve d'un caroubier",
+    "PREUVE : le ruisseau",
+    "OBJECTION : pas de preuve d'un ruisseau"
+   ],
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Qu'est-ce qu'une preuve recevable ?",
+     "texte": "Les sages ne nient pas le miracle : ils nient qu'il soit un argument. Un miracle prouve une puissance, pas une interprétation."
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "Rabbi Eliézer / Rabbi Yehochoua",
+   "repond_a": 0,
+   "resume_fr": "« Les murs de la maison d'étude le prouveront. » Les murs penchent. Rabbi Yehochoua les gronde : « Quand les sages débattent de la loi, de quoi vous mêlez-vous ? » Par respect pour Rabbi Yehochoua ils ne tombent pas ; par respect pour Rabbi Eliézer ils ne se redressent pas. Ils penchent encore.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Les murs penchés",
+     "texte": "Détail génial : le texte laisse les murs en suspens, comme la dispute. Le monde physique lui-même garde la mahloket."
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "dans_sougya": true,
+   "role": "PREUVE",
+   "voix": "Rabbi Eliézer / voix céleste",
+   "repond_a": 0,
+   "resume_fr": "« Le Ciel le prouvera. » Une voix céleste : « Qu'avez-vous contre Rabbi Eliézer ? La loi est comme lui partout. »",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Bat kol",
+     "texte": "Voix céleste. En Erouvin 13b on l'a écoutée pour trancher entre Hillel et Chammaï. Ici…"
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "Rabbi Yehochoua / Rabbi Yirmeya / Élie",
+   "repond_a": 3,
+   "resume_fr": "Rabbi Yehochoua se lève : « Elle n'est pas dans le ciel » (Deutéronome 30:12). Rabbi Yirmeya explique : la Torah a été donnée au Sinaï ; on n'écoute plus de voix céleste, car Dieu y a écrit « incline-toi vers la majorité » (Exode 23:2). Des années plus tard, Rabbi Natan demande au prophète Élie : qu'a fait Dieu à ce moment-là ? « Il a souri et dit : mes enfants m'ont vaincu, mes enfants m'ont vaincu. »",
+   "decoupage_suggere": [
+    "OBJECTION : « elle n'est pas dans le ciel »",
+    "QUESTION : que veut dire ce verset ici ?",
+    "REPONSE : la Torah est donnée, la majorité décide",
+    "RECIT : Dieu sourit"
+   ],
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Yehochoua ben Hanania",
+     "texte": "On le retrouve en Taanit 7a (le vin dans les pots d'argile). Ici, il tient tête au ciel lui-même."
+    },
+    {
+     "type": "OUTIL",
+     "titre": "Rov — la majorité",
+     "texte": "Exode 23:2 dit à la fois « ne suis pas la majorité pour le mal » et, en fin de verset, « d'après la majorité, fais pencher ». Les Sages tirent de cette fin la règle de la majorité (Sanhédrin 2a) ; Rachi, sur ce verset, montre aussi un sens plus simple lié au tribunal. Compare les deux lectures : c'est un bon exemple de la façon dont les Sages lisent un verset."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "« Mes enfants m'ont vaincu »",
+     "texte": "Nitshouni banaï — Dieu sourit en perdant. Pessahim 119a le dit autrement : « un être de chair, quand on le vainc, est triste ; le Saint, béni soit-Il, quand on le vainc, se réjouit ». La Torah vit parce que les humains en ont la charge."
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 4,
+   "resume_fr": "Ce jour-là, on brûla tout ce que Rabbi Eliézer avait déclaré pur, on vota et on l'excommunia. « Qui va le lui annoncer ? » Rabbi Akiva : « Moi — sinon quelqu'un de maladroit ira, et il détruira le monde entier. »",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Nidouï — excommunication",
+     "texte": "Mise à l'écart : on se tient à quatre coudées, on ne s'assied pas avec lui. En droit, c'est temporaire (trente jours, renouvelables). Pour Rabbi Eliézer, elle dura jusqu'à sa mort : c'est Rabbi Yehochoua qui la leva après son décès (Sanhédrin 68a)."
+    },
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabbi Akiva",
+     "texte": "Élève de Rabbi Eliézer, le plus grand sage de sa génération, berger devenu savant à 40 ans. Ici, il choisit d'être porteur de la mauvaise nouvelle pour en adoucir le coup."
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 5,
+   "resume_fr": "Rabbi Akiva s'habille de noir et s'assied à quatre coudées. « Akiva, qu'y a-t-il aujourd'hui ? » — « Maître, il me semble que tes collègues s'éloignent de toi. » (Litote : c'est lui qu'on éloigne.) Rabbi Eliézer déchire ses vêtements, ôte ses chaussures, s'assied par terre.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Dire sans blesser",
+     "texte": "Rabbi Akiva ne dit pas « tu es excommunié ». Il laisse son maître comprendre. Toute la sougya est dans ce segment : comment dire une chose dure."
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 6,
+   "resume_fr": "Ses yeux versent des larmes, et le monde est frappé : un tiers des olives, un tiers du blé, un tiers de l'orge. Même la pâte dans les mains des femmes tourne. Grande colère ce jour-là : tout ce que Rabbi Eliézer regardait brûlait.",
+   "encadres": []
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara / Rabban Gamliel",
+   "repond_a": 5,
+   "resume_fr": "Rabban Gamliel, le Nassi responsable de la décision, est en bateau ; une vague va l'engloutir. « C'est pour Rabbi Eliézer. » Il se lève : « Maître du monde, tu sais que je n'ai pas agi pour mon honneur ni pour celui de ma famille, mais pour le tien — pour que les disputes ne se multiplient pas en Israël. » La mer se calme.",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Rabban Gamliel",
+     "texte": "On le retrouve en Berakhot 2a. Beau-frère de Rabbi Eliézer. Le Ciel accepte sa défense : la mer se calme. Mais la suite (segments 9-10) montre que la douleur de celui qu'on a humilié n'est pas effacée pour autant."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 8,
+   "resume_fr": "Imma Chalom, femme de Rabbi Eliézer et sœur de Rabban Gamliel, empêche désormais son mari de dire la prière de supplication (tahanoun), de peur que son frère soit puni. Un jour, elle se trompe de date (ou un pauvre frappe à la porte) et le laisse seul un instant.",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Imma Chalom",
+     "texte": "L'une des rares femmes nommées et agissantes dans le Talmud. Elle comprend la situation mieux que les deux hommes : elle protège l'un de l'autre."
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "Imma Chalom",
+   "repond_a": 9,
+   "resume_fr": "Elle le trouve la tête baissée en prière : « Lève-toi, tu as tué mon frère. » Le chofar annonce la mort de Rabban Gamliel. « Comment savais-tu ? » — « Tradition de la maison de mon grand-père : toutes les portes du Ciel peuvent être fermées, sauf celles de la blessure par les mots. »",
+   "encadres": [
+    {
+     "type": "MOT",
+     "titre": "Ona'a — la blessure par les mots",
+     "texte": "Ona'at devarim : faire mal par la parole (humilier, rappeler le passé de quelqu'un). Le Talmud la juge plus grave que la tromperie sur l'argent, parce qu'on ne peut pas la rembourser."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Vigilance",
+     "texte": "La mort de Rabban Gamliel comme conséquence d'une prière peut troubler. Le texte ne dit pas que Rabbi Eliézer a voulu sa mort ; il dit que la douleur d'un humilié est entendue. À discuter."
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": null,
+   "resume_fr": "Qui blesse un converti par les mots transgresse trois interdits ; qui l'opprime, deux.",
+   "encadres": []
+  },
+  {
+   "i": 12,
+   "dans_sougya": false,
+   "role": "OBJECTION",
+   "voix": "la Guemara",
+   "repond_a": 11,
+   "resume_fr": "Pourquoi deux pour l'oppression ? Il y a aussi trois versets. Correction : trois dans les deux cas.",
+   "encadres": []
+  },
+  {
+   "i": 13,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Eliézer le Grand (baraïta)",
+   "repond_a": 11,
+   "resume_fr": "Pourquoi la Torah met-elle en garde 36 (ou 46) fois sur le converti ? Parce que son penchant est fragile.",
+   "encadres": []
+  },
+  {
+   "i": 14,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabbi Natan (baraïta)",
+   "repond_a": 11,
+   "resume_fr": "« Vous avez été étrangers en Égypte » : un défaut qui est en toi, ne le reproche pas à l'autre. Proverbe : qui a un pendu dans sa famille ne dit pas « pends-moi un poisson ».",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Le contexte du four d'Akhnaï",
+     "texte": "Toute cette page parle de la blessure par les mots. L'histoire du four en est l'illustration : le vrai sujet n'est pas qui a raison, mais ce qu'on fait au perdant."
+    }
+   ]
+  },
+  {
+   "i": 15,
+   "dans_sougya": false,
+   "role": "MISHNA",
+   "voix": "la Mishna",
+   "repond_a": null,
+   "resume_fr": "(Nouvelle Mishna : ne pas mélanger des produits de deux vendeurs — hors sougya.)",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "HALAKHA",
+  "principe": "Deux principes, et il faut tenir les deux. 1) La Torah est entre les mains des humains : ni miracle ni voix céleste ne remplacent le débat, et la majorité décide. 2) Mais gagner ne donne pas le droit d'humilier : la douleur de celui qu'on a blessé par les mots est toujours entendue, et l'humiliation infligée au vaincu a coûté la vie du Nassi.",
+  "avis_ecarte": "Rabbi Eliézer — le four est pur. Et peut-être avait-il raison « au ciel » : lecture classique de la voix céleste (par exemple Derachot HaRan, sermon 7 — à confirmer), que le texte refuse quand même comme critère de décision.",
+  "halakha": "La loi suit la majorité des sages, pas les signes ni les voix ; même un prophète ne peut trancher une halakha par prophétie (Rambam, Yessodei HaTorah 9 — numéro à confirmer). Le four : impur."
+ },
+ "outils": [
+  "ROV",
+  "TA_CHMA",
+  "MAHLOKET"
+ ],
+ "personnages": [
+  "Rabbi Eliézer",
+  "Rabbi Yehochoua",
+  "Rabbi Akiva",
+  "Rabban Gamliel",
+  "Imma Chalom"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Si Dieu lui-même dit que Rabbi Eliézer a raison, comment peut-on ne pas l'écouter ?",
+   "piste": "Distinguer : avoir raison sur le fond / avoir le droit de décider. Le texte dit que Dieu a accepté de ne pas décider (« mes enfants m'ont vaincu »). Qu'est-ce que ça implique pour n'importe quelle règle ?"
+  },
+  {
+   "amorce": "Rabban Gamliel a agi « pour que les disputes ne se multiplient pas ». Il avait de bonnes raisons. Pourquoi est-il puni ?",
+   "piste": "Une bonne raison n'efface pas la blessure causée. Faire chercher la différence entre décider contre quelqu'un et l'humilier."
+  },
+  {
+   "amorce": "En Erouvin 13b on écoute la voix céleste, ici non. Pourquoi ?",
+   "piste": "Laisser l'ado proposer une distinction. La Guemara pose le problème en Yevamot 14a ; les Tossafot (Berakhot 52a, s.v. ve-Rabbi Yehochoua hi) répondent : ici la voix allait contre la majorité, en Erouvin Beit Hillel étaient la majorité. Moment « ta question est celle des Tossafot »."
+  },
+  {
+   "amorce": "Qui est le héros de cette histoire ?",
+   "piste": "Pas de bonne réponse : Rabbi Yehochoua (le principe), Rabbi Akiva (la douceur), Imma Chalom (la lucidité), Rabbi Eliézer (la fidélité). Faire défendre chacun."
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Bava_Metzia.58b",
+   "pourquoi": "Le début : la blessure par les mots, plus grave que la tromperie sur l'argent."
+  },
+  {
+   "ref": "Eruvin.13b",
+   "pourquoi": "La voix céleste écoutée, cette fois."
+  },
+  {
+   "ref": "Sanhedrin.68a",
+   "pourquoi": "La mort de Rabbi Eliézer, toujours excommunié, et le regret des sages."
+  },
+  {
+   "ref": "Pesachim.119a",
+   "pourquoi": "« Le Saint, béni soit-Il, quand on le vainc, se réjouit »."
+  },
+  {
+   "ref": "Yevamot.14a",
+   "pourquoi": "La Guemara elle-même demande : pourquoi écouter la voix céleste pour Beit Hillel et pas ici ?"
+  }
+ ],
+ "vigilance": "Le passage est fort (excommunication, mort de Rabban Gamliel). Le placer après Erouvin 13b, et garder la hevrouta disponible sur les segments 7-10."
+}

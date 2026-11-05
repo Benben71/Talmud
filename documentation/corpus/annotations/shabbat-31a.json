@@ -1,0 +1,281 @@
+{
+ "slug": "shabbat-31a",
+ "ref": "Shabbat.31a",
+ "titre": "Hillel, Chammaï et « toute la Torah sur un pied »",
+ "parcours": [
+  "toi-et-lautre"
+ ],
+ "duree_min": 20,
+ "ce_texte": "Talmud de Babylone, traité Chabbat (ordre Moëd), feuillets 30b-31a. Une baraïta — enseignement de l'époque de la Mishna — en hébreu, rapportée en Babylonie : trois histoires sur Hillel et Chammaï, deux maîtres de Jérusalem au Ier siècle avant notre ère.",
+ "idee_cle": "Toute la Torah tient sur un pied — à condition d'ajouter « va, étudie ». Et le Talmud tranche : sois patient comme Hillel.",
+ "sougya": {
+  "segments": [
+   0,
+   8
+  ],
+  "actes": [
+   {
+    "titre": "Le pari : faire sortir Hillel de ses gonds",
+    "segments": [
+     0,
+     3
+    ]
+   },
+   {
+    "titre": "Trois candidats à la conversion",
+    "segments": [
+     4,
+     8
+    ]
+   }
+  ],
+  "note": "Le passage s'ouvre au milieu de l'histoire du pari. Le cadre moral est explicite juste avant, en Chabbat 30b (téléchargé : corpus/shabbat-30b.json, segment 11) : « Les Sages ont enseigné : que l'homme soit toujours patient (anvetan) comme Hillel et non irascible (kapdan) comme Chammaï. Il arriva que deux hommes… ». Ce prologue DOIT ouvrir la sougya dans l'app (à fusionner comme segment 0 lors du découpage définitif) : le Talmud prend parti, et l'annotation ne doit pas le neutraliser. Les segments 9-12 (Rech Lakich sur Isaïe 33:6, Rava sur le jugement final) sont hors sougya mais le segment 10 (« as-tu fait du commerce honnêtement ? ») peut servir d'ouverture."
+ },
+ "cas": {
+  "transpose": "Quelqu'un te demande : « Explique-moi tout ce qui compte pour toi — en dix secondes, sinon je m'en vais. » Tu l'envoies balader, ou tu tentes ? Et si tu tentes, tu dis quoi ?",
+  "epoque": "Un non-juif vient voir Chammaï : « Convertis-moi, à condition de m'apprendre toute la Torah pendant que je tiens sur un pied. » Puis il va voir Hillel."
+ },
+ "premiere_idee": "Écris ta phrase « sur un pied » : l'essentiel, en une ligne.",
+ "segments": [
+  {
+   "i": 0,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": null,
+   "resume_fr": "Deux hommes parient 400 zouz : qui arrivera à mettre Hillel en colère ? L'un vient le vendredi, à l'heure où Hillel se lave, et crie « Qui est Hillel ? » sur un ton méprisant. Hillel s'habille, sort : « Mon fils, que veux-tu ? » — « Pourquoi les Babyloniens ont-ils la tête ovale ? » (Hillel est babylonien.) — « Mon fils, grande question : parce que leurs sages-femmes ne savent pas modeler la tête des nouveau-nés. »",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Hillel l'Ancien",
+     "texte": "Venu de Babylonie à Jérusalem (Ier s. av. l'ère commune), d'abord très pauvre, devenu Nassi. Sa patience et son humilité sont proverbiales ; ses élèves forment « Beit Hillel »."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Le cadre (Chabbat 30b)",
+     "texte": "Juste avant ce récit, une baraïta donne la leçon d'avance : « que l'homme soit toujours patient comme Hillel et non irascible comme Chammaï ». Le pari des 400 zouz, puis les trois convertis, illustrent cette phrase."
+    },
+    {
+     "type": "MOT",
+     "titre": "Zouz",
+     "texte": "Pièce d'argent. 400 zouz : une somme énorme — deux fois le montant minimal d'une ketouba (200 zouz, Ketoubot 10b)."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Le vendredi après-midi",
+     "texte": "Le pire moment pour déranger quelqu'un : la préparation du chabbat. Le texte dit seulement « ce jour-là était veille de chabbat » — peut-être le parieur l'a-t-il choisi exprès."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Vigilance : les « questions » du parieur",
+     "texte": "Têtes des Babyloniens, yeux des gens de Palmyre, pieds des Africains : ce sont des moqueries sur l'apparence de peuples entiers, pas de vraies questions. Le récit les met dans la bouche d'un provocateur. Hillel choisit de les traiter comme des questions sérieuses — c'est lui qui garde la main. À dire clairement aux ados plutôt que de laisser passer."
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Il attend une heure, revient : « Qui est Hillel ? » Même accueil. « Pourquoi les habitants de Palmyre ont-ils les yeux chassieux ? » — « Grande question : parce qu'ils vivent dans le sable. »",
+   "encadres": []
+  },
+  {
+   "i": 2,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "Troisième fois : « Pourquoi les Africains ont-ils les pieds larges ? » — « Grande question : parce qu'ils vivent dans les marais. »",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "La répétition en trois",
+     "texte": "Trois questions, trois fois « mon fils, grande question ». La structure répétée fait sentir la patience sans la commenter."
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "la Guemara",
+   "repond_a": 0,
+   "resume_fr": "« J'ai encore plein de questions, mais j'ai peur que tu te fâches. » Hillel s'assied : « Pose-les toutes. » L'homme craque : « C'est toi qu'on appelle Nassi ? Qu'il n'y en ait pas beaucoup comme toi ! J'ai perdu 400 zouz à cause de toi. » Hillel : « Garde ton calme. Hillel vaut bien que tu perdes 400 zouz, et encore 400, sans qu'il se mette en colère. »",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Retournement",
+     "texte": "Celui qui voulait mettre Hillel en colère est le seul à se mettre en colère. Le récit ne dit pas « Hillel était patient » : il le montre."
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": null,
+   "resume_fr": "Premier candidat : « Combien avez-vous de Torahs ? » — « Deux : écrite et orale. » — « Je crois à l'écrite, pas à l'orale. Convertis-moi pour l'écrite seulement. » Chammaï le chasse. Hillel l'accepte. Jour 1 : alef, bet, guimel, dalet. Jour 2 : il inverse l'ordre des lettres. « Hier tu m'as dit autre chose ! » — « Tu vois : même pour lire les lettres, tu t'es fié à moi. Fie-toi aussi à moi pour la Torah orale. »",
+   "encadres": [
+    {
+     "type": "PERSONNAGE",
+     "titre": "Chammaï",
+     "texte": "Contemporain et contradicteur d'Hillel ; d'après ce récit, il tient une règle de bâtisseur (d'où l'idée, chez Steinsaltz, qu'il l'était de métier). Rigoureux, exigeant. Ses élèves forment « Beit Chammaï », que le Talmud respecte profondément. Mais sur le tempérament, le Talmud tranche (30b) : sois patient comme Hillel, pas irascible comme Chammaï."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Torah écrite / Torah orale",
+     "texte": "Le candidat pose en fait la question que des mouvements entiers (Sadducéens, Karaïtes) ont posée : pourquoi faire confiance à la tradition orale ? Hillel répond par une expérience, pas par un argument."
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": 4,
+   "resume_fr": "Deuxième candidat : « Apprends-moi toute la Torah pendant que je tiens sur un pied. » Chammaï le repousse avec sa règle de maçon. Hillel l'accepte : « Ce qui t'est détestable, ne le fais pas à ton prochain. C'est toute la Torah ; le reste est commentaire. Va, étudie. »",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Trois temps dans la réponse d'Hillel",
+     "texte": "1) Un principe (la règle d'or, formulée en négatif). 2) Une hiérarchie (« le reste est commentaire » — pas « le reste est inutile »). 3) Un envoi (« va étudier ») : la phrase sur un pied est un début, pas une fin."
+    },
+    {
+     "type": "CONTEXTE",
+     "titre": "Lévitique 19:18",
+     "texte": "« Tu aimeras ton prochain comme toi-même. » Hillel le reformule en négatif : ne pas faire. Pourquoi ce choix ? Bonne question pour la hevrouta."
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "les Sages ont enseigné (baraïta)",
+   "repond_a": 4,
+   "resume_fr": "Troisième candidat : il entend décrire les vêtements du Grand Prêtre et veut se convertir pour devenir Grand Prêtre. Chammaï le repousse. Hillel l'accepte.",
+   "encadres": []
+  },
+  {
+   "i": 7,
+   "dans_sougya": true,
+   "role": "RECIT",
+   "voix": "les Sages ont enseigné (baraïta, suite)",
+   "repond_a": 6,
+   "resume_fr": "Hillel : « On ne nomme roi que celui qui connaît le protocole royal. Va apprendre. » Il lit la Torah, tombe sur « l'étranger qui s'approche sera mis à mort » (Nombres 1:51). « De qui parle ce verset ? » — « Même du roi David. » Le converti raisonne seul : si cela s'applique aux enfants de Dieu, Israël, à plus forte raison à moi, arrivé avec mon bâton et mon sac.",
+   "encadres": [
+    {
+     "type": "OUTIL",
+     "titre": "Kal va-homer — a fortiori",
+     "texte": "« Si c'est vrai dans le cas léger, à plus forte raison dans le cas lourd. » Ici, c'est le converti lui-même qui le formule : Hillel l'a laissé trouver."
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "dans_sougya": true,
+   "role": "CONCLUSION",
+   "voix": "la Guemara",
+   "repond_a": 4,
+   "resume_fr": "Il retourne voir Chammaï : « Suis-je digne d'être Grand Prêtre ? » Puis Hillel : « Hillel le patient, bénédictions sur ta tête. » Un jour, les trois convertis se retrouvent : « L'irascibilité (kapdanout) de Chammaï voulait nous chasser du monde ; la patience d'Hillel nous a amenés sous les ailes de la Présence divine. »",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "Chammaï avait-il tort ?",
+     "texte": "Le Talmud tranche : sois patient comme Hillel (30b), et les convertis le confirment. Mais tu peux te demander ce que Chammaï voulait protéger : les trois candidats posaient des conditions réellement inacceptables (une seule Torah, dix secondes, un poste), et une autre page (Bekhorot 30b) dit qu'on ne reçoit pas un candidat qui accepte toute la Torah sauf un point. Refuser une condition n'est pas refuser une personne — c'est là que les deux maîtres divergent."
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rech Lakich",
+   "repond_a": null,
+   "resume_fr": "Rech Lakich lit Isaïe 33:6 comme la liste des six ordres de la Mishna, et conclut : au-dessus de tout, « la crainte de Dieu est son trésor ».",
+   "encadres": []
+  },
+  {
+   "i": 10,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rava",
+   "repond_a": 9,
+   "resume_fr": "Rava : après la mort, on demande à chacun : as-tu fait du commerce honnêtement ? as-tu fixé des temps pour l'étude ? … Et sans crainte de Dieu, rien ne vaut — comme du blé stocké sans conservateur : il pourrit.",
+   "encadres": [
+    {
+     "type": "CONTEXTE",
+     "titre": "La première question",
+     "texte": "La première question posée après la mort n'est pas « as-tu prié ? » mais « as-tu été honnête en affaires ? ». Ouverture possible vers le parcours « À qui c'est ? »."
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "l'école de Rabbi Yichmaël",
+   "repond_a": 10,
+   "resume_fr": "Détail de loi : on peut mélanger un peu de conservateur au blé vendu sans que ce soit du vol, car c'est nécessaire.",
+   "encadres": []
+  },
+  {
+   "i": 12,
+   "dans_sougya": false,
+   "role": "ENSEIGNEMENT",
+   "voix": "Rabba bar Rav Houna",
+   "repond_a": null,
+   "resume_fr": "(fragment, suite sur 31b) Celui qui a la Torah mais pas…",
+   "encadres": []
+  }
+ ],
+ "et_alors": {
+  "type": "RECIT",
+  "principe": "Le Talmud le dit lui-même en ouverture (30b) : « que l'homme soit toujours patient comme Hillel et non irascible comme Chammaï ». La patience n'est pas de la faiblesse : Hillel accepte des conditions impossibles — on peut penser qu'il sait que l'étude les fera tomber (c'est une lecture, pas le texte). Et « toute la Torah sur un pied » tient en une règle, à condition d'ajouter « va étudier ».",
+  "avis_ecarte": null,
+  "halakha": null
+ },
+ "outils": [
+  "KAL_VAHOMER"
+ ],
+ "personnages": [
+  "Hillel",
+  "Chammaï"
+ ],
+ "questions_hevrouta": [
+  {
+   "amorce": "Pourquoi Hillel dit-il « ne fais pas » et non « aime ton prochain » ?",
+   "piste": "Une règle négative est applicable tout de suite, par n'importe qui, sans sentiment. Faire tester : que peux-tu exiger de quelqu'un qui ne t'aime pas ?"
+  },
+  {
+   "amorce": "Chammaï a-t-il eu tort ?",
+   "piste": "Rappeler d'abord que le Talmud tranche (30b : patient comme Hillel). Puis faire reformuler le point de vue de Chammaï : les conditions des trois candidats sont réellement inacceptables, et Bekhorot 30b lui donne un appui (on ne reçoit pas qui accepte toute la Torah sauf un point). Quelle est la différence entre refuser une condition et refuser une personne ?"
+  },
+  {
+   "amorce": "Dans l'histoire du pari, Hillel répond sérieusement à des questions moqueuses. Est-ce de la naïveté ?",
+   "piste": "Hillel choisit de traiter la provocation comme une vraie question. Qui contrôle la situation, à la fin ?"
+  }
+ ],
+ "liens": [
+  {
+   "ref": "Shabbat.30b",
+   "pourquoi": "Le prologue : « que l'homme soit toujours patient comme Hillel » (segment 11 de corpus/shabbat-30b.json)."
+  },
+  {
+   "ref": "Bekhorot.30b",
+   "pourquoi": "On ne reçoit pas un candidat qui accepte toute la Torah sauf un point — l'appui textuel de Chammaï."
+  },
+  {
+   "ref": "Eruvin.13b",
+   "pourquoi": "Pourquoi la loi suit Beit Hillel et non Beit Chammaï."
+  },
+  {
+   "ref": "Pirkei_Avot.1.12",
+   "pourquoi": "Hillel : « aime les créatures et rapproche-les de la Torah »."
+  }
+ ]
+}

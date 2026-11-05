@@ -88,19 +88,19 @@ const MOTS: [string, string, string][] = [
 function Lettres() {
   return (
     <div>
-      <p className="text-[15px] leading-snug">Chaque lettre a une valeur. C'est ainsi qu'on numérote les feuillets, les chapitres et les versets. On additionne de la plus grande à la plus petite : <span className="he">סב</span> = 60 + 2 = 62.</p>
+      <p className="text-[calc(15px*var(--text-scale))] leading-snug">Chaque lettre a une valeur. C'est ainsi qu'on numérote les feuillets, les chapitres et les versets. On additionne de la plus grande à la plus petite : <span className="he">סב</span> = 60 + 2 = 62.</p>
       <div className="mt-3 grid grid-cols-11 gap-1 text-center">
-        {LETTRES.map(([l, v]) => <div key={l} className="border hairline py-1"><div className="he text-xl">{l}</div><div className="text-[11px] text-ink-2">{v}</div></div>)}
+        {LETTRES.map(([l, v]) => <div key={l} className="border hairline py-1"><div className="he text-xl">{l}</div><div className="text-[calc(11px*var(--text-scale))] text-ink-2">{v}</div></div>)}
       </div>
-      <ul className="mt-3 space-y-1 text-[15px] leading-snug">
+      <ul className="mt-3 space-y-1 text-[calc(15px*var(--text-scale))] leading-snug">
         <li>15 s'écrit <span className="he">טו</span> (9 + 6) et 16 <span className="he">טז</span> (9 + 7), pour ne pas écrire les lettres qui commencent le Nom divin.</li>
         <li>Chaque traité commence au daf <span className="he">ב</span> (2) : le daf 1 est la page de titre. « Bava Metsia 62a » s'écrit <span className="he">בבא מציעא סב.</span> ; le côté b porte deux points : <span className="he">סב:</span></li>
         <li>Un livre hébreu s'ouvre de droite à gauche. Livre ouvert, la page de droite est le verso d'un feuillet, la page de gauche le recto du suivant.</li>
       </ul>
       <div className="mt-4 border-t hairline pt-2">
         <div className="sc text-sm text-rubric">à toi</div>
-        <p className="text-[15px]">Écris en lettres : 2, 10, 15, 31, 62, 90, 113. Lis : <span className="he">כד · נו · צא · קכב</span>.</p>
-        <details className="mt-1 text-[14px] text-ink-2"><summary className="cursor-pointer">Réponses</summary><span className="he">ב · י · טו · לא · סב · צ · קיג</span> ; 24, 56, 91, 122.</details>
+        <p className="text-[calc(15px*var(--text-scale))]">Écris en lettres : 2, 10, 15, 31, 62, 90, 113. Lis : <span className="he">כד · נו · צא · קכב</span>.</p>
+        <details className="mt-1 text-[calc(14px*var(--text-scale))] text-ink-2"><summary className="cursor-pointer">Réponses</summary><span className="he">ב · י · טו · לא · סב · צ · קיג</span> ; 24, 56, 91, 122.</details>
       </div>
     </div>
   );
@@ -109,17 +109,17 @@ function Lettres() {
 function LaPage() {
   return (
     <div>
-      <p className="text-[15px] leading-snug">Une page de Talmud est une conversation imprimée. Au centre, le texte le plus ancien ; autour, des commentaires écrits des siècles plus tard, qui l'expliquent et se répondent. Cette mise en page vient de l'imprimeur Daniel Bomberg (Venise, 1520-1523) ; presque toutes les éditions l'ont reprise, donc « Berakhot 2a » désigne la même page partout.</p>
-      <div className="mt-4 grid grid-cols-[1fr_2fr_1fr] gap-2 border hairline p-3 text-center text-[12px]">
-        <div className="border hairline bg-white/30 p-2"><div className="he font-bold">רש״י</div>Rachi — explique phrase par phrase. Toujours du côté de la reliure.</div>
-        <div className="border border-ink bg-white/40 p-3"><div className="he font-bold">מתני׳ · גמ׳</div>Mishna (hébreu, vers 200), puis Guemara (araméen, vers 500). En gros caractères carrés.</div>
-        <div className="border hairline bg-white/30 p-2"><div className="he font-bold">תוספות</div>Tossafot — comparent les pages entre elles, contredisent parfois Rachi.</div>
+      <p className="text-[calc(15px*var(--text-scale))] leading-snug">Une page de Talmud est une conversation imprimée. Au centre, le texte le plus ancien ; autour, des commentaires écrits des siècles plus tard, qui l'expliquent et se répondent. Cette mise en page vient de l'imprimeur Daniel Bomberg (Venise, 1520-1523) ; presque toutes les éditions l'ont reprise, donc « Berakhot 2a » désigne la même page partout.</p>
+      <div className="mt-4 grid grid-cols-[1fr_2fr_1fr] gap-2 border hairline p-3 text-center text-[calc(12px*var(--text-scale))]">
+        <div className="border hairline bg-surface/30 p-2"><div className="he font-bold">רש״י</div>Rachi — explique phrase par phrase. Toujours du côté de la reliure.</div>
+        <div className="border border-ink bg-surface/40 p-3"><div className="he font-bold">מתני׳ · גמ׳</div>Mishna (hébreu, vers 200), puis Guemara (araméen, vers 500). En gros caractères carrés.</div>
+        <div className="border hairline bg-surface/30 p-2"><div className="he font-bold">תוספות</div>Tossafot — comparent les pages entre elles, contredisent parfois Rachi.</div>
         <div className="col-span-3 text-ink-2">Dans les marges : des renvois vers d'autres pages du Talmud et vers les codes de lois. En haut : le nom du chapitre, son numéro, le traité, le feuillet.</div>
       </div>
-      <p className="mt-3 text-[14px] leading-snug text-ink-2">Les commentaires sont imprimés dans une police semi-cursive appelée « écriture de Rachi ». Le nom vient des imprimeurs ; Rachi lui-même écrivait autrement. Dans cette app, la colonne de gauche joue le rôle de Rachi (qu'est-ce que ça dit ?), la colonne de droite celui des Tossafot (qu'est-ce que ça pose comme question ?) — et tes notes y sont imprimées aussi.</p>
+      <p className="mt-3 text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">Les commentaires sont imprimés dans une police semi-cursive appelée « écriture de Rachi ». Le nom vient des imprimeurs ; Rachi lui-même écrivait autrement. Dans cette app, la colonne de gauche joue le rôle de Rachi (qu'est-ce que ça dit ?), la colonne de droite celui des Tossafot (qu'est-ce que ça pose comme question ?) — et tes notes y sont imprimées aussi.</p>
       <div className="mt-4 border-t hairline pt-2">
         <div className="sc text-sm text-rubric">à toi</div>
-        <p className="text-[15px]">Ouvre un Talmud imprimé (ou le fac-similé sur Sefaria) à Berakhot 2a et trouve : l'abréviation <span className="he">מתני׳</span>, l'abréviation <span className="he">גמ׳</span>, le premier mot de Rachi, le numéro du feuillet en haut de page.</p>
+        <p className="text-[calc(15px*var(--text-scale))]">Ouvre un Talmud imprimé (ou le fac-similé sur Sefaria) à Berakhot 2a et trouve : l'abréviation <span className="he">מתני׳</span>, l'abréviation <span className="he">גמ׳</span>, le premier mot de Rachi, le numéro du feuillet en haut de page.</p>
       </div>
     </div>
   );
@@ -143,20 +143,20 @@ export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; 
               <li key={k} className="relative mb-4">
                 <span className="absolute -left-[26px] top-2 h-2 w-2 rounded-full bg-rubric" />
                 <div className="sc text-sm text-rubric">{h.quand}</div>
-                <p className="text-[15px] leading-snug">{h.quoi}</p>
+                <p className="text-[calc(15px*var(--text-scale))] leading-snug">{h.quoi}</p>
               </li>
             ))}
-            <li className="text-[13px] text-ink-2">Les dates anciennes sont approximatives ; certaines sont discutées par les historiens. « av. » = avant notre ère.</li>
+            <li className="text-[calc(13px*var(--text-scale))] text-ink-2">Les dates anciennes sont approximatives ; certaines sont discutées par les historiens. « av. » = avant notre ère.</li>
           </ol>
         )}
         {sujet === "qui-est-qui" && (
           <div>
-            <p className="mb-3 text-[15px] text-ink-2">Les sages que tu rencontreras, dans l'ordre du temps.</p>
+            <p className="mb-3 text-[calc(15px*var(--text-scale))] text-ink-2">Les sages que tu rencontreras, dans l'ordre du temps.</p>
             <dl className="grid gap-x-6 gap-y-3 md:grid-cols-2">
               {QUI.map((q) => (
                 <div key={q.nom} className="border-t hairline pt-2">
-                  <dt className="flex items-baseline justify-between"><span className="font-semibold">{q.nom}</span><span className="sc text-[12px] text-ink-2">{q.quand} · {q.ou}</span></dt>
-                  <dd className="text-[14px] leading-snug text-ink-2">{q.quoi}</dd>
+                  <dt className="flex items-baseline justify-between"><span className="font-semibold">{q.nom}</span><span className="sc text-[calc(12px*var(--text-scale))] text-ink-2">{q.quand} · {q.ou}</span></dt>
+                  <dd className="text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">{q.quoi}</dd>
                 </div>
               ))}
             </dl>
@@ -166,16 +166,16 @@ export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; 
         {sujet === "le-daf" && <Lettres />}
         {sujet === "glossaire" && (
           <dl className="grid gap-x-6 gap-y-2 md:grid-cols-2">
-            {GLOSSAIRE.map(([t, d]) => <div key={t} className="border-t hairline pt-1 text-[15px] leading-snug"><dt className="font-semibold">{t}</dt><dd className="text-ink-2">{d}</dd></div>)}
+            {GLOSSAIRE.map(([t, d]) => <div key={t} className="border-t hairline pt-1 text-[calc(15px*var(--text-scale))] leading-snug"><dt className="font-semibold">{t}</dt><dd className="text-ink-2">{d}</dd></div>)}
           </dl>
         )}
         {sujet === "mots" && (
           <div>
-            <p className="mb-3 text-[15px] text-ink-2">Le Talmud est écrit en araméen, la langue parlée de l'époque, mêlée d'hébreu. Quelques mots qui structurent chaque discussion — tu les reconnaîtras dans l'original.</p>
+            <p className="mb-3 text-[calc(15px*var(--text-scale))] text-ink-2">Le Talmud est écrit en araméen, la langue parlée de l'époque, mêlée d'hébreu. Quelques mots qui structurent chaque discussion — tu les reconnaîtras dans l'original.</p>
             <dl className="space-y-2">
               {MOTS.map(([he, tr, d]) => (
                 <div key={tr} className="grid grid-cols-[1fr_1fr_2fr] items-baseline gap-3 border-t hairline pt-1">
-                  <dt className="he text-xl">{he}</dt><dd className="sc text-sm">{tr}</dd><dd className="text-[14px] leading-snug text-ink-2">{d}</dd>
+                  <dt className="he text-xl">{he}</dt><dd className="sc text-sm">{tr}</dd><dd className="text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">{d}</dd>
                 </div>
               ))}
             </dl>
@@ -183,7 +183,7 @@ export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; 
         )}
       </div>
 
-      <div className="mt-8 border-t hairline pt-3 text-[14px] text-ink-2">
+      <div className="mt-8 border-t hairline pt-3 text-[calc(14px*var(--text-scale))] text-ink-2">
         Pour pratiquer plutôt que lire : {ouverts.map((c, k) => <span key={c.slug}>{k > 0 && " · "}<button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onStart(c.slug)}>{c.court}</button></span>)}.
         <span className="ml-2">La structure de ces repères s'inspire du carnet <em>Ouvrir le Talmud</em> (Ayeka).</span>
       </div>

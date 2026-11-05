@@ -18,34 +18,34 @@ export function Adulte({ catalogue, onStart }: { catalogue: Catalogue[]; onStart
       <Fleuron className="mb-4" />
       <div className="sc text-sm text-rubric">pour l'adulte qui accompagne</div>
       <h1 className="text-3xl">Où encadrer, ce qui a été simplifié</h1>
-      <p className="mt-2 text-[15px] text-ink-2">Parent, enseignant, rav : cette page est pour vous. Elle dit ce que l'app fait, ce qu'elle ne fait pas, et les passages où un ado a besoin de quelqu'un à côté.</p>
+      <p className="mt-2 text-[calc(15px*var(--text-scale))] text-ink-2">Parent, enseignant, rav : cette page est pour vous. Elle dit ce que l'app fait, ce qu'elle ne fait pas, et les passages où un ado a besoin de quelqu'un à côté.</p>
 
       <div className="mt-6 space-y-4">
         {GENERAL.map((g) => (
           <div key={g.titre} className="border-t hairline pt-2">
             <div className="font-semibold">{g.titre}</div>
-            <p className="text-[15px] leading-snug">{g.texte}</p>
+            <p className="text-[calc(15px*var(--text-scale))] leading-snug">{g.texte}</p>
           </div>
         ))}
       </div>
 
       <h2 className="mt-8 text-2xl">Sougya par sougya</h2>
-      <p className="text-[14px] text-ink-2">Les points de vigilance notés par l'éditeur.</p>
+      <p className="text-[calc(14px*var(--text-scale))] text-ink-2">Les points de vigilance notés par l'éditeur.</p>
       <ul className="mt-3 space-y-3">
         {catalogue.map((c) => (
-          <li key={c.slug} className="border-t hairline pt-2 text-[15px] leading-snug">
+          <li key={c.slug} className="border-t hairline pt-2 text-[calc(15px*var(--text-scale))] leading-snug">
             <div className="flex flex-wrap items-baseline justify-between gap-x-3">
               <span className="font-semibold">{c.titre}</span>
-              <span className="sc text-[12px] text-ink-2">{c.ref.replace("_", " ").replace(".", " ")} · {c.disponible ? <button className="underline" onClick={() => onStart(c.slug)}>ouverte</button> : "à venir"}</span>
+              <span className="sc text-[calc(12px*var(--text-scale))] text-ink-2">{c.ref.replace("_", " ").replace(".", " ")} · {c.disponible ? <button className="underline" onClick={() => onStart(c.slug)}>ouverte</button> : "à venir"}</span>
             </div>
             {c.vigilance ? <p className="rubric">⚠ {c.vigilance}</p> : <p className="text-ink-2">Rien de particulier à signaler.</p>}
             {c.idee_cle && <p className="text-ink-2"><span className="sc">idée clé</span> — {c.idee_cle}</p>}
           </li>
         ))}
       </ul>
-      {avec.length === 0 && <p className="mt-3 text-[14px] text-ink-2">Aucune vigilance signalée pour l'instant.</p>}
+      {avec.length === 0 && <p className="mt-3 text-[calc(14px*var(--text-scale))] text-ink-2">Aucune vigilance signalée pour l'instant.</p>}
 
-      <p className="mt-8 border-t hairline pt-2 text-[12px] text-ink-2">Cette page s'inspire de « Pour l'adulte qui accompagne » dans le carnet <em>Ouvrir le Talmud</em> (Ayeka, Rav Emile Ackermann).</p>
+      <p className="mt-8 border-t hairline pt-2 text-[calc(12px*var(--text-scale))] text-ink-2">Cette page s'inspire de « Pour l'adulte qui accompagne » dans le carnet <em>Ouvrir le Talmud</em> (Ayeka, Rav Emile Ackermann).</p>
     </div>
   );
 }

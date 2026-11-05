@@ -49,12 +49,12 @@ export function Hevrouta({
     <div className="flex h-full flex-col">
       <div className="flex items-baseline justify-between border-b hairline px-3 py-2">
         <div className="sc text-sm">Hevrouta <span className="text-ink-2">· segment {segment.i}</span></div>
-        <div className={`sc text-[12px] ${mode === "demo" ? "text-ink-2" : "rubric"}`}>{mode === "openai" ? "OpenAI" : mode === "claude" ? "Claude" : "mode démo"}</div>
+        <div className={`sc text-[calc(12px*var(--text-scale))] ${mode === "demo" ? "text-ink-2" : "rubric"}`}>{mode === "openai" ? "OpenAI" : mode === "claude" ? "Claude" : "mode démo"}</div>
       </div>
 
       <div className="flex-1 space-y-3 overflow-y-auto px-3 py-3">
         {history.length === 0 && (
-          <div className="text-[14px] leading-snug text-ink-2">
+          <div className="text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">
             <p>Ton binôme a déjà lu la page. Choisis un coup, écris, ou prends une amorce :</p>
             <ul className="mt-2 space-y-1">
               {sougya.questions_hevrouta.map((q, k) => (
@@ -66,13 +66,13 @@ export function Hevrouta({
           </div>
         )}
         {history.map((m, k) => (
-          <div key={k} className={`fadein max-w-[94%] text-[15px] leading-snug ${m.role === "user" ? "ml-auto border-r-2 border-rubric pr-3 text-right" : "border-l hairline pl-3"}`}>
-            {m.move && <div className="sc text-[11px] text-ink-2">{MOVES.find((x) => x.id === m.move)?.label ?? m.move}{m.segment !== undefined && ` · seg. ${m.segment}`}</div>}
+          <div key={k} className={`fadein max-w-[94%] text-[calc(15px*var(--text-scale))] leading-snug ${m.role === "user" ? "ml-auto border-r-2 border-rubric pr-3 text-right" : "border-l hairline pl-3"}`}>
+            {m.move && <div className="sc text-[calc(11px*var(--text-scale))] text-ink-2">{MOVES.find((x) => x.id === m.move)?.label ?? m.move}{m.segment !== undefined && ` · seg. ${m.segment}`}</div>}
             {m.content}
           </div>
         ))}
-        {busy && <div className="text-[14px] italic text-ink-2">… ta hevrouta réfléchit</div>}
-        {error && <div className="text-[14px] text-rubric">{error}</div>}
+        {busy && <div className="text-[calc(14px*var(--text-scale))] italic text-ink-2">… ta hevrouta réfléchit</div>}
+        {error && <div className="text-[calc(14px*var(--text-scale))] text-rubric">{error}</div>}
         <div ref={endRef} />
       </div>
 
@@ -85,7 +85,7 @@ export function Hevrouta({
           ))}
         </div>
         <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); send(); }}>
-          <input value={text} onChange={(e) => setText(e.target.value)} placeholder={current.placeholder} className="min-w-0 flex-1 px-3 py-1.5 text-[15px]" />
+          <input value={text} onChange={(e) => setText(e.target.value)} placeholder={current.placeholder} className="min-w-0 flex-1 px-3 py-1.5 text-[calc(15px*var(--text-scale))]" />
           <button disabled={busy} className="btn btn-sm btn-primary">Envoyer</button>
         </form>
       </div>

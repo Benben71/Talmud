@@ -7,16 +7,16 @@ const LABEL: Record<EncadreType, string> = {
 
 export function Encadres({ items, only, empty }: { items: Encadre[]; only?: EncadreType[]; empty?: string }) {
   const list = only ? items.filter((e) => only.includes(e.type)) : items;
-  if (list.length === 0) return <p className="text-[13px] leading-snug text-ink-2">{empty ?? "Rien à signaler sur ce segment."}</p>;
+  if (list.length === 0) return <p className="text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">{empty ?? "Rien à signaler sur ce segment."}</p>;
   return (
     <div className="space-y-3">
       {list.map((e, k) => (
         <div key={k} className="fadein border-t hairline pt-2">
           <div className="flex items-baseline gap-2">
-            <span className="sc text-[12px] text-rubric">{LABEL[e.type]}</span>
-            <span className="text-[15px] font-semibold">{e.titre}</span>
+            <span className="sc text-[calc(12px*var(--text-scale))] text-rubric">{LABEL[e.type]}</span>
+            <span className="text-[calc(15px*var(--text-scale))] font-semibold">{e.titre}</span>
           </div>
-          <p className="mt-1 text-[14px] leading-snug text-ink-2">{e.texte}</p>
+          <p className="mt-1 text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">{e.texte}</p>
         </div>
       ))}
     </div>

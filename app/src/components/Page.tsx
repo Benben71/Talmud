@@ -24,7 +24,7 @@ function AToiBox({ question, value, onSave }: { question: string; value: string;
       <p className="mt-1 text-[1.05rem] leading-snug">{question}</p>
       <textarea value={text} onChange={(e) => { setText(e.target.value); setSaved(false); }} onBlur={() => { onSave(text); setSaved(true); }} rows={3}
         className="mt-2 w-full p-2 text-[1rem] leading-relaxed" placeholder="Écris ici — ça ira dans ta page." />
-      <div className="mt-1 text-[12px] text-ink-2">{saved ? "Gardé dans ta page." : "Plusieurs réponses sont possibles ; certaines sont mieux argumentées que d'autres."}</div>
+      <div className="mt-1 text-[calc(12px*var(--text-scale))] text-ink-2">{saved ? "Gardé dans ta page." : "Plusieurs réponses sont possibles ; certaines sont mieux argumentées que d'autres."}</div>
     </div>
   );
 }
@@ -113,9 +113,9 @@ export function Page({
       <div className="flex min-h-0 flex-1 md:grid md:grid-cols-[1fr_2.2fr_1fr]">
         <aside className={`${layer === "rachi" ? "block" : "hidden"} min-h-0 overflow-y-auto border-r hairline px-4 py-4 md:block md:px-5`}>
           <div className="sc mb-2 text-sm text-ink-2">Rachi · qu'est-ce que ça dit ?</div>
-          <p className="mb-3 text-[15px] leading-snug">{seg.resume}</p>
+          <p className="mb-3 text-[calc(15px*var(--text-scale))] leading-snug">{seg.resume}</p>
           {seg.decoupage && (
-            <div className="mb-3 border-t hairline pt-2 text-[13px] leading-snug text-ink-2">
+            <div className="mb-3 border-t hairline pt-2 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">
               <div className="sc mb-1">plusieurs coups dans ce segment</div>
               <ol className="list-decimal space-y-0.5 pl-4">{seg.decoupage.map((d, k) => <li key={k}>{d}</li>)}</ol>
             </div>
@@ -186,8 +186,8 @@ export function Page({
           <Encadres items={seg.encadres} only={["OUTIL", "CONTEXTE"]} empty="Pas d'outil ni de contexte signalé ici." />
           <div className="sc mt-5 border-t hairline pt-2 text-sm text-ink-2">ta page, sur ce segment</div>
           {myQuestions.length === 0
-            ? <p className="mt-1 text-[13px] leading-snug text-ink-2">Tes kouchiot et teikou posés ici apparaîtront là — une quatrième couche, la tienne.</p>
-            : <ul className="mt-1 space-y-1 text-[14px] leading-snug">{myQuestions.map((q, k) => <li key={k} className="border-l-2 border-rubric pl-2">« {q.text} »</li>)}</ul>}
+            ? <p className="mt-1 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">Tes kouchiot et teikou posés ici apparaîtront là — une quatrième couche, la tienne.</p>
+            : <ul className="mt-1 space-y-1 text-[calc(14px*var(--text-scale))] leading-snug">{myQuestions.map((q, k) => <li key={k} className="border-l-2 border-rubric pl-2">« {q.text} »</li>)}</ul>}
         </aside>
       </div>
 

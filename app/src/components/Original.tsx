@@ -35,7 +35,7 @@ export function Original({ text, mark }: { text: string; mark?: string | null })
         ))}
       </p>
       {sel && (
-        <div className="fadein bloc mt-3 p-3 text-[14px]">
+        <div className="fadein bloc mt-3 p-3 text-[calc(14px*var(--text-scale))]">
           <div className="flex items-center justify-between">
             <span className="he text-xl font-medium">{sel.word}</span>
             <button className="text-ink-2 hover:text-ink" onClick={() => setSel(null)} aria-label="Fermer">✕</button>
@@ -45,11 +45,11 @@ export function Original({ text, mark }: { text: string; mark?: string | null })
           {sel.entries && sel.entries.length === 0 && <p className="text-ink-2">Pas d'entrée pour ce mot tel quel (essaie la racine, ou demande à ta hevrouta).</p>}
           {sel.entries?.map((e, k) => (
             <div key={k} className="mt-2 border-t hairline pt-2">
-              <div className="sc text-[12px] text-ink-2">{e.parent_lexicon ?? "lexique"} · <span className="he" style={{ fontVariant: "normal" }}>{e.headword}</span></div>
+              <div className="sc text-[calc(12px*var(--text-scale))] text-ink-2">{e.parent_lexicon ?? "lexique"} · <span className="he" style={{ fontVariant: "normal" }}>{e.headword}</span></div>
               <div className="mt-1 leading-snug [&_i]:italic" dangerouslySetInnerHTML={{ __html: e.content?.senses?.[0]?.definition ?? "" }} />
             </div>
           ))}
-          <div className="sc mt-2 text-[11px] text-ink-2">lexique Jastrow / BDB via Sefaria.org</div>
+          <div className="sc mt-2 text-[calc(11px*var(--text-scale))] text-ink-2">lexique Jastrow / BDB via Sefaria.org</div>
         </div>
       )}
     </div>

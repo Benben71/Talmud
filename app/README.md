@@ -17,7 +17,7 @@ Ouvre http://localhost:5173. Deux processus : Vite (web, :5173) et le serveur he
 
 **Claude en option** : si `OPENAI_API_KEY` est vide, renseigner `ANTHROPIC_API_KEY` et, au besoin, `HEVROUTA_MODEL` (défaut : `claude-opus-5-5`). Si les deux clés sont présentes, OpenAI est choisi. Sans clé, l'app tourne en **mode démo** (réponses scriptées à partir des amorces de l'éditeur) — tout le reste fonctionne. Pour Claude, le serveur active le repli serveur (`fallbacks: "default"`) en cas de refus de sécurité ; retirer `betas`/`fallbacks` dans `server/index.mjs` si on n'en veut pas.
 
-**Vercel** : définir `app` comme dossier racine du projet et ajouter `OPENAI_API_KEY` aux variables d'environnement de Production. Le build génère les fichiers de contenu, et `api/status.mjs` ainsi que `api/hevrouta.mjs` exposent les deux routes serveur. Après une modification de variable, redéployer le projet pour que la fonction utilise la nouvelle valeur.
+**Vercel** : définir `app` comme dossier racine du projet et ajouter `OPENAI_API_KEY` aux variables d'environnement de Production. Sa valeur doit contenir uniquement la clé, sans `OPENAI_API_KEY=`, guillemets ni commentaire. Le build génère les fichiers de contenu, et `api/status.mjs` ainsi que `api/hevrouta.mjs` exposent les deux routes serveur. Après une modification de variable, redéployer le projet pour que la fonction utilise la nouvelle valeur.
 
 ## Ce que fait le prototype
 Les six temps d'une sougya : **le cas** (transposé + d'époque) → **ta première idée** (écrite avant de lire) → **les voix & le débat** (lecture segment par segment) → **et alors ?** → **ma page**.

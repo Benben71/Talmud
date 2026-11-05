@@ -30,7 +30,8 @@ const model = provider === "openai"
   : provider === "claude"
     ? process.env.HEVROUTA_MODEL || "claude-opus-5-5"
     : null;
-const client = provider === "openai" ? new OpenAI() : provider === "claude" ? new Anthropic() : null;
+const invalidOpenAIKey = provider === "openai" && /\s/.test(process.env.OPENAI_API_KEY);
+const client = provider === "openai" && !invalidOpenAIKey ? new OpenAI() : provider === "claude" ? new Anthropic() : null;
 
 const sougyot = new Map();
 for (const f of fs.readdirSync(CONTENT)) {
@@ -104,6 +105,7 @@ app.use(express.json({ limit: "1mb" }));
 app.get("/api/status", (_req, res) => res.json({ mode: provider, model, sougyot: [...sougyot.keys()] }));
 
 app.post("/api/hevrouta", async (req, res) => {
+  if (invalidOpenAIKey) return res.status(500).json({ error: "OPENAI_API_KEY contient des espaces ou un commentaire. Corrige la variable sur le serveur." });
   const { slug, segment, move = "libre", text = "", history = [] } = req.body ?? {};
   const s = sougyot.get(slug);
   if (!s) return res.status(404).json({ error: "sougya inconnue" });
@@ -147,8 +149,8 @@ app.post("/api/hevrouta", async (req, res) => {
   } catch (err) {
     if (err instanceof Anthropic.AuthenticationError || err instanceof OpenAI.AuthenticationError) return res.status(401).json({ error: "Clé API invalide." });
     if (err instanceof Anthropic.RateLimitError || err instanceof OpenAI.RateLimitError) return res.status(429).json({ error: "Trop de requêtes, réessaie dans un instant." });
-    if (err instanceof Anthropic.APIError || err instanceof OpenAI.APIError) return res.status(502).json({ error: `Erreur API ${err.status} : ${err.message}` });
-    console.error(err);
+    if (err instanceof Anthropic.APIError || err instanceof OpenAI.APIError) return res.status(502).json({ error: `Erreur API ${err.status ?? "inconnue"}.` });
+    console.error("Erreur serveur hevrouta :", err?.name ?? "erreur inconnue");
     res.status(500).json({ error: "Erreur serveur." });
   }
 });

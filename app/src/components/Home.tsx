@@ -1,5 +1,5 @@
 // La page d'accueil se lit de haut en bas comme une introduction, puis s'ouvre sur la mer :
-//   1. le mot, la promesse, un bouton pour commencer, et un vrai débat résumé réplique par réplique ;
+//   1. le mot, la promesse, un bouton pour commencer, à quoi ça sert, la Corée du Sud, et un vrai débat résumé ;
 //   2. « Le Talmud, c'est quoi ? » — trois paragraphes, un schéma de la page imprimée et une frise qui finit par « toi » ;
 //   3. « Comment ça marche ici » — les cinq temps d'une séance, les outils de l'app et cinq mots-clés ;
 //   4. « Choisis un passage » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges.
@@ -57,6 +57,14 @@ const MOTS: [string, string, string][] = [
   ["חַבְרוּתָא", "Hevrouta", "l'étude à deux, et le binôme qui lit avec toi."],
   ["קוּשְׁיָא", "Kouchia", "l'objection : « oui, mais… »."],
   ["תֵּיקוּ", "Teikou", "la question reste ouverte, sans réponse."],
+];
+
+// Ce que l'ado y gagne, dit avec les signes des coups du débat qu'il apprendra à reconnaître.
+const BENEFICES: { role: Role; titre: string; texte: string }[] = [
+  { role: "QUESTION", titre: "Ne plus tout gober", texte: "Demander « pourquoi ? » et « d'où tu sors ça ? ». Repérer l'argument qui ne tient pas, en classe comme sur les réseaux." },
+  { role: "OBJECTION", titre: "Argumenter sans t'énerver", texte: "Objecter, répondre, apporter une preuve. Ton oral, tes exposés et tes débats y gagnent." },
+  { role: "DISTINCTION", titre: "Comprendre l'autre camp", texte: "Le Talmud garde l'avis de celui qui a perdu. Pour bien répondre à quelqu'un, il faut d'abord le comprendre." },
+  { role: "TEIKOU", titre: "Accepter de ne pas savoir", texte: "Certaines questions restent ouvertes. Douter, ce n'est pas perdre." },
 ];
 
 function Extrait({ onLire }: { onLire: () => void }) {
@@ -153,17 +161,18 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
       <Fleuron className="mb-3" />
 
       {/* 1. Le mot, la promesse, et de quoi commencer tout de suite */}
-      <section className="grid items-center gap-x-12 gap-y-6 md:grid-cols-[1.25fr_1fr]">
-        <div>
+      <section className="grid items-start gap-x-12 gap-y-6 md:grid-cols-[1.25fr_1fr]">
+        <div className="md:col-start-1 md:row-start-1">
           <div className="flex flex-wrap items-baseline gap-x-5">
             <span className="he text-[3.4rem] font-bold leading-none tracking-tight md:text-[4.2rem]">מַחְלוֹקֶת</span>
             <span className={`sc text-[calc(13px*var(--text-scale))] text-ink-2`}>mahloket · le désaccord qu'on garde</span>
           </div>
           <h1 className="mt-3 text-[1.7rem] leading-tight md:text-[2.1rem]">Entre dans le plus grand débat de l'histoire.</h1>
-          <p className={`mt-3 max-w-xl text-[calc(16px*var(--text-scale))] leading-snug text-ink-2`}>
-            <strong className="font-semibold text-ink">Mahloket</strong> est une initiation au <strong className="font-semibold text-ink">Talmud</strong> pour les 12-17 ans.
-            Tu lis de vrais passages, tu donnes ton avis avant les sages, et tu apprends à débattre comme eux :
-            poser une question, objecter, répondre — et parfois laisser une question ouverte.
+          <p className="mt-3 max-w-xl text-[calc(16.5px*var(--text-scale))] leading-snug">
+            Le <strong className="font-semibold">Talmud</strong>, c'est un livre où des sages débattent de tout, et où chaque idée doit répondre à une question : <em>« d'où tu sors ça ? »</em>
+          </p>
+          <p className="mt-2 max-w-xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2">
+            Ici, tu lis de vrais passages, tu donnes ton avis avant les sages, puis tu débats avec eux. Pas besoin d'être juif, religieux, ni de lire l'hébreu.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
             {commencer}
@@ -179,7 +188,35 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
           </nav>
         </div>
 
-        <Extrait onLire={() => onStart(DEMO_SLUG)} />
+        <div className="md:col-start-1 md:row-start-2">
+          <h2 className="sc text-[calc(15px*var(--text-scale))] text-rubric">à quoi ça te sert ?</h2>
+          <ul className="mt-2 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+            {BENEFICES.map((b) => (
+              <li key={b.titre} className="flex gap-2.5">
+                <span className="rubric w-5 shrink-0 text-center text-[calc(18px*var(--text-scale))] font-semibold leading-tight" aria-hidden="true">{ROLE_SYMBOL[b.role]}</span>
+                <div>
+                  <div className="text-[calc(16px*var(--text-scale))] font-semibold leading-tight">{b.titre}</div>
+                  <p className="mt-0.5 text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">{b.texte}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <aside className="border-l-2 border-rubric pl-4 md:col-start-2 md:row-start-2">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+            <span className="sc text-[calc(14px*var(--text-scale))] text-rubric">le savais-tu ? en corée du sud…</span>
+            <span lang="ko" className="text-[calc(16px*var(--text-scale))] text-ink-2">하브루타</span>
+          </div>
+          <p className="mt-1 text-[calc(14.5px*var(--text-scale))] leading-snug">
+            Presque personne n'y est juif. Pourtant, depuis les années 1970, des livres d'histoires tirées du Talmud s'y vendent par millions, et des écoles font travailler les élèves en <em>havrouta</em> : à deux, en se posant des questions.
+            Ce qui les attire, ce n'est pas la religion : c'est la méthode.
+          </p>
+        </aside>
+
+        <div className="md:col-start-2 md:row-start-1">
+          <Extrait onLire={() => onStart(DEMO_SLUG)} />
+        </div>
       </section>
 
       {/* 2. Le Talmud, c'est quoi ? */}

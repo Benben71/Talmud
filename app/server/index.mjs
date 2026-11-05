@@ -34,7 +34,7 @@ const client = provider === "openai" ? new OpenAI() : provider === "claude" ? ne
 
 const sougyot = new Map();
 for (const f of fs.readdirSync(CONTENT)) {
-  if (f.endsWith(".json") && f !== "index.json") {
+  if (f.endsWith(".json") && f !== "index.json" && f !== "catalogue.json") {
     const s = JSON.parse(fs.readFileSync(path.join(CONTENT, f), "utf8"));
     sougyot.set(s.slug, s);
   }

@@ -90,7 +90,7 @@ export default function App() {
             <div className="flex min-h-0 flex-1">
               <Nav variant="rail" active={navActive} onGo={onNavGlobal} />
               <div className="relative min-w-0 flex-1 overflow-y-auto">
-                {route.kind === "home" && <Home catalogue={CATALOGUE} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={() => navigate({ kind: "reperes", sujet: "histoire" })} onAdulte={() => navigate({ kind: "adulte" })} />}
+                {route.kind === "home" && <Home catalogue={CATALOGUE} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={(sujet) => navigate({ kind: "reperes", sujet })} onAdulte={() => navigate({ kind: "adulte" })} />}
                 {route.kind === "reperes" && <Reperes sujet={route.sujet} onSujet={(s) => navigate({ kind: "reperes", sujet: s })} catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
                 {route.kind === "adulte" && <Adulte catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
               </div>

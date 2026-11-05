@@ -43,6 +43,40 @@ function coast(cx: number, cy: number, r: number, seed: number) {
   return out.join("");
 }
 
+// Sur téléphone, la carte marine déroule ses archipels verticalement : chaque île
+// reste lisible et accessible sans défilement horizontal.
+export function MobileArchipel({ items, onOpen }: { items: Catalogue[]; onOpen: (slug: string) => void }) {
+  return (
+    <div className="mobile-sea border border-ink px-3 py-4" aria-label="La mer du Talmud : les sougyot comme des îles">
+      <div className="sc text-center text-sm text-rubric">la mer du talmud</div>
+      {Object.entries(CLUSTERS).map(([id, cluster]) => {
+        const islands = items.filter((item) => item.parcours[0] === id);
+        if (islands.length === 0) return null;
+        return (
+          <section key={id} className="mt-4 border-t hairline pt-3">
+            <div className="mb-3 flex min-w-0 flex-wrap items-baseline justify-between gap-x-2">
+              <h3 className="sc min-w-0 text-[calc(16px*var(--text-scale))]">{cluster.label}</h3>
+              <span className="he text-[calc(16px*var(--text-scale))] text-ink-2">{cluster.he}</span>
+            </div>
+            <div className="mobile-islands grid grid-cols-2 gap-2">
+              {islands.map((item) => (
+                <button key={item.slug} type="button" disabled={!item.disponible} onClick={() => onOpen(item.slug)}
+                  className="mobile-island flex min-w-0 flex-col items-center justify-center gap-1 text-center">
+                  <span className="rubric" aria-hidden="true">{item.disponible ? "✦" : "◇"}</span>
+                  <span className="min-w-0 text-[calc(17px*var(--text-scale))] font-semibold leading-tight">{item.court}</span>
+                  <span className="sc text-[calc(11px*var(--text-scale))] leading-tight text-ink-2">
+                    {item.ref.replace("_", " ").replace(".", " ")} · {item.disponible ? `${item.duree_min} min` : "bientôt"}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Archipel({ items, onOpen }: { items: Catalogue[]; onOpen: (slug: string) => void }) {
   const counts: Record<string, number> = {};
   const placed = items.map((it) => {

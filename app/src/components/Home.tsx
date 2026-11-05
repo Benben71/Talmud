@@ -5,12 +5,13 @@
 import type { Catalogue, Sougya } from "../types";
 import { OUTIL_LABEL, PARCOURS } from "../types";
 import { readProgress } from "../store";
-import { Archipel } from "./Archipel";
+import { Archipel, MobileArchipel } from "./Archipel";
 import { Fleuron } from "./Fleuron";
+import type { Sujet } from "../router";
 
 export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdulte }: {
   catalogue: Catalogue[]; texture: Sougya;
-  onStart: (slug: string) => void; onResume: (slug: string, seg: number) => void; onReperes: () => void; onAdulte: () => void;
+  onStart: (slug: string) => void; onResume: (slug: string, seg: number) => void; onReperes: (sujet: Sujet) => void; onAdulte: () => void;
 }) {
   const ouverts = catalogue.filter((c) => c.disponible);
   const enCours = ouverts.map((c) => ({ c, p: readProgress(c.slug) })).filter((x) => x.p.started && x.p.last_segment !== null);
@@ -39,7 +40,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
           </p>
         </div>
         <div className="grid gap-3 text-[calc(13.5px*var(--text-scale))] leading-snug text-ink-2">
-          <p><span className="sc text-rubric">c'est quoi, le Talmud</span> — Un débat vieux de quinze siècles, mis par écrit sans ponctuation, où l'on a gardé les avis perdants et les questions sans réponse. On ne le lit pas : on y entre, et on prend la parole. <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={onReperes}>Les repères</button> racontent le reste.</p>
+          <p><span className="sc text-rubric">c'est quoi, le Talmud</span> — Un débat vieux de quinze siècles, mis par écrit sans ponctuation, où l'on a gardé les avis perdants et les questions sans réponse. On ne le lit pas : on y entre, et on prend la parole. <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onReperes("histoire")}>Les repères</button> racontent le reste.</p>
           <p><span className="sc text-rubric">comment on apprend ici</span> — Jamais seul : avec une <em>hevrouta</em>, un binôme qui lit avec toi et te demande « pourquoi ? ». Chaque passage commence par un cas concret et par <em>ta</em> réponse, avant celle des sages. <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={onAdulte}>Pour l'adulte qui accompagne</button>.</p>
         </div>
       </section>
@@ -81,13 +82,12 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
           </div>
         </aside>
 
-        <main className="order-1 min-w-0 lg:order-2">
-          <div className="overflow-x-auto">
-            <div className="min-w-[760px]">
-              <Archipel items={catalogue} onOpen={onStart} />
-            </div>
+        <main className="order-1 flex min-w-0 flex-col lg:order-2">
+          <div className="order-2 mt-3 md:order-1 md:mt-0 md:overflow-x-auto">
+            <div className="md:hidden"><MobileArchipel items={catalogue} onOpen={onStart} /></div>
+            <div className="hidden min-w-[760px] md:block"><Archipel items={catalogue} onOpen={onStart} /></div>
           </div>
-          <div className="mt-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+          <div className="order-1 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 md:order-2 md:mt-3">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
               {resume
                 ? <>
@@ -101,16 +101,18 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             </div>
             <div className="text-[calc(12.5px*var(--text-scale))] text-ink-2">Une île en trait plein est ouverte, en pointillé elle arrive. Pas de chemin obligé.</div>
           </div>
-          <p className="mt-3 border-l hairline pl-3 text-[calc(14px*var(--text-scale))] italic leading-snug text-ink-2">{first.cas}</p>
+          <p className="order-3 mt-3 border-l hairline pl-3 text-[calc(14px*var(--text-scale))] italic leading-snug text-ink-2">{first.cas}</p>
         </main>
 
         <aside className="order-3">
-          <div className="sc mb-2 border-t hairline pt-2 text-sm text-rubric">les voix</div>
+          <div className="sc border-t hairline pt-2 text-sm text-rubric">qui parle dans ces débats ?</div>
+          <p className="mb-2 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">Des sages dont les idées se répondent d'une page à l'autre. <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onReperes("qui-est-qui")}>Qui est qui ? →</button></p>
           <ul className="columns-2 text-[calc(13.5px*var(--text-scale))] leading-snug lg:columns-1">
             {personnages.slice(0, 8).map((p) => <li key={p}><span className="rubric">⋄</span> {p}</li>)}
             {personnages.length > 8 && <li className="italic text-ink-2">… et {personnages.length - 8} autres</li>}
           </ul>
-          <div className="sc mb-2 mt-4 border-t hairline pt-2 text-sm text-rubric">la boîte à outils</div>
+          <div className="sc mt-4 border-t hairline pt-2 text-sm text-rubric">comment raisonnent-ils ?</div>
+          <p className="mb-2 text-[calc(13px*var(--text-scale))] leading-snug text-ink-2">Questions, preuves, distinctions : des gestes à reconnaître en lisant. <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onReperes("mots")}>Voir les mots du débat →</button></p>
           <ul className="text-[calc(13.5px*var(--text-scale))] leading-snug">
             {outils.slice(0, 6).map((o) => <li key={o}><span className="rubric">⋄</span> {OUTIL_LABEL[o] ?? o}</li>)}
             {outils.length > 6 && <li className="italic text-ink-2">… et {outils.length - 6} autres, en chemin</li>}

@@ -1,0 +1,294 @@
+[
+  {
+    "id": "naitre",
+    "question": "Valait-il mieux ne pas naître ?",
+    "he": "נוֹחַ לוֹ שֶׁלֹּא נִבְרָא",
+    "heLabel": "« mieux pour lui de ne pas avoir été créé »",
+    "domaine": "Exister",
+    "accroche": "La question la plus vertigineuse du Talmud n'est pas posée par un philosophe isolé, mais par deux écoles entières, pendant des années.",
+    "camps": [
+      { "id": "pas-ne", "label": "Il aurait mieux valu ne pas naître" },
+      { "id": "ne", "label": "C'est mieux d'être né" }
+    ],
+    "debat": [
+      { "qui": "Le Talmud", "type": "recit", "dit": "Pendant deux ans et demi, l'école de Chammaï et l'école de Hillel débattent d'une seule question : pour l'être humain, est-ce mieux d'avoir été créé, ou de ne pas l'avoir été ?", "ref": "Érouvin 13b" },
+      { "qui": "Les uns", "quand": "on l'attribue d'habitude à l'école de Chammaï", "type": "avis", "camp": "pas-ne", "dit": "Il aurait mieux valu pour l'homme ne pas être créé." },
+      { "qui": "Les autres", "quand": "on l'attribue d'habitude à l'école de Hillel", "type": "avis", "camp": "ne", "dit": "C'est mieux pour lui d'avoir été créé." },
+      { "qui": "Le vote", "type": "conclusion", "camp": "pas-ne", "dit": "Ils comptent les voix. Résultat : il aurait mieux valu ne pas être créé." },
+      { "qui": "Le Talmud", "type": "reponse", "dit": "Mais maintenant qu'il a été créé, qu'il examine ce qu'il a fait. Certains disent : qu'il pèse ce qu'il va faire." }
+    ],
+    "issue": "Le Talmud ne répond pas à « pourquoi exister ? » : il retourne la question en « que fais-tu de ton existence ? ». Pessimiste ou réaliste ? Les commentateurs en discutent encore.",
+    "a_toi": "La conclusion te paraît-elle triste, ou au contraire libératrice ? Qu'est-ce que ça change de passer de « pourquoi suis-je là ? » à « qu'est-ce que je fais ? »",
+    "amorces": ["Pourquoi voter sur une question pareille ?", "Est-ce que la conclusion n'est pas déprimante ?", "Défends le camp qui a perdu."],
+    "sources": [{ "ref": "Érouvin 13b", "path": "Eruvin.13b" }],
+    "sougya": "eruvin-13b"
+  },
+  {
+    "id": "souffrance",
+    "question": "Pourquoi les justes souffrent-ils ?",
+    "he": "צַדִּיק וְרַע לוֹ",
+    "heLabel": "« un juste à qui il arrive du mal »",
+    "domaine": "Le mal",
+    "accroche": "Si Dieu est juste, pourquoi des gens bien vivent-ils des malheurs ? Le Talmud pose la question à plusieurs endroits, et ose ne pas y répondre.",
+    "camps": [
+      { "id": "justice", "label": "Il y a une justice, même invisible" },
+      { "id": "mystere", "label": "On ne peut pas comprendre" },
+      { "id": "injuste", "label": "Le monde n'est pas juste" }
+    ],
+    "debat": [
+      { "qui": "Moïse", "type": "question", "dit": "Montre-moi tes voies : pourquoi un juste souffre-t-il, et pourquoi un méchant prospère-t-il ?", "ref": "Berakhot 7a" },
+      { "qui": "Rabbi Yohanan", "quand": "IIIe s., Tibériade, au nom de Rabbi Yossi", "type": "reponse", "camp": "justice", "dit": "Le juste qui souffre n'est pas un juste complet ; le méchant qui prospère n'est pas un méchant complet." },
+      { "qui": "Rabbi Meïr", "quand": "IIe s., Galilée", "type": "objection", "camp": "mystere", "dit": "Non : cette demande-là, Moïse ne l'a pas obtenue. Dieu lui a seulement dit « Je fais grâce à qui Je fais grâce », même à qui ne le mérite pas." },
+      { "qui": "Le Talmud", "type": "recit", "dit": "Moïse voit en vision Rabbi Akiva enseigner la Torah mieux que personne. Puis il le voit mourir torturé par les Romains. Il s'écrie : « C'est ça, la Torah, et c'est ça, sa récompense ? »", "ref": "Menahot 29b" },
+      { "qui": "Dieu, dans le récit", "type": "reponse", "camp": "mystere", "dit": "Tais-toi. C'est ainsi que Je l'ai pensé." },
+      { "qui": "Le Talmud", "type": "recit", "dit": "Un enfant grimpe pour obéir à son père et accomplir un commandement ; deux commandements qui promettent tous les deux une longue vie. Il tombe et meurt.", "ref": "Kiddouchin 39b" },
+      { "qui": "Elisha ben Abouya", "quand": "IIe s.", "type": "avis", "camp": "injuste", "dit": "Selon une version, c'est devant une scène comme celle-là que ce grand sage cesse de croire. On l'appellera désormais « Aher », l'autre." },
+      { "qui": "Rabbi Yaakov", "quand": "IIe s., petit-fils d'Elisha ben Abouya", "type": "reponse", "camp": "justice", "dit": "La récompense des commandements n'est pas dans ce monde. « Pour que tes jours se prolongent » parle du monde qui vient." }
+    ],
+    "issue": "Le Talmud garde côte à côte la question, le silence de Dieu, le doute d'un sage et une réponse de foi. Il ne cache pas que la question reste ouverte.",
+    "a_toi": "Pourquoi, selon toi, le Talmud a-t-il gardé l'histoire d'un sage qui a perdu la foi, au lieu de l'effacer ? Une question sans réponse peut-elle quand même être utile ?",
+    "amorces": ["« Tais-toi » : c'est une vraie réponse ?", "Rabbi Yaakov n'esquive-t-il pas la question ?", "Fais parler Elisha ben Abouya."],
+    "sources": [{ "ref": "Berakhot 7a", "path": "Berakhot.7a" }, { "ref": "Menahot 29b", "path": "Menachot.29b" }, { "ref": "Kiddouchin 39b", "path": "Kiddushin.39b" }]
+  },
+  {
+    "id": "liberte",
+    "question": "Sommes-nous libres ?",
+    "he": "הַכֹּל בִּידֵי שָׁמַיִם",
+    "heLabel": "« tout est entre les mains du Ciel »",
+    "domaine": "Liberté",
+    "accroche": "Si tout est écrit d'avance, est-on responsable de ce qu'on fait ? Les sages tracent une frontière précise, et des siècles plus tard on la discute encore.",
+    "camps": [
+      { "id": "libre", "label": "Je choisis librement" },
+      { "id": "ecrit", "label": "Tout est déjà écrit" },
+      { "id": "deux", "label": "Les deux à la fois" }
+    ],
+    "debat": [
+      { "qui": "Le Talmud", "type": "recit", "dit": "Avant la naissance, un ange présente la goutte d'où naîtra l'enfant et demande : sera-t-il fort ou faible ? sage ou sot ? riche ou pauvre ? Mais il ne demande pas : sera-t-il juste ou méchant ?", "ref": "Nidda 16b" },
+      { "qui": "Rabbi Hanina", "quand": "IIIe s., Terre d'Israël", "type": "avis", "camp": "libre", "dit": "Tout est entre les mains du Ciel, sauf la crainte du Ciel. Ta force, ton intelligence, ta fortune te sont données ; ce que tu en fais moralement dépend de toi.", "ref": "Berakhot 33b" },
+      { "qui": "Rabbi Akiva", "quand": "IIe s., dans la Mishna", "type": "avis", "camp": "deux", "dit": "Tout est prévu, et la liberté est donnée.", "ref": "Pirkei Avot 3:15" },
+      { "qui": "Maïmonide", "quand": "XIIe s., Égypte", "type": "question", "camp": "ecrit", "dit": "Mais si Dieu sait d'avance ce que je vais choisir, comment mon choix peut-il être libre ? Sa réponse : le savoir de Dieu n'est pas comme le nôtre, nous ne pouvons pas le comprendre.", "ref": "Michné Torah, Techouva 5:5" },
+      { "qui": "Le Raavad", "quand": "XIIe s., Provence", "type": "objection", "dit": "Il reproche à Maïmonide d'avoir soulevé une question aussi troublante sans y apporter de vraie réponse." }
+    ],
+    "issue": "Le Talmud ne résout pas le paradoxe logique. Il protège un point : la responsabilité morale, sans laquelle juger, punir ou pardonner n'aurait plus de sens.",
+    "a_toi": "Fais deux listes : ce qui t'a été « donné » (talents, famille, pays…) et ce qui dépend vraiment de toi. Où ranges-tu ton caractère ? Tes amitiés ?",
+    "amorces": ["Si l'ange connaît ma richesse, il ne connaît pas un peu mon caractère aussi ?", "Le Raavad a-t-il raison de se plaindre ?", "Défends « tout est écrit »."],
+    "sources": [{ "ref": "Nidda 16b", "path": "Niddah.16b" }, { "ref": "Berakhot 33b", "path": "Berakhot.33b" }, { "ref": "Pirkei Avot 3:15", "path": "Pirkei_Avot.3.15" }, { "ref": "Michné Torah, Techouva 5:5", "path": "Mishneh_Torah,_Repentance.5.5" }]
+  },
+  {
+    "id": "astres",
+    "question": "Les astres décident-ils de ta vie ?",
+    "he": "אֵין מַזָּל לְיִשְׂרָאֵל",
+    "heLabel": "« il n'y a pas de destin astral pour Israël »",
+    "domaine": "Liberté",
+    "accroche": "L'astrologie était la science de l'époque. Les sages ne la rejettent pas d'un bloc : ils débattent de son pouvoir sur nous.",
+    "camps": [
+      { "id": "destin", "label": "Le destin pèse sur nous" },
+      { "id": "actes", "label": "Nos actes peuvent tout changer" }
+    ],
+    "debat": [
+      { "qui": "Rabbi Hanina", "quand": "IIIe s., Terre d'Israël", "type": "avis", "camp": "destin", "dit": "L'astre sous lequel on naît rend sage et rend riche. Et Israël aussi y est soumis.", "ref": "Chabbat 156a" },
+      { "qui": "Rabbi Yohanan", "quand": "IIIe s., Tibériade", "type": "objection", "camp": "actes", "dit": "Il n'y a pas de destin astral pour Israël. Le prophète l'a dit : « Ne vous effrayez pas des signes du ciel. »" },
+      { "qui": "Le Talmud", "type": "recit", "dit": "Des astrologues avaient prédit à Rabbi Akiva que sa fille serait mordue par un serpent le jour de son mariage. Le soir des noces, elle plante sa broche dans le mur : au matin, elle découvre qu'elle a transpercé un serpent.", "ref": "Chabbat 156b" },
+      { "qui": "La fille de Rabbi Akiva", "type": "reponse", "camp": "actes", "dit": "Pendant le festin, un pauvre a frappé à la porte. Tout le monde était occupé, personne ne l'entendait. Je me suis levée et je lui ai donné ma part." },
+      { "qui": "Rabbi Akiva", "quand": "IIe s.", "type": "conclusion", "camp": "actes", "dit": "Il sort et enseigne : « La générosité sauve de la mort. »" }
+    ],
+    "issue": "Le Talmud garde les deux avis. Mais ses histoires vont toutes dans le même sens : même si un destin existe, un acte libre peut le changer.",
+    "a_toi": "Aujourd'hui, qu'est-ce qui joue le rôle des « astres » : les gènes ? le milieu social ? les algorithmes ? Jusqu'où décident-ils pour toi ?",
+    "amorces": ["Rabbi Hanina avait peut-être raison sur l'intelligence ?", "L'histoire de la fille d'Akiva prouve-t-elle vraiment quelque chose ?", "C'est quoi, nos astres à nous ?"],
+    "sources": [{ "ref": "Chabbat 156a", "path": "Shabbat.156a" }, { "ref": "Chabbat 156b", "path": "Shabbat.156b" }]
+  },
+  {
+    "id": "verite",
+    "question": "La vérité vient-elle du ciel ou du débat ?",
+    "he": "לֹא בַּשָּׁמַיִם הִיא",
+    "heLabel": "« elle n'est pas dans le ciel »",
+    "domaine": "Vérité",
+    "accroche": "Si Dieu lui-même te donne raison, as-tu gagné le débat ? Le Talmud répond non, et Dieu en rit.",
+    "camps": [
+      { "id": "ciel", "label": "Une preuve venue d'en haut doit l'emporter" },
+      { "id": "debat", "label": "C'est aux humains de trancher" }
+    ],
+    "debat": [
+      { "qui": "Rabbi Eliézer", "quand": "vers 100, Yavné", "type": "avis", "camp": "ciel", "dit": "Seul contre tous sur une question de pureté, il a donné tous les arguments du monde, sans convaincre. « Si la loi est comme moi, que ce caroubier le prouve ! » Le caroubier se déplace.", "ref": "Bava Metsia 59b" },
+      { "qui": "Les sages", "type": "objection", "camp": "debat", "dit": "On n'apporte pas de preuve d'un caroubier. Ni d'une rivière qui remonte son cours. Ni des murs de la maison d'étude qui se penchent." },
+      { "qui": "Une voix céleste", "type": "avis", "camp": "ciel", "dit": "Pourquoi vous opposez-vous à Rabbi Eliézer ? La loi est comme lui, partout." },
+      { "qui": "Rabbi Yehochoua", "quand": "vers 100, Yavné", "type": "reponse", "camp": "debat", "dit": "Il se lève : « Elle n'est pas dans le ciel ! »" },
+      { "qui": "Rabbi Yirmeya", "quand": "IVe s.", "type": "reponse", "camp": "debat", "dit": "La Torah a déjà été donnée au Sinaï. On ne tient plus compte d'une voix céleste, car la Torah elle-même dit de suivre la majorité." },
+      { "qui": "Le prophète Élie", "type": "recit", "dit": "Un sage lui demande ce que Dieu a fait à ce moment-là. Réponse : Il a souri et a dit « Mes enfants m'ont vaincu, mes enfants m'ont vaincu »." },
+      { "qui": "Le Talmud", "type": "recit", "dit": "La fin est dure : Rabbi Eliézer est exclu par ses collègues. C'est Rabbi Akiva, vêtu de noir, qui va le lui annoncer avec délicatesse." }
+    ],
+    "issue": "Deux idées très fortes : la vérité se construit ensemble, par le débat ; et un avis perdant peut rester vrai. Ailleurs (Érouvin 13b), le Talmud dit des avis de Hillel et de Chammaï : « les uns et les autres sont les paroles du Dieu vivant ». Mais le récit ne fait pas de la victoire de la majorité une victoire sans prix.",
+    "a_toi": "Si un avis peut être vrai sans être retenu, à quoi sert-il de trancher ? Connais-tu un désaccord où les deux côtés ont une part de vérité ?",
+    "amorces": ["Pourquoi Dieu sourit-il d'avoir perdu ?", "La majorité peut se tromper, non ?", "Fais parler Rabbi Eliézer."],
+    "sources": [{ "ref": "Bava Metsia 59b", "path": "Bava_Metzia.59b" }, { "ref": "Érouvin 13b", "path": "Eruvin.13b" }],
+    "sougya": "bava-metzia-59b"
+  },
+  {
+    "id": "juger",
+    "question": "Comment juger quand personne ne peut prouver la vérité ?",
+    "he": "שְׁנַיִם אוֹחֲזִין בְּטַלִּית",
+    "heLabel": "« deux tiennent un vêtement »",
+    "domaine": "Vérité",
+    "accroche": "Deux personnes, un seul objet, aucun témoin. L'un des deux ment peut-être. Le juge ne le saura jamais : que fait-il ?",
+    "camps": [
+      { "id": "partager", "label": "On partage" },
+      { "id": "sort", "label": "On tire au sort" },
+      { "id": "attendre", "label": "On ne donne rien tant qu'on ne sait pas" }
+    ],
+    "debat": [
+      { "qui": "La Mishna", "quand": "vers 200", "type": "recit", "dit": "Deux personnes arrivent au tribunal en tenant chacune un bout du même vêtement. Chacune dit : « Je l'ai trouvé, il est tout à moi. »", "ref": "Bava Metsia 2a" },
+      { "qui": "La Mishna", "type": "avis", "camp": "partager", "dit": "Chacune jure qu'elle n'en possède pas moins de la moitié, et on partage. Si l'une dit « tout » et l'autre « la moitié », c'est trois quarts et un quart." },
+      { "qui": "La Mishna", "type": "avis", "camp": "partager", "dit": "S'il y a des témoins, ou si chacun reconnaît la version de l'autre, on partage sans serment." },
+      { "qui": "La Guemara", "type": "question", "dit": "Mais à quoi sert ce serment, si on partage de toute façon ?", "ref": "Bava Metsia 3a" },
+      { "qui": "La Guemara", "type": "reponse", "camp": "partager", "dit": "C'est une règle des sages, pour que chacun n'aille pas saisir le vêtement d'un autre en disant « il est à moi ». Jurer à faux fait peur ; saisir un bout de tissu, non." },
+      { "qui": "Rabbi Yossi", "quand": "IIe s., dans un autre cas de doute", "type": "objection", "camp": "attendre", "dit": "Deux personnes ont déposé de l'argent chez un tiers et réclament la même somme. Si on partage, que perd le menteur ? Que tout reste en dépôt « jusqu'à ce que vienne Élie »." , "ref": "Bava Metsia 37a" }
+    ],
+    "issue": "Le Talmud ne prétend pas atteindre la vérité : il cherche une règle qui décourage le mensonge. Partager, faire jurer ou tout bloquer : chaque solution protège quelque chose de différent.",
+    "a_toi": "Laquelle des trois solutions punit le mieux le menteur ? Laquelle protège le mieux celui qui dit vrai ? Ce n'est pas forcément la même.",
+    "amorces": ["Pourquoi pas tirer au sort ?", "Le serment ne sert à rien si l'autre est prêt à mentir, non ?", "Défends Rabbi Yossi."],
+    "sources": [{ "ref": "Bava Metsia 2a", "path": "Bava_Metzia.2a" }, { "ref": "Bava Metsia 3a", "path": "Bava_Metzia.3a" }, { "ref": "Bava Metsia 37a", "path": "Bava_Metzia.37a" }],
+    "sougya": "bava-metzia-2a"
+  },
+  {
+    "id": "gourde",
+    "question": "Ta vie passe-t-elle avant celle de l'autre ?",
+    "he": "חַיֶּיךָ קוֹדְמִין",
+    "heLabel": "« ta vie passe en premier »",
+    "domaine": "Éthique",
+    "accroche": "Deux dilemmes extrêmes, deux réponses qui semblent opposées. Les philosophes d'aujourd'hui en discutent encore.",
+    "camps": [
+      { "id": "partager", "label": "Partager, même si on meurt tous les deux" },
+      { "id": "boire", "label": "Celui qui a la gourde la boit" }
+    ],
+    "debat": [
+      { "qui": "Une baraïta", "quand": "enseignement de l'époque de la Mishna", "type": "recit", "dit": "Deux hommes marchent dans le désert. L'un a une gourde d'eau. S'ils la partagent, ils mourront tous les deux ; si un seul boit, il atteindra un lieu habité.", "ref": "Bava Metsia 62a" },
+      { "qui": "Ben Petoura", "quand": "IIe s.", "type": "avis", "camp": "partager", "dit": "Qu'ils boivent tous les deux et meurent, plutôt que l'un voie mourir l'autre." },
+      { "qui": "Rabbi Akiva", "quand": "IIe s.", "type": "objection", "camp": "boire", "dit": "La Torah dit « que ton frère vive avec toi » : avec toi, donc ta vie passe avant la sienne." },
+      { "qui": "Le Talmud", "type": "recit", "dit": "Un homme vient voir le sage Rava : le gouverneur de sa ville lui a ordonné de tuer quelqu'un, sinon c'est lui qui sera tué.", "ref": "Pessahim 25b" },
+      { "qui": "Rava", "quand": "IVe s., Mehoza", "type": "avis", "dit": "Laisse-toi tuer, mais ne tue pas. Qui te dit que ton sang est plus rouge que le sien ? Peut-être que le sien est plus rouge." }
+    ],
+    "issue": "Les deux cas ne se contredisent pas : tu as le droit de te sauver toi-même (Rabbi Akiva), mais pas de sauver ta vie en prenant celle d'un autre (Rava). Deux vies ont exactement la même valeur.",
+    "a_toi": "La position de Ben Petoura est-elle généreuse ou absurde ? Imagine une situation d'aujourd'hui (secours, médecine…) où cette question se pose vraiment.",
+    "amorces": ["Rabbi Akiva n'est-il pas égoïste ?", "Quelle différence entre boire la gourde et tuer ?", "Défends Ben Petoura."],
+    "sources": [{ "ref": "Bava Metsia 62a", "path": "Bava_Metzia.62a" }, { "ref": "Pessahim 25b", "path": "Pesachim.25b" }],
+    "sougya": "bava-metzia-62a"
+  },
+  {
+    "id": "mechants",
+    "question": "Peut-on souhaiter du mal à ceux qui nous en font ?",
+    "he": "יִתַּמּוּ חַטָּאִים",
+    "heLabel": "« que disparaissent les péchés »",
+    "domaine": "Éthique",
+    "accroche": "Un grand sage prie pour la mort de ceux qui le harcèlent. Sa femme relit le verset sur lequel il s'appuie, et lui montre qu'il a mal lu.",
+    "camps": [
+      { "id": "punir", "label": "Oui, ils l'ont mérité" },
+      { "id": "changer", "label": "Non, il faut souhaiter qu'ils changent" }
+    ],
+    "debat": [
+      { "qui": "Le Talmud", "type": "recit", "dit": "Des voyous du quartier de Rabbi Meïr le tourmentent.", "ref": "Berakhot 10a" },
+      { "qui": "Rabbi Meïr", "quand": "IIe s., Galilée", "type": "avis", "camp": "punir", "dit": "Il prie pour qu'ils meurent, en s'appuyant sur un psaume : « Que disparaissent les pécheurs de la terre. »" },
+      { "qui": "Beruria", "quand": "IIe s., femme de Rabbi Meïr", "type": "objection", "camp": "changer", "dit": "À quoi penses-tu ? Est-il écrit « les pécheurs » ? Il est écrit « les péchés » !" },
+      { "qui": "Beruria", "type": "preuve", "camp": "changer", "dit": "Et va jusqu'au bout du verset : « et les méchants ne seront plus ». Prie pour qu'ils reviennent au bien, et il n'y aura plus de méchants." },
+      { "qui": "Le Talmud", "type": "conclusion", "camp": "changer", "dit": "Rabbi Meïr pria pour eux, et ils changèrent." }
+    ],
+    "issue": "Beruria gagne par une méthode : lire un mot de près, et aller jusqu'au bout du verset. Sa lecture s'écarte un peu du sens simple du psaume, et c'est justement ce qui change la prière de son mari. Le Talmud montre ici une femme qui discute avec autorité, et qui a raison.",
+    "a_toi": "Pense à quelqu'un qui t'a fait du mal. Souhaiter qu'il change, est-ce plus facile ou plus difficile que souhaiter qu'il soit puni ? Est-ce que c'est plus juste ?",
+    "amorces": ["Et si les voyous n'avaient jamais changé ?", "Beruria triche un peu avec le verset, non ?", "Fais parler Rabbi Meïr."],
+    "sources": [{ "ref": "Berakhot 10a", "path": "Berakhot.10a" }],
+    "sougya": "berakhot-10a"
+  },
+  {
+    "id": "etude",
+    "question": "Vaut-il mieux savoir ou agir ?",
+    "he": "תַּלְמוּד גָּדוֹל אוֹ מַעֲשֶׂה גָּדוֹל",
+    "heLabel": "« l'étude est-elle plus grande, ou l'action ? »",
+    "domaine": "Éthique",
+    "accroche": "Pendant les persécutions romaines, des sages réunis dans un grenier de Lod se demandent ce qui compte le plus.",
+    "camps": [
+      { "id": "etude", "label": "Savoir, étudier" },
+      { "id": "action", "label": "Agir" }
+    ],
+    "debat": [
+      { "qui": "Le Talmud", "type": "recit", "dit": "Rabbi Tarfon et les anciens sont réunis dans la chambre haute d'une maison de Lod. On leur pose la question : qu'est-ce qui est plus grand, l'étude ou l'action ?", "ref": "Kiddouchin 40b" },
+      { "qui": "Rabbi Tarfon", "quand": "IIe s.", "type": "avis", "camp": "action", "dit": "L'action est plus grande." },
+      { "qui": "Rabbi Akiva", "quand": "IIe s.", "type": "objection", "camp": "etude", "dit": "L'étude est plus grande." },
+      { "qui": "Tous", "type": "conclusion", "camp": "etude", "dit": "L'étude est plus grande, parce qu'elle mène à l'action." },
+      { "qui": "Rabban Chimon ben Gamliel", "quand": "Ier-IIe s., dans la Mishna", "type": "objection", "camp": "action", "dit": "Ce n'est pas l'étude qui est l'essentiel, mais l'action.", "ref": "Pirkei Avot 1:17" }
+    ],
+    "issue": "La réponse finale donne raison à l'étude… pour une raison qui vient de l'action. Chaque camp y retrouve une part de ce qu'il défendait.",
+    "a_toi": "Une étude qui ne mène à rien a-t-elle encore de la valeur ? Et une bonne action faite sans réfléchir ?",
+    "amorces": ["Si l'étude vaut par l'action, c'est l'action qui gagne, non ?", "Pourquoi poser cette question en pleine persécution ?", "Défends Rabbi Tarfon."],
+    "sources": [{ "ref": "Kiddouchin 40b", "path": "Kiddushin.40b" }, { "ref": "Pirkei Avot 1:17", "path": "Pirkei_Avot.1.17" }]
+  },
+  {
+    "id": "corps-ame",
+    "question": "Qui est responsable : le corps ou l'esprit ?",
+    "he": "חִיגֵּר וְסוּמָא",
+    "heLabel": "« le boiteux et l'aveugle »",
+    "domaine": "Exister",
+    "accroche": "Un empereur romain et Rabbi Yehouda ha-Nassi discutent en amis. Et à la fin, c'est le rabbin qui reconnaît avoir appris quelque chose.",
+    "camps": [
+      { "id": "esprit", "label": "L'esprit seul est responsable" },
+      { "id": "ensemble", "label": "Le corps et l'esprit, ensemble" }
+    ],
+    "debat": [
+      { "qui": "Antonin", "quand": "empereur romain", "type": "question", "dit": "Le corps et l'âme peuvent échapper au jugement. Le corps dira : « C'est l'âme qui a péché, sans elle je suis une pierre. » L'âme dira : « C'est le corps, sans lui je vole comme un oiseau. »", "ref": "Sanhédrin 91a" },
+      { "qui": "Rabbi", "quand": "Rabbi Yehouda ha-Nassi, vers 200", "type": "reponse", "camp": "ensemble", "dit": "Un roi fait garder son verger par un boiteux et un aveugle. Le boiteux voit les figues, l'aveugle peut marcher : l'aveugle porte le boiteux et ils mangent les fruits. Chacun nie. Le roi met le boiteux sur l'aveugle et les juge ensemble." },
+      { "qui": "Antonin", "type": "question", "dit": "Quand l'âme entre-t-elle dans le corps : dès la conception, ou quand l'embryon est formé ?", "ref": "Sanhédrin 91b" },
+      { "qui": "Rabbi", "type": "avis", "dit": "Quand il est formé." },
+      { "qui": "Antonin", "type": "objection", "dit": "Impossible : de la viande laissée trois jours sans sel ne pourrit-elle pas ? Il faut que l'âme soit là dès le début." },
+      { "qui": "Rabbi", "type": "conclusion", "dit": "Antonin m'a appris cela. Et un verset le soutient." }
+    ],
+    "issue": "L'être humain n'est ni un esprit enfermé dans un corps, ni un corps sans esprit : c'est l'ensemble qui agit et qui répond. Le Talmud montre aussi qu'un sage peut changer d'avis grâce à un non-Juif.",
+    "a_toi": "Quand tu fais quelque chose sous le coup de la colère ou de la fatigue, est-ce « toi » qui l'as fait ? Où places-tu la limite ?",
+    "amorces": ["La parabole marche-t-elle vraiment ?", "Pourquoi le Talmud raconte-t-il que Rabbi a eu tort ?", "Fais parler Antonin."],
+    "sources": [{ "ref": "Sanhédrin 91a", "path": "Sanhedrin.91a" }, { "ref": "Sanhédrin 91b", "path": "Sanhedrin.91b" }]
+  },
+  {
+    "id": "dieu-laisse-faire",
+    "question": "Pourquoi Dieu laisse-t-il faire ?",
+    "he": "עוֹלָם כְּמִנְהָגוֹ נוֹהֵג",
+    "heLabel": "« le monde suit son cours »",
+    "domaine": "Dieu et le monde",
+    "accroche": "Des philosophes de Rome viennent mettre les sages au défi. Le Talmud rapporte la discussion, objections comprises.",
+    "camps": [
+      { "id": "intervenir", "label": "Dieu devrait empêcher le mal" },
+      { "id": "cours", "label": "Le monde doit suivre ses lois" }
+    ],
+    "debat": [
+      { "qui": "Les philosophes", "quand": "Rome", "type": "question", "camp": "intervenir", "dit": "Si votre Dieu ne veut pas qu'on adore des idoles, pourquoi ne les détruit-il pas ?", "ref": "Avoda Zara 54b" },
+      { "qui": "Les sages", "type": "reponse", "camp": "cours", "dit": "On adore aussi le soleil, la lune, les étoiles. Faudrait-il qu'Il détruise le monde à cause des sots ?" },
+      { "qui": "Les philosophes", "type": "objection", "camp": "intervenir", "dit": "Alors qu'Il détruise au moins les idoles dont le monde n'a pas besoin !" },
+      { "qui": "Les sages", "type": "reponse", "camp": "cours", "dit": "Les idolâtres diraient alors : « Voyez, les autres sont de vrais dieux, puisqu'ils n'ont pas été détruits. »" },
+      { "qui": "Une baraïta", "quand": "enseignement de l'époque de la Mishna", "type": "conclusion", "camp": "cours", "dit": "Si quelqu'un vole du blé et le sème, il ne devrait pas pousser. Pourtant il pousse : « le monde suit son cours », et ceux qui ont mal agi en répondront." }
+    ],
+    "issue": "C'est une ébauche de réponse au problème du mal : un monde stable, où les lois de la nature valent pour tous, laisse la responsabilité aux humains.",
+    "a_toi": "Préférerais-tu un monde où chaque mauvaise action échoue automatiquement ? Qu'est-ce qu'on y perdrait ?",
+    "amorces": ["La réponse des sages n'est-elle pas une esquive ?", "Et pour les grandes catastrophes ?", "Défends les philosophes."],
+    "sources": [{ "ref": "Avoda Zara 54b", "path": "Avodah_Zarah.54b" }]
+  },
+  {
+    "id": "limites",
+    "question": "Peut-on tout chercher à comprendre ?",
+    "he": "אַרְבָּעָה נִכְנְסוּ לַפַּרְדֵּס",
+    "heLabel": "« quatre entrèrent dans le Pardès »",
+    "domaine": "Dieu et le monde",
+    "accroche": "Le Talmud débat de l'origine du monde, mais met aussi en garde : certaines questions peuvent faire perdre pied.",
+    "camps": [
+      { "id": "tout", "label": "On peut tout chercher" },
+      { "id": "limites", "label": "Certaines questions sont dangereuses" }
+    ],
+    "debat": [
+      { "qui": "Beit Chammaï", "quand": "Ier s., Jérusalem", "type": "avis", "camp": "tout", "dit": "Le ciel a été créé en premier, puis la terre.", "ref": "Haguiga 12a" },
+      { "qui": "Beit Hillel", "type": "objection", "camp": "tout", "dit": "Non : la terre d'abord, puis le ciel." },
+      { "qui": "Les sages", "type": "reponse", "dit": "Les deux ont été créés ensemble." },
+      { "qui": "La Mishna", "quand": "vers 200", "type": "avis", "camp": "limites", "dit": "Celui qui scrute ce qui est en haut, ce qui est en bas, ce qui était avant et ce qui sera après, mieux vaudrait pour lui ne pas être venu au monde.", "ref": "Haguiga 11b" },
+      { "qui": "Le Talmud", "type": "recit", "dit": "Quatre sages entrent dans le « Pardès », le verger de la connaissance mystique. Ben Azzaï regarde et meurt. Ben Zoma regarde et perd la raison. Elisha ben Abouya « coupe les plantes » : il devient hérétique.", "ref": "Haguiga 14b" },
+      { "qui": "Rabbi Akiva", "quand": "IIe s.", "type": "conclusion", "camp": "limites", "dit": "Seul, il entre en paix et sort en paix." }
+    ],
+    "issue": "Le Talmud n'interdit pas la curiosité : il la prend assez au sérieux pour la juger dangereuse. Penser les questions ultimes demande de garder les pieds sur terre, et souvent un maître à côté de soi.",
+    "a_toi": "Y a-t-il des questions qui t'ont déjà donné le vertige ? Vaut-il mieux les explorer seul ou avec quelqu'un ?",
+    "amorces": ["Pourquoi seul Rabbi Akiva s'en sort-il ?", "Débattre de la création, ce n'est pas déjà scruter « ce qui était avant » ?", "Défends la curiosité sans limites."],
+    "sources": [{ "ref": "Haguiga 12a", "path": "Chagigah.12a" }, { "ref": "Haguiga 11b", "path": "Chagigah.11b" }, { "ref": "Haguiga 14b", "path": "Chagigah.14b" }]
+  }
+]

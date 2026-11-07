@@ -35,10 +35,68 @@ const client = provider === "openai" && !invalidOpenAIKey ? new OpenAI() : provi
 
 const sougyot = new Map();
 for (const f of fs.readdirSync(CONTENT)) {
-  if (f.endsWith(".json") && f !== "index.json" && f !== "catalogue.json") {
+  if (f.endsWith(".json") && !["index.json", "catalogue.json", "questions.json"].includes(f)) {
     const s = JSON.parse(fs.readFileSync(path.join(CONTENT, f), "utf8"));
     sougyot.set(s.slug, s);
   }
+}
+
+// Les grandes questions : la hevrouta débat d'une question à partir des voix du débat rapportées dans la fiche.
+const questions = new Map(JSON.parse(fs.readFileSync(path.join(CONTENT, "questions.json"), "utf8")).map((q) => [q.id, q]));
+
+const Q_MOVES = {
+  explique: "L'élève ne comprend pas un point du débat. Explique simplement, en t'appuyant sur les tours de parole, puis retourne-lui une question.",
+  avocat: "L'élève te demande de défendre le camp opposé au sien (ou, s'il n'a pas de camp, le camp le moins évident). Fais-le pour de vrai, avec le meilleur argument des sages de ce camp, en citant le tour. Puis demande-lui ce qu'il répond.",
+  voix: "L'élève demande à un sage du débat de parler. Réponds EN TANT QUE ce sage, strictement à partir de ce que la fiche lui attribue. Si la fiche ne lui fait rien dire sur ce point, dis-le, et indique ce qu'il dit vraiment.",
+  kouchia: "L'élève pose une objection. Prends-la au sérieux : dis si un sage du débat la pose déjà ou y répond (cite le tour), sinon reconnais qu'elle reste ouverte (teikou).",
+  monavis: "L'élève défend son avis. Avant de l'accepter, demande-lui de reformuler en une phrase l'avis du camp adverse. Puis teste son argument avec un « et si… ? ».",
+  libre: "Message libre de l'élève.",
+};
+
+function questionPrompt(q, etat = {}) {
+  const camp = (id) => q.camps.find((c) => c.id === id)?.label ?? "pas encore choisi";
+  const tours = q.debat.map((t, i) => `--- tour ${i + 1} · ${t.type} · ${t.qui}${t.quand ? ` (${t.quand})` : ""}${t.camp ? ` · camp : ${camp(t.camp)}` : ""}${t.ref ? ` · ${t.ref}` : ""}\n${t.dit}`).join("\n");
+  const reponses = Object.entries(etat.reponses ?? {}).filter(([, v]) => v).map(([i, v]) => `- au tour ${Number(i) + 1} : « ${v} »`).join("\n") || "(aucune)";
+  return `Tu es la hevrouta (le binôme d'étude) d'un adolescent de 12 à 17 ans, francophone, qui découvre le Talmud. Tu as environ 16 ans, tu as lu ce débat ; tu n'es ni un rav ni un prof. Tu es curieux, chaleureux, précis, et tu aimes les bonnes questions plus que les bonnes réponses.
+
+On ne lit pas ici une page de loi, mais un débat de l'aggada (récits, paraboles), rarement tranché. Ton but : que l'élève comprenne chaque position, prenne parti avec de vrais arguments, et accepte que la question reste ouverte.
+
+RÈGLES
+1. Tu t'appuies sur les tours de parole ci-dessous et tu les cites ainsi : (tour N). La fiche paraphrase le texte : ne présente pas ses phrases comme des citations mot à mot. Si tu évoques un autre passage ou un commentateur absent de la fiche, dis que c'est de mémoire et que ça se vérifie.
+2. Tu ne tranches pas à la place de l'élève. Tu peux dire ce que le Talmud retient ou laisse ouvert, d'après la fiche.
+3. Avant d'accepter un argument de l'élève, tu lui demandes de reformuler l'avis adverse.
+4. Tu dis « je ne sais pas » ou « teikou » plutôt que d'inventer.
+5. Pour toute question de pratique personnelle, ou si l'élève parle d'une souffrance réelle (deuil, harcèlement, idées noires), tu réponds avec douceur et tu l'encourages à en parler à un adulte de confiance.
+6. Tu réponds en français, en 3 à 8 phrases, sans jargon non expliqué. Tu termines presque toujours par une question. Tu respectes la tradition et la diversité des lecteurs (écoles juives, familles laïques, curieux non juifs).
+
+QUESTION : ${q.question}
+Camps possibles : ${q.camps.map((c) => c.label).join(" / ")}
+Ce que la fiche dit de l'issue : ${q.issue}
+Amorces prévues : ${q.amorces.join(" · ")}
+
+L'ÉLÈVE
+Son avis avant de lire : ${camp(etat.avant)}${etat.pourquoi ? ` — « ${etat.pourquoi} »` : ""}
+Son avis après avoir lu : ${etat.apres ? camp(etat.apres) : "pas encore donné"}
+Ce qu'il a répondu aux sages dans le fil du débat :
+${reponses}
+
+LE DÉBAT, TOUR PAR TOUR
+${tours}`;
+}
+
+function questionDemo(q, move, text, etat = {}) {
+  const autre = q.camps.find((c) => c.id !== etat.avant) ?? q.camps[0];
+  const tour = q.debat.findIndex((t) => t.camp === autre.id);
+  const t = q.debat[tour] ?? q.debat[0];
+  const base = {
+    explique: `(Mode démo — pas de clé API.) Le cœur du débat : ${q.camps.map((c) => `« ${c.label} »`).join(" contre ")}. Relis le tour ${tour + 1} : ${t.qui} dit « ${t.dit} ». Avec tes mots, qu'est-ce qu'il veut défendre ?`,
+    avocat: `(Mode démo.) Je prends le camp « ${autre.label} ». ${t.qui} le dit (tour ${tour + 1}) : « ${t.dit} » Qu'est-ce que tu réponds à ça ?`,
+    voix: `(Mode démo.) [${t.qui}] Je n'ai dit qu'une chose dans ce débat (tour ${tour + 1}) : « ${t.dit} » Sur le reste, la fiche ne me fait rien dire.`,
+    kouchia: `(Mode démo.) Bonne objection. Regarde si un des sages y répond déjà, par exemple au tour ${tour + 1}. Sinon, c'est peut-être un teikou : une question qui reste debout.`,
+    monavis: `(Mode démo.) D'accord, mais avant que je l'accepte : reformule en une phrase l'avis « ${autre.label} », comme si tu devais le défendre.`,
+    libre: `(Mode démo.) Je suis un mode démo sans clé API. Mais je te pose la question de la fiche : ${q.a_toi}`,
+  };
+  return base[move] ?? base.libre;
 }
 
 const MOVES = {
@@ -106,12 +164,17 @@ app.get("/api/status", (_req, res) => res.json({ mode: provider, model, sougyot:
 
 app.post("/api/hevrouta", async (req, res) => {
   if (invalidOpenAIKey) return res.status(500).json({ error: "OPENAI_API_KEY contient des espaces ou un commentaire. Corrige la variable sur le serveur." });
-  const { slug, segment, move = "libre", text = "", history = [] } = req.body ?? {};
-  const s = sougyot.get(slug);
-  if (!s) return res.status(404).json({ error: "sougya inconnue" });
-  const userTurn = `[Segment courant : ${segment}] [Coup : ${move}] ${MOVES[move] ?? MOVES.libre}\n\nL'élève : ${text || "(aucun texte)"}`;
+  const { slug, segment, question, etat, move = "libre", text = "", history = [] } = req.body ?? {};
+  const q = question ? questions.get(question) : null;
+  const s = q ? null : sougyot.get(slug);
+  if (question && !q) return res.status(404).json({ error: "question inconnue" });
+  if (!q && !s) return res.status(404).json({ error: "sougya inconnue" });
+  const userTurn = q
+    ? `[Coup : ${move}] ${Q_MOVES[move] ?? Q_MOVES.libre}\n\nL'élève : ${text || "(aucun texte)"}`
+    : `[Segment courant : ${segment}] [Coup : ${move}] ${MOVES[move] ?? MOVES.libre}\n\nL'élève : ${text || "(aucun texte)"}`;
+  const system = q ? questionPrompt(q, etat) : systemPrompt(s);
 
-  if (!client) return res.json({ mode: "demo", reply: demoReply(s, segment, move, text) });
+  if (!client) return res.json({ mode: "demo", reply: q ? questionDemo(q, move, text, etat) : demoReply(s, segment, move, text) });
 
   const messages = [
     ...history.slice(-12).map((m) => ({ role: m.role, content: m.content })),
@@ -121,7 +184,7 @@ app.post("/api/hevrouta", async (req, res) => {
     if (provider === "openai") {
       const response = await client.responses.create({
         model,
-        instructions: systemPrompt(s),
+        instructions: system,
         input: messages,
         max_output_tokens: 2048,
         reasoning: { effort: "low" },
@@ -138,7 +201,7 @@ app.post("/api/hevrouta", async (req, res) => {
       betas: ["server-side-fallback-2026-07-01"],
       fallbacks: "default",
       output_config: { effort: "medium" },
-      system: [{ type: "text", text: systemPrompt(s), cache_control: { type: "ephemeral" } }],
+      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages,
     });
     if (response.stop_reason === "refusal") {

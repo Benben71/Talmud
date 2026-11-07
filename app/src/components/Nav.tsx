@@ -1,5 +1,6 @@
 // La navigation d'app : un rail à gauche sur grand écran, une barre d'onglets en bas sur téléphone.
-// Sept entrées, gravées au trait : la mer, lire, la carte, la hevrouta, ma page, les grandes questions, repères.
+// Sept entrées, gravées au trait : la mer, les grandes questions (l'entrée principale), puis, pour lire un
+// passage en entier, lire, la carte, la hevrouta, ma page ; enfin les repères.
 export type NavKey = "mer" | "lire" | "carte" | "hevrouta" | "mapage" | "questions" | "reperes";
 
 const ICON: Record<NavKey, React.ReactNode> = {
@@ -12,7 +13,7 @@ const ICON: Record<NavKey, React.ReactNode> = {
   reperes: <><circle cx="12" cy="12" r="9" /><path d="M12 3 v18 M3 12 h18" strokeWidth=".8" /><path d="M12 6 l2 6 l-2 6 l-2 -6 z" /></>,
 };
 const LABEL: Record<NavKey, string> = { mer: "La mer", lire: "Lire", carte: "Carte", hevrouta: "Hevrouta", mapage: "Ma page", questions: "Questions", reperes: "Repères" };
-const ORDER: NavKey[] = ["mer", "lire", "carte", "hevrouta", "mapage", "questions", "reperes"];
+const ORDER: NavKey[] = ["mer", "questions", "lire", "carte", "hevrouta", "mapage", "reperes"];
 
 export function NavIcon({ k, active, size }: { k: NavKey; active: boolean; size: number }) {
   return (

@@ -1,11 +1,11 @@
-// La page d'accueil se lit de haut en bas comme une introduction, puis s'ouvre sur la mer :
-//   1. le mot, la promesse, un bouton pour commencer, à quoi ça sert, la Corée du Sud, et un vrai débat résumé ;
-//   2. « Le Talmud, c'est quoi ? » — trois paragraphes, un schéma de la page imprimée et une frise qui finit par « toi » ;
-//   3. « Comment ça marche ici » — les cinq temps d'une séance, les outils de l'app et cinq mots-clés ;
-//   4. « Choisis un passage » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges ;
-//   5. « Les grandes questions » — quatre débats philosophiques de l'aggada et un lien vers la rubrique.
+// La page d'accueil part des grandes questions : l'ado vient lire des débats et y prendre part.
+//   1. le mot, la promesse, un bouton vers les questions, à quoi ça sert, la Corée du Sud, et un vrai débat résumé ;
+//   2. « Quelle question te travaille ? » — toutes les grandes questions, par thème ;
+//   3. « Le Talmud, c'est quoi ? » — trois paragraphes, un schéma de la page imprimée et une frise qui finit par « toi » ;
+//   4. « Comment ça marche ici » — les cinq temps d'une question, les outils de l'app et cinq mots-clés ;
+//   5. « Lis un passage en entier » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges.
 import type { ReactNode } from "react";
-import { QUESTIONS } from "../content/questions";
+import { DOMAINES, QUESTIONS, lireEtat } from "../content/questions";
 import type { Catalogue, Role, Sougya } from "../types";
 import { OUTIL_LABEL, PARCOURS, ROLE_LABEL, ROLE_SYMBOL } from "../types";
 import { readProgress } from "../store";
@@ -18,11 +18,11 @@ const DEMO_SLUG = "bava-metzia-2a"; // la sougya résumée dans l'extrait de l'a
 const LINK = "underline decoration-rule underline-offset-2 hover:text-ink hover:decoration-ink";
 
 const TEMPS: { titre: string; texte: string }[] = [
-  { titre: "Le cas", texte: "Une situation concrète, d'hier et d'aujourd'hui : deux personnes, un objet trouvé, une décision à prendre." },
-  { titre: "Ta première idée", texte: "Tu écris ce que tu en penses, avant de lire la réponse des sages." },
-  { titre: "Les voix & le débat", texte: "Tu lis le passage phrase par phrase : qui parle, qui objecte, qui répond à qui." },
-  { titre: "Et alors ?", texte: "Ce que le débat a tranché, ce qu'il laisse ouvert, et ce que ça change pour toi." },
-  { titre: "Ma page", texte: "Tes idées et tes questions, rassemblées dans un carnet que tu peux imprimer." },
+  { titre: "Prends parti", texte: "Une grande question, deux ou trois camps. Tu choisis le tien avant de lire les sages." },
+  { titre: "Lis le débat", texte: "Les sages parlent chacun à leur tour : qui affirme, qui objecte, qui raconte, qui répond à qui." },
+  { titre: "Réponds-leur", texte: "À chaque tour, tu peux répondre à un sage : ta réponse entre dans le débat." },
+  { titre: "Et le Talmud ?", texte: "Ce que le Talmud retient, ce qu'il laisse ouvert. Puis tu redonnes ton avis : as-tu changé ?" },
+  { titre: "Débats avec ta hevrouta", texte: "Ton binôme défend l'autre camp, fait parler un sage, et ne te donne pas raison trop vite." },
 ];
 
 const OUTILS: { k: NavKey; titre: string; texte: string }[] = [
@@ -158,6 +158,8 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
   const commencer = resume
     ? <button onClick={() => onResume(resume.c.slug, resume.p.last_segment!)} className="btn btn-primary">Reprendre · {resume.c.court}, segment {resume.p.last_segment} →</button>
     : <button onClick={() => onStart(first.slug)} className="btn btn-primary">Commencer le premier passage →</button>;
+  // Une question commencée mais sans avis final : on propose de la reprendre.
+  const qEnCours = QUESTIONS.find((q) => { const e = lireEtat(q.id); return e.avant !== null && e.revele > 0 && !e.apres; });
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-10 pt-3 md:px-6">
@@ -175,20 +177,20 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             Le <strong className="font-semibold">Talmud</strong>, c'est un livre où des sages débattent de tout, et où chaque idée doit répondre à une question : <em>« d'où tu sors ça ? »</em>
           </p>
           <p className="mt-2 max-w-xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2">
-            Ici, tu lis de vrais passages, tu donnes ton avis avant les sages, puis tu débats avec eux. Pas besoin d'être juif, religieux, ni de lire l'hébreu.
+            Choisis une grande question : la vérité, la liberté, le mal, la vie de l'autre… Prends parti, lis ce que les sages en ont dit, réponds-leur. Pas besoin d'être juif, religieux, ni de lire l'hébreu.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
-            {commencer}
-            {resume
-              ? <button onClick={() => onStart(first.slug)} className={`sc text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>ou commencer par {first.court.toLowerCase()}</button>
-              : <span className={`sc text-[calc(12px*var(--text-scale))] text-ink-2`}>{first.court} · {first.ref.replace("_", " ").replace(".", " ")} · {first.duree_min} min · aucun prérequis</span>}
+            {qEnCours
+              ? <button onClick={() => onQuestions(qEnCours.id)} className="btn btn-primary">Reprendre · {qEnCours.question} →</button>
+              : <button onClick={() => aller("questions")} className="btn btn-primary">Choisis une question →</button>}
+            <button onClick={() => aller("passages")} className={`sc text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>ou lis un passage en entier</button>
           </div>
           <nav className={`mt-4 flex flex-wrap gap-x-4 gap-y-1 text-[calc(14px*var(--text-scale))] text-ink-2`} aria-label="Sur cette page">
             <span className="sc text-rubric">sur cette page</span>
+            <button className={LINK} onClick={() => aller("questions")}>Les grandes questions</button>
             <button className={LINK} onClick={() => aller("talmud")}>Le Talmud, c'est quoi ?</button>
             <button className={LINK} onClick={() => aller("methode")}>Comment ça marche</button>
-            <button className={LINK} onClick={() => aller("passages")}>Choisir un passage</button>
-            <button className={LINK} onClick={() => aller("questions")}>Les grandes questions</button>
+            <button className={LINK} onClick={() => aller("passages")}>Lire un passage en entier</button>
           </nav>
         </div>
 
@@ -223,9 +225,41 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
         </div>
       </section>
 
-      {/* 2. Le Talmud, c'est quoi ? */}
+      {/* 2. Les grandes questions : l'entrée principale */}
       <section className="mt-10">
-        <Titre n="I" he="תַּלְמוּד" id="talmud">Le Talmud, c'est quoi ?</Titre>
+        <Titre n="I" he="אַגָּדָה" id="questions">Quelle question te travaille ?</Titre>
+        <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
+          Les sages du Talmud ne discutent pas que de la vie de tous les jours. Dans ses récits (l'<em>aggada</em>), ils débattent du sens de la vie, du mal, de la liberté, de la vérité, souvent sans trancher. À toi d'entrer dans le débat.
+        </p>
+        <div className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
+          {DOMAINES.map((d) => (
+            <div key={d}>
+              <h3 className={`sc border-t hairline pt-2 text-[calc(13px*var(--text-scale))] text-rubric`}>{d}</h3>
+              <ul className="mt-1.5 space-y-1.5">
+                {QUESTIONS.filter((q) => q.domaine === d).map((q) => {
+                  const e = lireEtat(q.id);
+                  return (
+                    <li key={q.id}>
+                      <button onClick={() => onQuestions(q.id)} className="group flex w-full items-baseline gap-2 text-left">
+                        <span className={`text-[calc(13px*var(--text-scale))] ${e.apres ? "rubric" : "text-rule"}`} aria-hidden="true">{e.apres ? "●" : e.avant !== null && e.revele > 0 ? "◐" : "○"}</span>
+                        <span className={`text-[calc(17px*var(--text-scale))] font-semibold leading-tight group-hover:underline group-hover:decoration-rule group-hover:underline-offset-2`}>{q.question}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className={`mt-4 text-[calc(14px*var(--text-scale))] text-ink-2`}>
+          <button className={LINK} onClick={() => onQuestions(null)}>Toutes les questions, avec leurs résumés →</button>
+          <span className="ml-3">○ pas commencée · ◐ en cours · ● ton avis est donné</span>
+        </p>
+      </section>
+
+      {/* 3. Le Talmud, c'est quoi ? */}
+      <section className="mt-10">
+        <Titre n="II" he="תַּלְמוּד" id="talmud">Le Talmud, c'est quoi ?</Titre>
         <div className="mt-4 grid gap-x-8 gap-y-6 lg:grid-cols-[1fr_1fr_1fr_240px]">
           <div>
             <h3 className={`sc mb-1 text-[calc(14px*var(--text-scale))] text-rubric`}>un livre qui débat</h3>
@@ -277,11 +311,11 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
         </div>
       </section>
 
-      {/* 3. Comment ça marche ici */}
+      {/* 4. Comment ça marche ici */}
       <section className="mt-10">
-        <Titre n="II" he="חַבְרוּתָא" id="methode">Comment ça marche ici</Titre>
+        <Titre n="III" he="חַבְרוּתָא" id="methode">Comment ça marche ici</Titre>
         <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
-          Chaque passage (une <em>sougya</em>) se lit en 15 à 25 minutes, en cinq temps. On suit la méthode du rabbin <strong className="font-semibold text-ink">Adin Steinsaltz</strong>, qui a traduit et expliqué tout le Talmud pour que chacun puisse l'ouvrir.
+          Chaque grande question se vit en cinq temps, en 10 à 20 minutes. Pour aller plus loin, certains débats se lisent aussi en entier, phrase par phrase, avec le texte original : on suit alors la méthode du rabbin <strong className="font-semibold text-ink">Adin Steinsaltz</strong>, qui a traduit et expliqué tout le Talmud pour que chacun puisse l'ouvrir.
         </p>
         <ol className="mt-5 grid gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-5">
           {TEMPS.map((t, k) => (
@@ -329,11 +363,11 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
         </p>
       </section>
 
-      {/* 4. La mer : choisir un passage */}
+      {/* 5. La mer : lire un passage en entier */}
       <section className="mt-10">
-        <Titre n="III" he="יַם הַתַּלְמוּד" id="passages">Choisis un passage</Titre>
+        <Titre n="IV" he="יַם הַתַּלְמוּד" id="passages">Lis un passage en entier</Titre>
         <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
-          On appelle le Talmud « la mer » : on n'en voit jamais le bout. Ici, chaque île est un passage, regroupé par grande question.
+          On appelle le Talmud « la mer » : on n'en voit jamais le bout. Ici, chaque île est un passage complet, à lire phrase par phrase, avec le texte original. Les îles sont regroupées par parcours.
           Une île en trait plein est ouverte ({ouverts.length} sur {catalogue.length} pour l'instant), en pointillé elle arrive. Pas d'ordre obligé : commence où tu veux.
         </p>
 
@@ -405,28 +439,6 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             </div>
           </aside>
         </div>
-      </section>
-
-      {/* 5. Les grandes questions : les débats philosophiques de l'aggada */}
-      <section className="mt-10">
-        <Titre n="IV" he="אַגָּדָה" id="questions">Les grandes questions</Titre>
-        <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
-          Les sages ne discutent pas que de la vie de tous les jours. Dans les récits du Talmud, ils débattent aussi du sens de la vie, du mal, de la liberté et de la vérité, souvent sans trancher.
-        </p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {QUESTIONS.slice(0, 4).map((q) => (
-            <li key={q.id}>
-              <button onClick={() => onQuestions(q.id)} className="bloc block h-full w-full px-3 py-3 text-left hover:border-ink">
-                <div className={`sc text-[calc(12px*var(--text-scale))] text-rubric`}>{q.domaine}</div>
-                <div className={`text-[calc(17px*var(--text-scale))] font-semibold leading-tight`}>{q.question}</div>
-                <div className={`sc mt-1 text-[calc(12px*var(--text-scale))] text-ink-2`}>{q.sources[0].ref}</div>
-              </button>
-            </li>
-          ))}
-        </ul>
-        <p className={`mt-3 text-[calc(14px*var(--text-scale))] text-ink-2`}>
-          <button className={LINK} onClick={() => onQuestions(null)}>Les {QUESTIONS.length} grandes questions →</button>
-        </p>
       </section>
 
       {/* Pour l'adulte, et les crédits */}

@@ -25,3 +25,5 @@ dist-ssr
 
 .env
 src/content/*.json
+# Écrit à la main (les autres JSON sont générés par scripts/build-content.mjs).
+!src/content/questions.json

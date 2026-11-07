@@ -7,6 +7,7 @@ import {
   DOMAINES, QUESTIONS, TOUR_LABEL, ecrireEtat, etatVide, lireEtat, sefaria,
   type EtatQuestion, type GrandeQuestion, type Tour,
 } from "../content/questions";
+import type { Vue } from "../router";
 import { Fleuron } from "./Fleuron";
 
 const LINK = "underline decoration-rule underline-offset-2 hover:text-ink hover:decoration-ink";
@@ -102,7 +103,7 @@ const MOVES: { id: string; label: string; placeholder: string }[] = [
   { id: "explique", label: "Explique-moi", placeholder: "Ce que tu ne comprends pas" },
 ];
 
-function DebatHevrouta({ q, etat, update, mode }: { q: GrandeQuestion; etat: EtatQuestion; update: (p: (e: EtatQuestion) => Partial<EtatQuestion>) => void; mode: string }) {
+function DebatHevrouta({ q, etat, update, mode, grand }: { q: GrandeQuestion; etat: EtatQuestion; update: (p: (e: EtatQuestion) => Partial<EtatQuestion>) => void; mode: string; grand?: boolean }) {
   const [move, setMove] = useState("monavis");
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
@@ -137,7 +138,7 @@ function DebatHevrouta({ q, etat, update, mode }: { q: GrandeQuestion; etat: Eta
         <span className="sc text-sm">ta hevrouta</span>
         <span className={`sc text-[calc(12px*var(--text-scale))] ${mode === "demo" ? "text-ink-2" : "rubric"}`}>{mode === "openai" ? "OpenAI" : mode === "claude" ? "Claude" : mode === "demo" ? "mode démo" : mode}</span>
       </div>
-      <div className="max-h-[420px] space-y-3 overflow-y-auto px-3 py-3">
+      <div className={`${grand ? "max-h-[60vh] min-h-[240px]" : "max-h-[420px]"} space-y-3 overflow-y-auto px-3 py-3`}>
         {etat.chat.length === 0 && (
           <div className="text-[calc(14.5px*var(--text-scale))] leading-snug text-ink-2">
             <p>Ton binôme a lu le même débat. Il ne te donnera pas raison trop vite. Commence par une amorce :</p>
@@ -171,7 +172,113 @@ function DebatHevrouta({ q, etat, update, mode }: { q: GrandeQuestion; etat: Eta
   );
 }
 
-function Fiche({ q, catalogue, mode, onStart, onOpen }: { q: GrandeQuestion; catalogue: Catalogue[]; mode: string; onStart: (slug: string) => void; onOpen: (id: string | null) => void }) {
+const VUES: { id: Vue; label: string }[] = [
+  { id: "debat", label: "Le débat" }, { id: "carte", label: "La carte" }, { id: "hevrouta", label: "Hevrouta" },
+];
+
+// La carte : l'ado range chaque voix dans son camp, vérifie, puis voit qui est où, et où il se place lui-même.
+function CarteDebat({ q, etat, update, commence, onLire }: {
+  q: GrandeQuestion; etat: EtatQuestion; update: (p: (e: EtatQuestion) => Partial<EtatQuestion>) => void; commence: boolean; onLire: () => void;
+}) {
+  const voix = q.debat
+    .map((t, i) => ({ ...t, i }))
+    .filter((t, k, all) => t.camp && t.qui !== "Le Talmud" && all.findIndex((x) => x.qui === t.qui && x.camp) === k);
+  const { choix, verifie } = etat.carte;
+  const tous = voix.every((v) => choix[v.qui]);
+  const score = voix.filter((v) => choix[v.qui] === v.camp).length;
+  const label = (id?: string | null) => q.camps.find((c) => c.id === id)?.label;
+  const setCarte = (c: Partial<EtatQuestion["carte"]>) => update((e) => ({ carte: { ...e.carte, ...c } }));
+  const cols = q.camps.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2";
+  const neutres = q.debat.map((t, i) => ({ ...t, i })).filter((t) => !t.camp);
+
+  return (
+    <section className="mt-6">
+      <h3 className="text-[calc(20px*var(--text-scale))] font-semibold">Qui est dans quel camp ?</h3>
+      <p className="mt-1 text-[calc(15px*var(--text-scale))] leading-snug text-ink-2">
+        Range chaque voix du débat dans son camp, d'après ce qu'elle dit. Puis vérifie, et regarde où tu te places, toi.
+        {!commence && <> Tu n'as pas encore lu le débat : tu peux jouer quand même, ou <button onClick={onLire} className={LINK}>le lire d'abord</button>.</>}
+      </p>
+
+      <ul className="mt-4 space-y-3">
+        {voix.map((v) => {
+          const c = choix[v.qui];
+          const juste = c === v.camp;
+          return (
+            <li key={v.qui} className="border-t hairline pt-2">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                <span className="text-[calc(16px*var(--text-scale))] font-semibold">{v.qui}</span>
+                {verifie && <span className={`text-[calc(14px*var(--text-scale))] ${juste ? "text-ink-2" : "rubric"}`}>{juste ? "✓ bien vu" : `✗ plutôt : ${label(v.camp)}`}</span>}
+              </div>
+              <p className="text-[calc(14.5px*var(--text-scale))] leading-snug text-ink-2">« {v.dit} »</p>
+              <div className="mt-1.5 flex flex-wrap gap-1" role="radiogroup" aria-label={`Camp de ${v.qui}`}>
+                {q.camps.map((cp) => (
+                  <button key={cp.id} role="radio" aria-checked={c === cp.id} disabled={verifie} onClick={() => setCarte({ choix: { ...choix, [v.qui]: cp.id } })}
+                    className={`btn btn-sm btn-quiet ${c === cp.id ? "btn-on" : ""}`} style={{ fontVariant: "normal", textTransform: "none", letterSpacing: 0 }}>{cp.label}</button>
+                ))}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        {!verifie ? (
+          <>
+            <button disabled={!tous} onClick={() => setCarte({ verifie: true })} className="btn btn-primary">Vérifier</button>
+            <button onClick={() => setCarte({ verifie: true })} className={`text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>passer et voir la carte</button>
+          </>
+        ) : (
+          <>
+            <span className="text-[calc(16px*var(--text-scale))]"><strong className="font-semibold">{score} / {voix.length}</strong> bien placés</span>
+            <button onClick={() => setCarte({ choix: {}, verifie: false })} className={`text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>recommencer</button>
+          </>
+        )}
+      </div>
+
+      {verifie && (
+        <div className="fadein mt-8">
+          <h3 className="text-[calc(20px*var(--text-scale))] font-semibold">La carte du débat</h3>
+          {neutres.length > 0 && (
+            <p className="mt-2 text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">
+              <span className="sc text-rubric">sans prendre parti · </span>
+              {neutres.map((t, k) => <span key={t.i}>{k > 0 && " · "}{TOUR_LABEL[t.type].sym} {t.qui} <span className="text-rule">(tour {t.i + 1})</span></span>)}
+            </p>
+          )}
+          <div className={`mt-3 grid gap-3 ${cols}`}>
+            {q.camps.map((cp) => {
+              const tours = q.debat.map((t, i) => ({ ...t, i })).filter((t) => t.camp === cp.id);
+              const avant = etat.avant === cp.id; const apres = etat.apres === cp.id;
+              return (
+                <div key={cp.id} className={`bloc px-3 py-3 ${avant || apres ? "border-ink" : ""}`}>
+                  <div className="text-[calc(16px*var(--text-scale))] font-semibold leading-tight">{cp.label}</div>
+                  {(avant || apres) && (
+                    <div className="sc mt-1 text-[calc(12px*var(--text-scale))] text-rubric">
+                      ● toi{avant && apres ? ", avant et après" : avant ? ", avant le débat" : ", après le débat"}
+                    </div>
+                  )}
+                  <ol className="mt-2 space-y-2">
+                    {tours.map((t) => (
+                      <li key={t.i} className="border-l-2 border-rubric pl-2 text-[calc(14px*var(--text-scale))] leading-snug">
+                        <span className="role-mark"><span className="sym">{TOUR_LABEL[t.type].sym}</span></span>
+                        <span className="font-semibold">{t.qui}</span> <span className="text-rule">tour {t.i + 1}</span>
+                        <div className="text-ink-2">{t.dit}</div>
+                        {etat.reponses[t.i] && <div className="mt-1 text-right italic">↳ toi : {etat.reponses[t.i]}</div>}
+                      </li>
+                    ))}
+                    {tours.length === 0 && <li className="text-[calc(13px*var(--text-scale))] italic text-ink-2">Aucun sage du débat ne défend ce camp.</li>}
+                  </ol>
+                </div>
+              );
+            })}
+          </div>
+          {etat.avant === null && <p className="mt-3 text-[calc(14px*var(--text-scale))] text-ink-2">Prends parti dans « Le débat » pour te voir apparaître sur la carte.</p>}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function Fiche({ q, vue, catalogue, mode, onStart, onOpen }: { q: GrandeQuestion; vue: Vue; catalogue: Catalogue[]; mode: string; onStart: (slug: string) => void; onOpen: (id: string | null, vue?: Vue) => void }) {
   const { etat, update, reset } = useEtat(q.id);
   const [changerAvant, setChangerAvant] = useState(false);
   const suiteRef = useRef<HTMLDivElement>(null);
@@ -203,7 +310,14 @@ function Fiche({ q, catalogue, mode, onStart, onOpen }: { q: GrandeQuestion; cat
         <span className="text-[calc(14px*var(--text-scale))] italic text-ink-2">{q.heLabel}</span>
       </div>
       <p className="mt-3 max-w-2xl text-[calc(16.5px*var(--text-scale))] leading-snug">{q.accroche}</p>
+      <nav className="mt-4 flex flex-wrap gap-1" aria-label="Vues de la question">
+        {VUES.map((v) => (
+          <button key={v.id} onClick={() => onOpen(q.id, v.id)} aria-current={vue === v.id ? "page" : undefined} className={`btn btn-sm btn-quiet ${vue === v.id ? "btn-on" : ""}`}>{v.label}</button>
+        ))}
+      </nav>
 
+      {vue === "debat" && (
+        <>
       <Etape n={1} titre="Et toi, d'abord ?">
         {commence && !changerAvant ? (
           <p className="text-[calc(15.5px*var(--text-scale))] leading-snug">
@@ -276,6 +390,25 @@ function Fiche({ q, catalogue, mode, onStart, onOpen }: { q: GrandeQuestion; cat
         </>
       )}
 
+        </>
+      )}
+      {vue === "carte" && <CarteDebat q={q} etat={etat} update={update} commence={commence} onLire={() => onOpen(q.id, "debat")} />}
+      {vue === "hevrouta" && (
+        <section className="mt-6">
+          <p className="mb-3 text-[calc(15px*var(--text-scale))] leading-snug">
+            Ton avis : <strong className="font-semibold">{campLabel(etat.avant) ?? (etat.avant === "?" ? "tu ne savais pas" : "pas encore donné")}</strong>
+            {etat.apres && <> → après le débat : <strong className="font-semibold">{campLabel(etat.apres)}</strong></>}.
+          </p>
+          {!fini && (
+            <p className="bloc mb-3 px-3 py-2 text-[calc(14.5px*var(--text-scale))] leading-snug">
+              Ta hevrouta a lu tout le débat. Pour ne pas te gâcher la suite, lis-le d'abord.{" "}
+              <button onClick={() => onOpen(q.id, "debat")} className={LINK}>Lire le débat →</button>
+            </p>
+          )}
+          <DebatHevrouta q={q} etat={etat} update={update} mode={mode} grand />
+        </section>
+      )}
+
       <section className="mt-10 border-t hairline pt-2 text-[calc(14px*var(--text-scale))] text-ink-2">
         <span className="sc text-rubric">lire les textes · </span>
         {q.sources.map((s, i) => <span key={s.ref}>{i > 0 && " · "}<a href={sefaria(s)} target="_blank" rel="noreferrer" className={LINK}>{s.ref}</a></span>)}
@@ -291,7 +424,7 @@ function Fiche({ q, catalogue, mode, onStart, onOpen }: { q: GrandeQuestion; cat
 
       <div className="mt-6 flex flex-wrap items-baseline justify-between gap-3">
         {commence ? <button onClick={() => { if (confirm("Effacer tes réponses à cette question ?")) reset(); }} className={`text-[calc(13px*var(--text-scale))] text-ink-2 ${LINK}`}>recommencer cette question</button> : <span />}
-        <button onClick={() => onOpen(suivante.id)} className={`text-[calc(15px*var(--text-scale))] ${LINK}`}>Question suivante : {suivante.question} →</button>
+        <button onClick={() => onOpen(suivante.id, vue)} className={`text-[calc(15px*var(--text-scale))] ${LINK}`}>Question suivante : {suivante.question} →</button>
       </div>
     </article>
   );
@@ -305,16 +438,16 @@ function statut(id: string): { texte: string; on: boolean } {
   return { texte: `${new Set(q.debat.filter((t) => t.type !== "recit").map((t) => t.qui)).size} voix · ${q.camps.length} camps`, on: false };
 }
 
-export function Questions({ id, onOpen, catalogue, onStart, mode }: { id: string | null; onOpen: (id: string | null) => void; catalogue: Catalogue[]; onStart: (slug: string) => void; mode: string }) {
+export function Questions({ id, vue, onOpen, catalogue, onStart, mode }: { id: string | null; vue: Vue; onOpen: (id: string | null, vue?: Vue) => void; catalogue: Catalogue[]; onStart: (slug: string) => void; mode: string }) {
   const q = id ? QUESTIONS.find((x) => x.id === id) : undefined;
   const top = useRef<HTMLDivElement>(null);
   // Changer de fiche remet la lecture en haut (le conteneur qui défile est celui de l'app).
-  useEffect(() => { top.current?.scrollIntoView({ block: "start" }); }, [id]);
+  useEffect(() => { top.current?.scrollIntoView({ block: "start" }); }, [id, vue]);
   return (
     <div ref={top} className="mx-auto max-w-4xl px-5 py-6 md:px-8">
       <Fleuron className="mb-4" />
       {q ? (
-        <Fiche key={q.id} q={q} catalogue={catalogue} mode={mode} onStart={onStart} onOpen={onOpen} />
+        <Fiche key={q.id} q={q} vue={vue} catalogue={catalogue} mode={mode} onStart={onStart} onOpen={onOpen} />
       ) : (
         <>
           <div className="sc text-[calc(14px*var(--text-scale))] text-rubric">les grandes questions</div>
@@ -358,6 +491,94 @@ export function Questions({ id, onOpen, catalogue, onStart, mode }: { id: string
             Les tours de parole sont résumés et paraphrasés pour l'app, pas traduits mot à mot : chaque fiche renvoie au texte original. Un adulte, un enseignant ou un rav peut t'aider à aller plus loin.
           </p>
         </>
+      )}
+    </div>
+  );
+}
+
+// Ma page : tout ce que l'ado a pensé et écrit, question par question, plus sa propre grande question.
+// S'imprime en A5 (voir @page dans index.css).
+export function MaPageQuestions({ onOpen }: { onOpen: (id: string | null, vue?: Vue) => void }) {
+  const [maQuestion, setMaQuestion] = useState(() => { try { return localStorage.getItem("talmud:ma-question") ?? ""; } catch { return ""; } });
+  useEffect(() => { try { localStorage.setItem("talmud:ma-question", maQuestion); } catch { /* stockage indisponible */ } }, [maQuestion]);
+  const lignes = QUESTIONS.map((q) => ({ q, e: lireEtat(q.id) }))
+    .filter(({ e }) => (e.avant !== null && e.revele > 0) || e.argument || e.chat.length);
+  const label = (q: GrandeQuestion, id: string | null) => q.camps.find((c) => c.id === id)?.label;
+  const changes = lignes.filter(({ e }) => e.apres && e.avant && e.avant !== "?" && e.apres !== e.avant).length;
+  const reponses = lignes.reduce((n, { e }) => n + Object.values(e.reponses).filter(Boolean).length, 0);
+
+  return (
+    <div className="mx-auto max-w-3xl px-5 py-6 md:px-8">
+      <Fleuron className="mb-4 print:hidden" />
+      <div className="sc text-[calc(14px*var(--text-scale))] text-rubric">ma page</div>
+      <h1 className="text-3xl md:text-4xl">Mes grandes questions</h1>
+      <p className="mt-2 text-[calc(15.5px*var(--text-scale))] leading-snug text-ink-2">
+        Ce que tu pensais avant de lire les sages, ce que tu leur as répondu, ce que tu penses maintenant. Rien n'est envoyé : tout reste dans ce navigateur.
+      </p>
+      {lignes.length > 0 && (
+        <p className="mt-3 text-[calc(15px*var(--text-scale))]">
+          <strong className="font-semibold">{lignes.length}</strong> question{lignes.length > 1 ? "s" : ""} explorée{lignes.length > 1 ? "s" : ""} ·{" "}
+          <strong className="font-semibold">{reponses}</strong> réponse{reponses > 1 ? "s" : ""} aux sages ·{" "}
+          <strong className="font-semibold">{changes}</strong> changement{changes > 1 ? "s" : ""} d'avis
+        </p>
+      )}
+
+      {lignes.length === 0 ? (
+        <div className="bloc mt-6 px-4 py-4">
+          <p className="text-[calc(15.5px*var(--text-scale))] leading-snug">Tu n'as encore pris parti sur aucune question. Ta page se remplira à mesure que tu débats avec les sages.</p>
+          <button onClick={() => onOpen(null)} className="btn btn-primary mt-3">Choisir une question →</button>
+        </div>
+      ) : (
+        <ol className="mt-6 space-y-6">
+          {lignes.map(({ q, e }) => {
+            const rep = Object.entries(e.reponses).filter(([, v]) => v);
+            const voix = q.debat.filter((t) => t.camp).map((t) => t.qui).filter((v, k, a) => a.indexOf(v) === k).length;
+            return (
+              <li key={q.id} className="border-t border-ink pt-2" style={{ breakInside: "avoid" }}>
+                <div className="sc text-[calc(12px*var(--text-scale))] text-rubric">{q.domaine}</div>
+                <h2 className="text-[calc(20px*var(--text-scale))] font-semibold leading-tight">{q.question}</h2>
+                <dl className="mt-2 space-y-1.5 text-[calc(15px*var(--text-scale))] leading-snug">
+                  <div><dt className="sc inline text-ink-2">avant · </dt><dd className="inline">{label(q, e.avant) ?? "je ne savais pas"}{e.pourquoi && <span className="text-ink-2"> — « {e.pourquoi} »</span>}</dd></div>
+                  {e.apres && (
+                    <div><dt className="sc inline text-ink-2">après · </dt><dd className="inline">{label(q, e.apres)}{e.avant !== "?" && e.apres !== e.avant && <span className="rubric"> · j'ai changé d'avis</span>}</dd></div>
+                  )}
+                  {rep.length > 0 && (
+                    <div>
+                      <dt className="sc text-ink-2">mes réponses aux sages</dt>
+                      <dd><ul className="mt-0.5 space-y-0.5">{rep.map(([i, v]) => <li key={i}><span className="text-ink-2">à {q.debat[Number(i)]?.qui} :</span> {v}</li>)}</ul></dd>
+                    </div>
+                  )}
+                  {e.argument && <div><dt className="sc text-ink-2">mon argument</dt><dd className="whitespace-pre-wrap">{e.argument}</dd></div>}
+                  {(e.carte.verifie || e.chat.length > 0) && (
+                    <div className="text-[calc(13.5px*var(--text-scale))] text-ink-2">
+                      {e.carte.verifie && <>carte : {q.debat.filter((t) => t.camp && t.qui !== "Le Talmud").map((t) => t.qui).filter((v, k, a) => a.indexOf(v) === k && e.carte.choix[v] === q.debat.find((t) => t.qui === v && t.camp)?.camp).length} / {voix} voix bien placées</>}
+                      {e.carte.verifie && e.chat.length > 0 && " · "}
+                      {e.chat.length > 0 && <>{Math.ceil(e.chat.length / 2)} échange{e.chat.length > 2 ? "s" : ""} avec ta hevrouta</>}
+                    </div>
+                  )}
+                </dl>
+                <div className="mt-2 flex flex-wrap gap-x-4 text-[calc(13px*var(--text-scale))] text-ink-2 print:hidden">
+                  <button onClick={() => onOpen(q.id)} className={LINK}>reprendre le débat</button>
+                  <button onClick={() => onOpen(q.id, "carte")} className={LINK}>la carte</button>
+                  <button onClick={() => onOpen(q.id, "hevrouta")} className={LINK}>la hevrouta</button>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      )}
+
+      <section className="mt-8 border-t border-ink pt-2">
+        <h2 className="text-[calc(20px*var(--text-scale))] font-semibold">Ma grande question à moi</h2>
+        <p className="text-[calc(14.5px*var(--text-scale))] leading-snug text-ink-2">Une question qui te travaille et que les sages n'ont pas (encore) posée ici. Tu pourras la poser à un adulte, à un ami, ou à ta hevrouta.</p>
+        <textarea value={maQuestion} onChange={(e) => setMaQuestion(e.target.value)} rows={3} aria-label="Ma grande question à moi"
+          placeholder="Par exemple : a-t-on le droit de mentir pour protéger quelqu'un ?" className="mt-2 w-full p-2 text-[calc(15.5px*var(--text-scale))] leading-snug" />
+      </section>
+
+      {lignes.length > 0 && (
+        <div className="mt-6 flex justify-end print:hidden">
+          <button onClick={() => window.print()} className="btn">Imprimer ma page</button>
+        </div>
       )}
     </div>
   );

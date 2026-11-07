@@ -20,6 +20,7 @@
     "issue": "Le Talmud ne répond pas à « pourquoi exister ? » : il retourne la question en « que fais-tu de ton existence ? ». Pessimiste ou réaliste ? Les commentateurs en discutent encore.",
     "a_toi": "La conclusion te paraît-elle triste, ou au contraire libératrice ? Qu'est-ce que ça change de passer de « pourquoi suis-je là ? » à « qu'est-ce que je fais ? »",
     "amorces": ["Pourquoi voter sur une question pareille ?", "Est-ce que la conclusion n'est pas déprimante ?", "Défends le camp qui a perdu."],
+    "vigilance": "« Valait-il mieux ne pas naître ? » peut résonner chez un ado qui va mal. La fiche insiste sur la suite du texte (« qu'il examine ses actes ») ; si un ado s'attarde sur la première moitié, prenez le temps d'en parler. La hevrouta a pour consigne d'orienter vers un adulte de confiance.",
     "sources": [{ "ref": "Érouvin 13b", "path": "Eruvin.13b" }],
     "sougya": "eruvin-13b"
   },
@@ -48,6 +49,7 @@
     "issue": "Le Talmud garde côte à côte la question, le silence de Dieu, le doute d'un sage et une réponse de foi. Il ne cache pas que la question reste ouverte.",
     "a_toi": "Pourquoi, selon toi, le Talmud a-t-il gardé l'histoire d'un sage qui a perdu la foi, au lieu de l'effacer ? Une question sans réponse peut-elle quand même être utile ?",
     "amorces": ["« Tais-toi » : c'est une vraie réponse ?", "Rabbi Yaakov n'esquive-t-il pas la question ?", "Fais parler Elisha ben Abouya."],
+    "vigilance": "Peut toucher un deuil ou une maladie dans la famille. Les récits de la mort de Rabbi Akiva (Menahot 29b) et de l'enfant qui tombe (Kiddouchin 39b) sont durs.",
     "sources": [{ "ref": "Berakhot 7a", "path": "Berakhot.7a" }, { "ref": "Menahot 29b", "path": "Menachot.29b" }, { "ref": "Kiddouchin 39b", "path": "Kiddushin.39b" }]
   },
   {
@@ -72,6 +74,7 @@
     "issue": "Le Talmud ne résout pas le paradoxe logique. Il protège un point : la responsabilité morale, sans laquelle juger, punir ou pardonner n'aurait plus de sens.",
     "a_toi": "Fais deux listes : ce qui t'a été « donné » (talents, famille, pays…) et ce qui dépend vraiment de toi. Où ranges-tu ton caractère ? Tes amitiés ?",
     "amorces": ["Si l'ange connaît ma richesse, il ne connaît pas un peu mon caractère aussi ?", "Le Raavad a-t-il raison de se plaindre ?", "Défends « tout est écrit »."],
+    "vigilance": "Maïmonide et le Raavad sont bien postérieurs au Talmud (XIIe siècle) : leurs dates sont indiquées, pour qu'on ne les confonde pas avec les sages du Talmud.",
     "sources": [{ "ref": "Nidda 16b", "path": "Niddah.16b" }, { "ref": "Berakhot 33b", "path": "Berakhot.33b" }, { "ref": "Pirkei Avot 3:15", "path": "Pirkei_Avot.3.15" }, { "ref": "Michné Torah, Techouva 5:5", "path": "Mishneh_Torah,_Repentance.5.5" }]
   },
   {
@@ -170,6 +173,7 @@
     "issue": "Les deux cas ne se contredisent pas : tu as le droit de te sauver toi-même (Rabbi Akiva), mais pas de sauver ta vie en prenant celle d'un autre (Rava). Deux vies ont exactement la même valeur.",
     "a_toi": "La position de Ben Petoura est-elle généreuse ou absurde ? Imagine une situation d'aujourd'hui (secours, médecine…) où cette question se pose vraiment.",
     "amorces": ["Rabbi Akiva n'est-il pas égoïste ?", "Quelle différence entre boire la gourde et tuer ?", "Défends Ben Petoura."],
+    "vigilance": "Dilemmes de vie et de mort, à présenter comme des cas d'école. La conclusion de la fiche (deux vies ont la même valeur) est une lecture courante, pas la seule.",
     "sources": [{ "ref": "Bava Metsia 62a", "path": "Bava_Metzia.62a" }, { "ref": "Pessahim 25b", "path": "Pesachim.25b" }],
     "sougya": "bava-metzia-62a"
   },
@@ -194,6 +198,7 @@
     "issue": "Beruria gagne par une méthode : lire un mot de près, et aller jusqu'au bout du verset. Sa lecture s'écarte un peu du sens simple du psaume, et c'est justement ce qui change la prière de son mari. Le Talmud montre ici une femme qui discute avec autorité, et qui a raison.",
     "a_toi": "Pense à quelqu'un qui t'a fait du mal. Souhaiter qu'il change, est-ce plus facile ou plus difficile que souhaiter qu'il soit puni ? Est-ce que c'est plus juste ?",
     "amorces": ["Et si les voyous n'avaient jamais changé ?", "Beruria triche un peu avec le verset, non ?", "Fais parler Rabbi Meïr."],
+    "vigilance": "Peut rejoindre une situation de harcèlement réel. La fiche ne demande pas à la victime de pardonner ; un ado harcelé a besoin d'un adulte, pas seulement d'un texte.",
     "sources": [{ "ref": "Berakhot 10a", "path": "Berakhot.10a" }],
     "sougya": "berakhot-10a"
   },
@@ -289,6 +294,7 @@
     "issue": "Le Talmud n'interdit pas la curiosité : il la prend assez au sérieux pour la juger dangereuse. Penser les questions ultimes demande de garder les pieds sur terre, et souvent un maître à côté de soi.",
     "a_toi": "Y a-t-il des questions qui t'ont déjà donné le vertige ? Vaut-il mieux les explorer seul ou avec quelqu'un ?",
     "amorces": ["Pourquoi seul Rabbi Akiva s'en sort-il ?", "Débattre de la création, ce n'est pas déjà scruter « ce qui était avant » ?", "Défends la curiosité sans limites."],
+    "vigilance": "Le Pardès (Haguiga 14b) est un texte mystique : la fiche le résume sans entrer dans son contenu, et c'est voulu.",
     "sources": [{ "ref": "Haguiga 12a", "path": "Chagigah.12a" }, { "ref": "Haguiga 11b", "path": "Chagigah.11b" }, { "ref": "Haguiga 14b", "path": "Chagigah.14b" }]
   }
 ]

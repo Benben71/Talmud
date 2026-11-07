@@ -23,6 +23,7 @@ export interface GrandeQuestion {
   amorces: string[];
   sources: Source[];
   sougya?: string;
+  vigilance?: string;
 }
 
 export const QUESTIONS = data as GrandeQuestion[];
@@ -34,6 +35,11 @@ export const TOUR_LABEL: Record<TourType, { sym: string; label: string }> = {
   conclusion: { sym: "★", label: "conclusion" },
 };
 
+// Les voix collectives ou narratives ne sont pas des « sages » à présenter ou à ranger sur la carte.
+const COLLECTIFS = new Set(["Le Talmud", "La Mishna", "La Guemara", "Les sages", "Tous", "Le vote", "Une baraïta", "Les uns", "Les autres", "Dieu, dans le récit", "Une voix céleste", "Les philosophes", "Le prophète Élie"]);
+export const estSage = (qui: string) => !COLLECTIFS.has(qui);
+export const SAGES = [...new Set(QUESTIONS.flatMap((q) => q.debat.map((t) => t.qui)).filter(estSage))];
+
 export const sefaria = (s: Source) => `https://www.sefaria.org/${s.path}`;
 
 // Ce que l'ado a fait sur une question : son camp avant et après, ses réponses aux sages, son argument, le chat.
@@ -44,10 +50,11 @@ export interface EtatQuestion {
   reponses: Record<number, string>;
   apres: string | null;
   argument: string;
+  carte: { choix: Record<string, string>; verifie: boolean };
   chat: { role: "user" | "assistant"; content: string; move?: string }[];
 }
 
-export const etatVide = (): EtatQuestion => ({ avant: null, pourquoi: "", revele: 0, reponses: {}, apres: null, argument: "", chat: [] });
+export const etatVide = (): EtatQuestion => ({ avant: null, pourquoi: "", revele: 0, reponses: {}, apres: null, argument: "", carte: { choix: {}, verifie: false }, chat: [] });
 
 export function lireEtat(id: string): EtatQuestion {
   try {

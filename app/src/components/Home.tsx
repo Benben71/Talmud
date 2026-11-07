@@ -5,7 +5,7 @@
 //   4. « Comment ça marche ici » — les cinq temps d'une question, les outils de l'app et cinq mots-clés ;
 //   5. « Lis un passage en entier » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges.
 import type { ReactNode } from "react";
-import { DOMAINES, QUESTIONS, lireEtat } from "../content/questions";
+import { DOMAINES, QUESTIONS, SAGES, lireEtat } from "../content/questions";
 import type { Catalogue, Role, Sougya } from "../types";
 import { OUTIL_LABEL, PARCOURS, ROLE_LABEL, ROLE_SYMBOL } from "../types";
 import { readProgress } from "../store";
@@ -26,10 +26,10 @@ const TEMPS: { titre: string; texte: string }[] = [
 ];
 
 const OUTILS: { k: NavKey; titre: string; texte: string }[] = [
-  { k: "lire", titre: "Trois façons de lire", texte: "L'histoire racontée, le texte expliqué (la traduction de Steinsaltz), ou l'original araméen, mot à mot." },
-  { k: "hevrouta", titre: "Une hevrouta", texte: "Un binôme d'étude, joué ici par une IA : il t'explique, te contredit et te demande « pourquoi ? »." },
-  { k: "carte", titre: "La carte du débat", texte: "Reconstruis la discussion comme un arbre : la question, l'objection, la réponse." },
-  { k: "reperes", titre: "Des repères", texte: "Une petite histoire du Talmud, qui est qui, un glossaire et les mots araméens." },
+  { k: "lire", titre: "Lire le débat", texte: "Les sages tour par tour. Pour certains débats, le passage en entier : l'histoire, le texte expliqué, l'original araméen." },
+  { k: "carte", titre: "La carte du débat", texte: "Range chaque sage dans son camp, puis vois qui est où, et où tu te places, toi." },
+  { k: "hevrouta", titre: "Une hevrouta", texte: "Un binôme d'étude, joué ici par une IA : il défend l'autre camp, fait parler un sage, te demande « pourquoi ? »." },
+  { k: "mapage", titre: "Ma page", texte: "Tes avis avant et après, tes réponses aux sages, ta propre grande question. À imprimer." },
 ];
 
 // Le début de Bava Metsia 2a, résumé coup par coup (d'après les segments 0 à 7 de la sougya) :
@@ -148,7 +148,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
   const enCours = ouverts.map((c) => ({ c, p: readProgress(c.slug) })).filter((x) => x.p.started && x.p.last_segment !== null);
   const resume = enCours[0] ?? null;
   const first = ouverts[0];
-  const personnages = [...new Set(catalogue.flatMap((c) => c.personnages))];
+  const personnages = SAGES;
   const outils = [...new Set(catalogue.flatMap((c) => c.outils))];
   const byParcours = (id: string) => catalogue.filter((c) => c.parcours.includes(id));
   const heLeft = texture.segments.slice(0, 4).map((s) => s.hebrew).join(" ");

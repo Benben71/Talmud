@@ -4,7 +4,8 @@
 //   #/s/<slug>/cas | idee | page/<n> | carte | etalors | mapage
 //   #/reperes/<sujet>                    histoire, qui-est-qui, la-page, le-daf, glossaire, mots
 //   #/adulte                             pour l'adulte qui accompagne
-//   #/questions[/<id>]                   les grandes questions (débats philosophiques de l'aggada)
+//   #/questions[/<id>[/carte|hevrouta]]  les grandes questions : la liste, puis le débat, sa carte, sa hevrouta
+//   #/ma-page                            ma page : mes avis et mes réponses sur toutes les questions
 // Options après « ? » : h=1 ouvre la hevrouta, seed=1 charge un état de démonstration.
 import { useEffect, useState } from "react";
 
@@ -15,7 +16,12 @@ export type Route =
   | { kind: "sougya"; slug: string; screen: Screen; seg?: number }
   | { kind: "reperes"; sujet: Sujet }
   | { kind: "adulte" }
-  | { kind: "questions"; id: string | null };
+  | { kind: "questions"; id: string | null; vue: Vue }
+  | { kind: "mapage" };
+
+// Les trois vues d'une grande question : le débat (lire), la carte des camps, la hevrouta.
+export type Vue = "debat" | "carte" | "hevrouta";
+const VUES: Vue[] = ["debat", "carte", "hevrouta"];
 
 const SCREENS: Screen[] = ["cas", "idee", "page", "carte", "etalors", "mapage"];
 export const SUJETS: Sujet[] = ["histoire", "qui-est-qui", "la-page", "le-daf", "glossaire", "mots"];
@@ -34,7 +40,8 @@ export function parse(hash: string): Route {
   }
   if (parts[0] === "reperes") return { kind: "reperes", sujet: (SUJETS as string[]).includes(parts[1]) ? (parts[1] as Sujet) : "histoire" };
   if (parts[0] === "adulte") return { kind: "adulte" };
-  if (parts[0] === "questions") return { kind: "questions", id: parts[1] ?? null };
+  if (parts[0] === "questions") return { kind: "questions", id: parts[1] ?? null, vue: (VUES as string[]).includes(parts[2]) ? (parts[2] as Vue) : "debat" };
+  if (parts[0] === "ma-page") return { kind: "mapage" };
   return { kind: "home" };
 }
 
@@ -42,7 +49,8 @@ export function build(r: Route): string {
   if (r.kind === "home") return "#/";
   if (r.kind === "reperes") return `#/reperes/${r.sujet}`;
   if (r.kind === "adulte") return "#/adulte";
-  if (r.kind === "questions") return r.id ? `#/questions/${r.id}` : "#/questions";
+  if (r.kind === "questions") return r.id ? `#/questions/${r.id}${r.vue !== "debat" ? `/${r.vue}` : ""}` : "#/questions";
+  if (r.kind === "mapage") return "#/ma-page";
   return `#/s/${r.slug}/${r.screen}${r.screen === "page" && r.seg !== undefined ? `/${r.seg}` : ""}`;
 }
 

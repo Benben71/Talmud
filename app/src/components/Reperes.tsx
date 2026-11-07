@@ -1,9 +1,9 @@
 // Repères : le cadre qu'un carnet donne et qu'une app oublie — une petite histoire, qui est qui,
 // la page, le feuillet et ses lettres, un glossaire, les mots araméens. Rédigé pour l'app (voir
 // documentation/04-bases-du-talmud.md) ; la structure s'inspire du carnet « Ouvrir le Talmud » (Ayeka).
-import type { Sujet } from "../router";
+import type { Sujet, Vue } from "../router";
 import { SUJETS } from "../router";
-import type { Catalogue } from "../types";
+import { QUESTIONS } from "../content/questions";
 import { Fleuron } from "./Fleuron";
 
 const TITRE: Record<Sujet, string> = {
@@ -32,16 +32,23 @@ const HISTOIRE: { quand: string; quoi: string }[] = [
 const QUI: { nom: string; quand: string; ou: string; quoi: string }[] = [
   { nom: "Hillel et Chammaï", quand: "Ier s. av.", ou: "Jérusalem", quoi: "Deux maîtres aux styles opposés : Hillel patient, Chammaï exigeant. Leurs écoles, Beit Hillel et Beit Chammaï, se disputent sur des centaines de questions." },
   { nom: "Rabban Yohanan ben Zakkaï", quand: "Ier s.", ou: "Yavné", quoi: "Sort de Jérusalem assiégée et refonde l'étude après la destruction du Temple." },
+  { nom: "Rabbi Tarfon", quand: "vers 100", ou: "Lod", quoi: "Pense que l'action compte plus que l'étude — et le dit devant Rabbi Akiva." },
+  { nom: "Ben Petoura", quand: "IIe s.", ou: "", quoi: "Dans le désert avec une seule gourde : plutôt mourir à deux que voir l'autre mourir." },
   { nom: "Rabbi Eliézer et Rabbi Yehochoua", quand: "vers 100", ou: "Yavné", quoi: "Ses deux grands élèves, souvent en désaccord — jusqu'au four d'Akhnaï." },
   { nom: "Rabban Gamliel", quand: "vers 100", ou: "Yavné", quoi: "Le Nassi, chef des sages : autorité forte, parfois contestée." },
   { nom: "Rabbi Akiva", quand: "mort vers 135", ou: "Bnei Brak", quoi: "Berger devenu savant à quarante ans, le plus grand maître de son temps, mort en martyr en récitant le Chema." },
+  { nom: "Elisha ben Abouya (« Aher »)", quand: "IIe s.", ou: "", quoi: "Grand sage qui perd la foi devant l'injustice ; le Talmud garde pourtant son histoire, et ses élèves." },
+  { nom: "Ben Azzaï et Ben Zoma", quand: "IIe s.", ou: "", quoi: "Deux des quatre sages entrés dans le « Pardès » : l'un en meurt, l'autre en perd la raison." },
   { nom: "Rabbi Meïr et Beruria", quand: "IIe s.", ou: "Galilée", quoi: "Élève de Rabbi Akiva, si brillant que ses collègues ne pouvaient le suivre ; et sa femme, savante, qui discute les versets." },
-  { nom: "Rabbi Yehouda ha-Nassi", quand: "vers 200", ou: "Galilée", quoi: "« Rabbi », tout court. Met la Mishna par écrit." },
+  { nom: "Rabbi Yaakov", quand: "IIe s.", ou: "", quoi: "Petit-fils d'Elisha ben Abouya : la récompense n'est pas dans ce monde-ci." },
+  { nom: "Rabbi Yehouda ha-Nassi", quand: "vers 200", ou: "Galilée", quoi: "« Rabbi », tout court. Met la Mishna par écrit, et discute de l'âme avec son ami l'empereur Antonin." },
   { nom: "Rav et Chmouel", quand: "IIIe s.", ou: "Soura et Nehardea", quoi: "Les premiers grands amoraïm de Babylonie." },
-  { nom: "Rabbi Yohanan", quand: "IIIe s.", ou: "Tibériade", quoi: "Le grand maître du Talmud de Jérusalem." },
+  { nom: "Rabbi Hanina", quand: "IIIe s.", ou: "Sepphoris", quoi: "« Tout est entre les mains du Ciel, sauf la crainte du Ciel. » Croit aussi à l'influence des astres." },
+  { nom: "Rabbi Yohanan", quand: "IIIe s.", ou: "Tibériade", quoi: "Le grand maître du Talmud de Jérusalem. « Il n'y a pas de destin astral pour Israël. »" },
   { nom: "Abayé et Rava", quand: "IVe s.", ou: "Poumbedita et Mehoza", quoi: "Deux amis dont les débats remplissent des centaines de pages. Rava aime les questions en série." },
   { nom: "Rav Pappa", quand: "IVe s.", ou: "Naresh", quoi: "Élève d'Abayé et de Rava ; ses conclusions concilient souvent les positions." },
   { nom: "Rav Achi", quand: "vers 400", ou: "Soura", quoi: "Commence la rédaction du Talmud de Babylone." },
+  { nom: "Maïmonide et le Raavad", quand: "XIIe s.", ou: "Égypte et Provence", quoi: "Bien après le Talmud : Maïmonide se demande comment être libre si Dieu sait tout d'avance ; le Raavad lui reproche de ne pas vraiment répondre." },
   { nom: "Rachi", quand: "1040-1105", ou: "Troyes", quoi: "Le commentateur. Explique chaque phrase ; imprimé du côté de la reliure." },
   { nom: "Les Tossafot", quand: "XIIe-XIIIe s.", ou: "France, Allemagne", quoi: "Élèves et descendants de Rachi ; comparent les pages et contredisent parfois Rachi." },
   { nom: "Adin Steinsaltz", quand: "1937-2020", ou: "Jérusalem", quoi: "Traduit et commente tout le Talmud pour que chacun puisse l'ouvrir. Sa méthode est celle de cette app." },
@@ -57,15 +64,18 @@ const GLOSSAIRE: [string, string][] = [
   ["Daf, amoud", "le feuillet, et chacune de ses deux faces (a : recto, b : verso)."],
   ["Drash / pchat", "lecture qui s'écarte du sens simple / le sens simple."],
   ["Guemara", "la discussion des sages sur la Mishna, surtout en araméen."],
-  ["Halakha", "la loi, la règle pratique."],
+  ["Halakha", "la loi, la règle pratique. Les grandes questions de cette app viennent surtout de l'aggada, rarement tranchée."],
   ["Hevrouta", "l'étude à deux ; aussi le partenaire d'étude — et, dans cette app, le binôme qui lit avec toi."],
   ["Kouchia / terouts", "l'objection / la réponse."],
+  ["Mazal", "l'astre sous lequel on naît, le destin — « il n'y a pas de mazal pour Israël », dit Rabbi Yohanan."],
   ["Mahloket", "le désaccord — que le Talmud garde au lieu de l'effacer."],
+  ["Pardès", "« le verger » : la spéculation mystique, où quatre sages sont entrés et dont un seul est sorti indemne."],
   ["Mishna", "les règles en hébreu mises par écrit vers 200 par Rabbi Yehouda ha-Nassi ; six ordres, 63 traités."],
   ["Rachi", "Rabbi Chlomo ben Yitshak (1040-1105), le commentateur."],
   ["Sougya", "une unité de discussion de la Guemara — l'unité de cette app."],
   ["Talmud", "la Mishna et la Guemara ensemble. Celui de Babylone (vers 500) est le plus étudié ; celui de Jérusalem (vers 400) existe aussi."],
   ["Tanna (pl. tannaïm)", "sage de l'époque de la Mishna."],
+  ["Techouva", "le retour, le repentir : changer de chemin. Beruria demande de prier pour la techouva des méchants, pas pour leur mort."],
   ["Teikou", "« qu'elle reste debout » : question laissée sans réponse."],
   ["Torah orale", "la tradition qui explique et complète la Torah écrite ; longtemps apprise par cœur, jamais écrite."],
   ["Tossafot", "« ajouts » : les commentaires des élèves et descendants de Rachi."],
@@ -125,8 +135,7 @@ function LaPage() {
   );
 }
 
-export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; onSujet: (s: Sujet) => void; catalogue: Catalogue[]; onStart: (slug: string) => void }) {
-  const ouverts = catalogue.filter((c) => c.disponible);
+export function Reperes({ sujet, onSujet, onQuestion }: { sujet: Sujet; onSujet: (s: Sujet) => void; onQuestion: (id: string | null, vue?: Vue) => void }) {
   return (
     <div className="mx-auto max-w-4xl px-5 py-6 md:px-8">
       <Fleuron className="mb-4" />
@@ -151,11 +160,11 @@ export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; 
         )}
         {sujet === "qui-est-qui" && (
           <div>
-            <p className="mb-3 text-[calc(15px*var(--text-scale))] text-ink-2">Les sages que tu rencontreras, dans l'ordre du temps.</p>
+            <p className="mb-3 text-[calc(15px*var(--text-scale))] text-ink-2">Les sages que tu rencontreras dans les grandes questions, dans l'ordre du temps.</p>
             <dl className="grid gap-x-6 gap-y-3 md:grid-cols-2">
               {QUI.map((q) => (
                 <div key={q.nom} className="border-t hairline pt-2">
-                  <dt className="flex items-baseline justify-between"><span className="font-semibold">{q.nom}</span><span className="sc text-[calc(12px*var(--text-scale))] text-ink-2">{q.quand} · {q.ou}</span></dt>
+                  <dt className="flex items-baseline justify-between"><span className="font-semibold">{q.nom}</span><span className="sc text-[calc(12px*var(--text-scale))] text-ink-2">{q.quand}{q.ou && ` · ${q.ou}`}</span></dt>
                   <dd className="text-[calc(14px*var(--text-scale))] leading-snug text-ink-2">{q.quoi}</dd>
                 </div>
               ))}
@@ -184,7 +193,7 @@ export function Reperes({ sujet, onSujet, catalogue, onStart }: { sujet: Sujet; 
       </div>
 
       <div className="mt-8 border-t hairline pt-3 text-[calc(14px*var(--text-scale))] text-ink-2">
-        Pour pratiquer plutôt que lire : {ouverts.map((c, k) => <span key={c.slug}>{k > 0 && " · "}<button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onStart(c.slug)}>{c.court}</button></span>)}.
+        Pour débattre plutôt que lire : {QUESTIONS.slice(0, 5).map((q, k) => <span key={q.id}>{k > 0 && " · "}<button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onQuestion(q.id)}>{q.question}</button></span>)} · <button className="underline decoration-rule underline-offset-2 hover:text-ink" onClick={() => onQuestion(null)}>toutes les questions</button>.
         <span className="ml-2">La structure de ces repères s'inspire du carnet <em>Ouvrir le Talmud</em> (Ayeka).</span>
       </div>
     </div>

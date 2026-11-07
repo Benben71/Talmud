@@ -1,8 +1,9 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import type { ChatMessage, Depth, Layer, Sougya } from "./types";
 import { useMaPage } from "./store";
-import { navigate, options, useRoute, type Route, type Screen } from "./router";
-import { CATALOGUE, DEFAULT_SLUG, SOUGYOT } from "./content/registry";
+import { navigate, options, useRoute, type Route, type Screen, type Vue } from "./router";
+import { CATALOGUE_PHILO, DEFAULT_SLUG, SOUGYOT } from "./content/registry";
+import { QUESTIONS } from "./content/questions";
 import { Page } from "./components/Page";
 import { Hevrouta } from "./components/Hevrouta";
 import { Cas, PremiereIdee, EtAlors, MaPageScreen } from "./components/Temps";
@@ -10,7 +11,7 @@ import { Carte } from "./components/Carte";
 import { Home } from "./components/Home";
 import { Reperes } from "./components/Reperes";
 import { Adulte } from "./components/Adulte";
-import { Questions } from "./components/Questions";
+import { Questions, MaPageQuestions } from "./components/Questions";
 import { Nav, type NavKey } from "./components/Nav";
 import { Preferences, type PreferencesProps, type Theme } from "./components/Preferences";
 
@@ -26,9 +27,12 @@ function useMode() {
   return mode;
 }
 
-// Le dernier slug ouvert, pour que l'onglet « Lire » ait un sens depuis l'accueil ou les repères.
-function lastSlug(): string {
-  try { return localStorage.getItem("talmud:last") ?? DEFAULT_SLUG; } catch { return DEFAULT_SLUG; }
+// La dernière grande question ouverte, pour que « Lire », « Carte » et « Hevrouta » aient un sens partout.
+function lastQuestion(): string {
+  try {
+    const id = localStorage.getItem("talmud:last-q");
+    return id && QUESTIONS.some((q) => q.id === id) ? id : QUESTIONS[0].id;
+  } catch { return QUESTIONS[0].id; }
 }
 
 function savedTheme(): Theme {
@@ -57,20 +61,28 @@ export default function App() {
   }, [theme, textSize]);
   const preferences: PreferencesProps = { theme, textSize, onTheme: setTheme, onTextSize: setTextSize };
   const slug = route.kind === "sougya" && SOUGYOT[route.slug] ? route.slug : null;
-  useEffect(() => { if (slug) try { localStorage.setItem("talmud:last", slug); } catch { /* ignore */ } }, [slug]);
+  const qid = route.kind === "questions" ? route.id : null;
+  useEffect(() => { if (qid) try { localStorage.setItem("talmud:last-q", qid); } catch { /* ignore */ } }, [qid]);
 
   const home = () => navigate({ kind: "home" });
   const openSougya = (s: string, screen: Screen = "cas", seg?: number) => navigate({ kind: "sougya", slug: s, screen, seg });
 
-  const navActive: NavKey | null = route.kind === "home" ? "mer" : route.kind === "questions" ? "questions" : route.kind === "reperes" || route.kind === "adulte" ? "reperes" : null;
+  // Lire, Carte et Hevrouta portent sur la grande question en cours ; Ma page rassemble toutes les questions.
+  const navActive: NavKey | null =
+    route.kind === "home" ? "mer"
+    : route.kind === "questions" ? (route.id === null ? "questions" : route.vue === "carte" ? "carte" : route.vue === "hevrouta" ? "hevrouta" : "lire")
+    : route.kind === "mapage" ? "mapage"
+    : route.kind === "reperes" || route.kind === "adulte" ? "reperes" : null;
   const onNavGlobal = (k: NavKey) => {
     if (k === "mer") home();
-    else if (k === "questions") navigate({ kind: "questions", id: null });
+    else if (k === "questions") navigate({ kind: "questions", id: null, vue: "debat" });
     else if (k === "reperes") navigate({ kind: "reperes", sujet: "histoire" });
-    else if (k === "lire" || k === "hevrouta") openSougya(lastSlug(), "page");
-    else if (k === "carte") openSougya(lastSlug(), "carte");
-    else if (k === "mapage") openSougya(lastSlug(), "mapage");
+    else if (k === "lire") navigate({ kind: "questions", id: lastQuestion(), vue: "debat" });
+    else if (k === "carte") navigate({ kind: "questions", id: lastQuestion(), vue: "carte" });
+    else if (k === "hevrouta") navigate({ kind: "questions", id: lastQuestion(), vue: "hevrouta" });
+    else if (k === "mapage") navigate({ kind: "mapage" });
   };
+  const openQuestion = (id: string | null, vue: Vue = "debat") => navigate({ kind: "questions", id, vue });
 
   return (
     <div className="h-full overflow-hidden md:p-5 print:p-0">
@@ -92,10 +104,11 @@ export default function App() {
             <div className="flex min-h-0 flex-1">
               <Nav variant="rail" active={navActive} onGo={onNavGlobal} />
               <div className="relative min-w-0 flex-1 overflow-y-auto">
-                {route.kind === "home" && <Home catalogue={CATALOGUE} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={(sujet) => navigate({ kind: "reperes", sujet })} onAdulte={() => navigate({ kind: "adulte" })} onQuestions={(id) => navigate({ kind: "questions", id })} />}
-                {route.kind === "questions" && <Questions id={route.id} onOpen={(id) => navigate({ kind: "questions", id })} catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} mode={mode} />}
-                {route.kind === "reperes" && <Reperes sujet={route.sujet} onSujet={(s) => navigate({ kind: "reperes", sujet: s })} catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
-                {route.kind === "adulte" && <Adulte catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
+                {route.kind === "home" && <Home catalogue={CATALOGUE_PHILO} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={(sujet) => navigate({ kind: "reperes", sujet })} onAdulte={() => navigate({ kind: "adulte" })} onQuestions={(id) => openQuestion(id)} />}
+                {route.kind === "questions" && <Questions id={route.id} vue={route.vue} onOpen={openQuestion} catalogue={CATALOGUE_PHILO} onStart={(s) => openSougya(s, "cas")} mode={mode} />}
+                {route.kind === "mapage" && <MaPageQuestions onOpen={openQuestion} />}
+                {route.kind === "reperes" && <Reperes sujet={route.sujet} onSujet={(s) => navigate({ kind: "reperes", sujet: s })} onQuestion={openQuestion} />}
+                {route.kind === "adulte" && <Adulte catalogue={CATALOGUE_PHILO} onStart={(s) => openSougya(s, "cas")} onQuestion={openQuestion} />}
               </div>
             </div>
             <Nav variant="tabs" active={navActive} onGo={onNavGlobal} />
@@ -144,7 +157,7 @@ function SougyaShell({ sougya, route, mode, onHome, preferences }: { sougya: Sou
     if (k === "hevrouta") { if (screen !== "page") go("page"); setHevroutaOpen((v) => !v); return; }
     setHevroutaOpen(false);
     if (k === "mer") onHome();
-    else if (k === "questions") navigate({ kind: "questions", id: null });
+    else if (k === "questions") navigate({ kind: "questions", id: null, vue: "debat" });
     else if (k === "reperes") navigate({ kind: "reperes", sujet: "histoire" });
     else if (k === "lire") go(state.visited.length || state.premiere_idee ? "page" : "cas");
     else if (k === "carte") go("carte");

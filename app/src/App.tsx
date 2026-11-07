@@ -10,6 +10,7 @@ import { Carte } from "./components/Carte";
 import { Home } from "./components/Home";
 import { Reperes } from "./components/Reperes";
 import { Adulte } from "./components/Adulte";
+import { Questions } from "./components/Questions";
 import { Nav, type NavKey } from "./components/Nav";
 import { Preferences, type PreferencesProps, type Theme } from "./components/Preferences";
 
@@ -61,9 +62,10 @@ export default function App() {
   const home = () => navigate({ kind: "home" });
   const openSougya = (s: string, screen: Screen = "cas", seg?: number) => navigate({ kind: "sougya", slug: s, screen, seg });
 
-  const navActive: NavKey | null = route.kind === "home" ? "mer" : route.kind === "reperes" || route.kind === "adulte" ? "reperes" : null;
+  const navActive: NavKey | null = route.kind === "home" ? "mer" : route.kind === "questions" ? "questions" : route.kind === "reperes" || route.kind === "adulte" ? "reperes" : null;
   const onNavGlobal = (k: NavKey) => {
     if (k === "mer") home();
+    else if (k === "questions") navigate({ kind: "questions", id: null });
     else if (k === "reperes") navigate({ kind: "reperes", sujet: "histoire" });
     else if (k === "lire" || k === "hevrouta") openSougya(lastSlug(), "page");
     else if (k === "carte") openSougya(lastSlug(), "carte");
@@ -90,7 +92,8 @@ export default function App() {
             <div className="flex min-h-0 flex-1">
               <Nav variant="rail" active={navActive} onGo={onNavGlobal} />
               <div className="relative min-w-0 flex-1 overflow-y-auto">
-                {route.kind === "home" && <Home catalogue={CATALOGUE} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={(sujet) => navigate({ kind: "reperes", sujet })} onAdulte={() => navigate({ kind: "adulte" })} />}
+                {route.kind === "home" && <Home catalogue={CATALOGUE} texture={SOUGYOT[DEFAULT_SLUG]} onStart={(s) => openSougya(s, "cas")} onResume={(s, seg) => openSougya(s, "page", seg)} onReperes={(sujet) => navigate({ kind: "reperes", sujet })} onAdulte={() => navigate({ kind: "adulte" })} onQuestions={(id) => navigate({ kind: "questions", id })} />}
+                {route.kind === "questions" && <Questions id={route.id} onOpen={(id) => navigate({ kind: "questions", id })} catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
                 {route.kind === "reperes" && <Reperes sujet={route.sujet} onSujet={(s) => navigate({ kind: "reperes", sujet: s })} catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
                 {route.kind === "adulte" && <Adulte catalogue={CATALOGUE} onStart={(s) => openSougya(s, "cas")} />}
               </div>
@@ -141,6 +144,7 @@ function SougyaShell({ sougya, route, mode, onHome, preferences }: { sougya: Sou
     if (k === "hevrouta") { if (screen !== "page") go("page"); setHevroutaOpen((v) => !v); return; }
     setHevroutaOpen(false);
     if (k === "mer") onHome();
+    else if (k === "questions") navigate({ kind: "questions", id: null });
     else if (k === "reperes") navigate({ kind: "reperes", sujet: "histoire" });
     else if (k === "lire") go(state.visited.length || state.premiere_idee ? "page" : "cas");
     else if (k === "carte") go("carte");

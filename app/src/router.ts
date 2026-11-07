@@ -4,6 +4,7 @@
 //   #/s/<slug>/cas | idee | page/<n> | carte | etalors | mapage
 //   #/reperes/<sujet>                    histoire, qui-est-qui, la-page, le-daf, glossaire, mots
 //   #/adulte                             pour l'adulte qui accompagne
+//   #/questions[/<id>]                   les grandes questions (débats philosophiques de l'aggada)
 // Options après « ? » : h=1 ouvre la hevrouta, seed=1 charge un état de démonstration.
 import { useEffect, useState } from "react";
 
@@ -13,7 +14,8 @@ export type Route =
   | { kind: "home" }
   | { kind: "sougya"; slug: string; screen: Screen; seg?: number }
   | { kind: "reperes"; sujet: Sujet }
-  | { kind: "adulte" };
+  | { kind: "adulte" }
+  | { kind: "questions"; id: string | null };
 
 const SCREENS: Screen[] = ["cas", "idee", "page", "carte", "etalors", "mapage"];
 export const SUJETS: Sujet[] = ["histoire", "qui-est-qui", "la-page", "le-daf", "glossaire", "mots"];
@@ -32,6 +34,7 @@ export function parse(hash: string): Route {
   }
   if (parts[0] === "reperes") return { kind: "reperes", sujet: (SUJETS as string[]).includes(parts[1]) ? (parts[1] as Sujet) : "histoire" };
   if (parts[0] === "adulte") return { kind: "adulte" };
+  if (parts[0] === "questions") return { kind: "questions", id: parts[1] ?? null };
   return { kind: "home" };
 }
 
@@ -39,6 +42,7 @@ export function build(r: Route): string {
   if (r.kind === "home") return "#/";
   if (r.kind === "reperes") return `#/reperes/${r.sujet}`;
   if (r.kind === "adulte") return "#/adulte";
+  if (r.kind === "questions") return r.id ? `#/questions/${r.id}` : "#/questions";
   return `#/s/${r.slug}/${r.screen}${r.screen === "page" && r.seg !== undefined ? `/${r.seg}` : ""}`;
 }
 

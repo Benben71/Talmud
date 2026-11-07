@@ -2,8 +2,10 @@
 //   1. le mot, la promesse, un bouton pour commencer, à quoi ça sert, la Corée du Sud, et un vrai débat résumé ;
 //   2. « Le Talmud, c'est quoi ? » — trois paragraphes, un schéma de la page imprimée et une frise qui finit par « toi » ;
 //   3. « Comment ça marche ici » — les cinq temps d'une séance, les outils de l'app et cinq mots-clés ;
-//   4. « Choisis un passage » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges.
+//   4. « Choisis un passage » — la mer du Talmud, avec les parcours, les voix et les gestes dans les marges ;
+//   5. « Les grandes questions » — quatre débats philosophiques de l'aggada et un lien vers la rubrique.
 import type { ReactNode } from "react";
+import { QUESTIONS } from "../content/questions";
 import type { Catalogue, Role, Sougya } from "../types";
 import { OUTIL_LABEL, PARCOURS, ROLE_LABEL, ROLE_SYMBOL } from "../types";
 import { readProgress } from "../store";
@@ -137,9 +139,10 @@ function SchemaPage() {
   );
 }
 
-export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdulte }: {
+export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdulte, onQuestions }: {
   catalogue: Catalogue[]; texture: Sougya;
   onStart: (slug: string) => void; onResume: (slug: string, seg: number) => void; onReperes: (sujet: Sujet) => void; onAdulte: () => void;
+  onQuestions: (id: string | null) => void;
 }) {
   const ouverts = catalogue.filter((c) => c.disponible);
   const enCours = ouverts.map((c) => ({ c, p: readProgress(c.slug) })).filter((x) => x.p.started && x.p.last_segment !== null);
@@ -185,6 +188,7 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             <button className={LINK} onClick={() => aller("talmud")}>Le Talmud, c'est quoi ?</button>
             <button className={LINK} onClick={() => aller("methode")}>Comment ça marche</button>
             <button className={LINK} onClick={() => aller("passages")}>Choisir un passage</button>
+            <button className={LINK} onClick={() => aller("questions")}>Les grandes questions</button>
           </nav>
         </div>
 
@@ -401,6 +405,28 @@ export function Home({ catalogue, texture, onStart, onResume, onReperes, onAdult
             </div>
           </aside>
         </div>
+      </section>
+
+      {/* 5. Les grandes questions : les débats philosophiques de l'aggada */}
+      <section className="mt-10">
+        <Titre n="IV" he="אַגָּדָה" id="questions">Les grandes questions</Titre>
+        <p className={`mt-3 max-w-3xl text-[calc(15px*var(--text-scale))] leading-snug text-ink-2`}>
+          Les sages ne discutent pas que de la vie de tous les jours. Dans les récits du Talmud, ils débattent aussi du sens de la vie, du mal, de la liberté et de la vérité, souvent sans trancher.
+        </p>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {QUESTIONS.slice(0, 4).map((q) => (
+            <li key={q.id}>
+              <button onClick={() => onQuestions(q.id)} className="bloc block h-full w-full px-3 py-3 text-left hover:border-ink">
+                <div className={`sc text-[calc(12px*var(--text-scale))] text-rubric`}>{q.domaine}</div>
+                <div className={`text-[calc(17px*var(--text-scale))] font-semibold leading-tight`}>{q.question}</div>
+                <div className={`sc mt-1 text-[calc(12px*var(--text-scale))] text-ink-2`}>{q.sources[0].ref}</div>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <p className={`mt-3 text-[calc(14px*var(--text-scale))] text-ink-2`}>
+          <button className={LINK} onClick={() => onQuestions(null)}>Les {QUESTIONS.length} grandes questions →</button>
+        </p>
       </section>
 
       {/* Pour l'adulte, et les crédits */}

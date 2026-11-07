@@ -1,6 +1,6 @@
 // La navigation d'app : un rail à gauche sur grand écran, une barre d'onglets en bas sur téléphone.
-// Six entrées, gravées au trait : la mer, lire, la carte, la hevrouta, ma page, repères.
-export type NavKey = "mer" | "lire" | "carte" | "hevrouta" | "mapage" | "reperes";
+// Sept entrées, gravées au trait : la mer, lire, la carte, la hevrouta, ma page, les grandes questions, repères.
+export type NavKey = "mer" | "lire" | "carte" | "hevrouta" | "mapage" | "questions" | "reperes";
 
 const ICON: Record<NavKey, React.ReactNode> = {
   mer: <path d="M2 9 q4 -4 8 0 t8 0 M2 14 q4 -4 8 0 t8 0 M2 19 q4 -4 8 0 t8 0" />,
@@ -8,10 +8,11 @@ const ICON: Record<NavKey, React.ReactNode> = {
   carte: <><circle cx="12" cy="5" r="2" /><circle cx="6" cy="19" r="2" /><circle cx="18" cy="19" r="2" /><circle cx="18" cy="12" r="1.5" /><path d="M12 7 L6 17 M12 7 L18 10.5 M18 13.5 V17" /></>,
   hevrouta: <><path d="M4 5 h10 v8 h-6 l-3 3 v-3 h-1 z" /><path d="M11 10 h9 v7 h-1 v3 l-3 -3 h-5 z" /></>,
   mapage: <><path d="M5 20 l10 -10 l4 4 l-10 10 h-4 z" /><path d="M15 10 l3 -3 l4 4 l-3 3" /><path d="M5 20 l4 0 l0 -4" strokeWidth=".8" /></>,
+  questions: <><path d="M12 2 l2.2 4.6 l5 .7 l-3.6 3.5 l.9 5 l-4.5 -2.4 l-4.5 2.4 l.9 -5 l-3.6 -3.5 l5 -.7 z" strokeWidth=".8" /><path d="M10 9.2 a2 2 0 1 1 2.6 1.9 c-.5 .2 -.6 .5 -.6 1" /><circle cx="12" cy="13.4" r=".35" /><path d="M8 20 h8" /></>,
   reperes: <><circle cx="12" cy="12" r="9" /><path d="M12 3 v18 M3 12 h18" strokeWidth=".8" /><path d="M12 6 l2 6 l-2 6 l-2 -6 z" /></>,
 };
-const LABEL: Record<NavKey, string> = { mer: "La mer", lire: "Lire", carte: "Carte", hevrouta: "Hevrouta", mapage: "Ma page", reperes: "Repères" };
-const ORDER: NavKey[] = ["mer", "lire", "carte", "hevrouta", "mapage", "reperes"];
+const LABEL: Record<NavKey, string> = { mer: "La mer", lire: "Lire", carte: "Carte", hevrouta: "Hevrouta", mapage: "Ma page", questions: "Questions", reperes: "Repères" };
+const ORDER: NavKey[] = ["mer", "lire", "carte", "hevrouta", "mapage", "questions", "reperes"];
 
 export function NavIcon({ k, active, size }: { k: NavKey; active: boolean; size: number }) {
   return (
@@ -34,7 +35,8 @@ export function Nav({ active, badge, disabled, onGo, variant }: {
         {isActive && variant === "rail" && <span className="absolute left-0 top-2 bottom-2 w-[3px] bg-rubric" />}
         {isActive && variant === "tabs" && <span className="absolute left-3 right-3 top-0 h-[2px] bg-rubric" />}
         <NavIcon k={k} active={isActive} size={variant === "tabs" ? 25 : 22} />
-        <span className={`sc leading-none ${variant === "tabs" ? "text-[12px]" : "text-[11px]"}`}>{LABEL[k]}</span>
+        {/* Sept onglets sur 375 px : on resserre les petites capitales pour que « Questions » tienne. */}
+        <span className={`sc leading-none ${variant === "tabs" ? "text-[11.5px]" : "text-[11px]"}`} style={variant === "tabs" ? { letterSpacing: ".02em" } : undefined}>{LABEL[k]}</span>
         {badge?.[k] ? <span className="absolute right-1/2 top-1 translate-x-4 rounded-full bg-rubric px-1 text-[9px] leading-[14px] text-paper" style={{ fontVariant: "normal" }}>{badge[k]}</span> : null}
       </button>
     );
